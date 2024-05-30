@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import navbar from './components/navbar';
-import Navbar from './components/navbar';
-import chevronRight from './images/Chevron-right.png'; 
-import couverture from './images/couverture.jpeg';
-import correct from './images/correct.png';
 
-function App() {
+import '../App.css';
+
+import Navbar from '../components/navbar';
+import chevronRight from '../images/Chevron-right.png'; 
+import couverture from '../images/couverture.jpeg';
+import correct from '../images/correct.png';
+
+function Recherche() {
   return (
     <>
     <Navbar/>
@@ -34,7 +34,7 @@ function App() {
                 <div> {/* container de l'input et son nom + le nombre à côté*/}
                   <div> {/* container de l'input et son nom uniquement */}
                     <input className='input_checkbox' type='checkbox' id='Documents numérique' name='Disponibles'/>
-                    <label for="Disponibles">Disponiblese</label>
+                    <label for="Disponibles">Disponibles</label>
                   </div>
                   <p>117</p>
                 </div>
@@ -189,6 +189,7 @@ function App() {
           </div>
         </div>
         <div className='container_livres'>
+           
           <div className='all_books'> {/* container de tous les livres */}
             <div className='one_book'> {/* container avec infos pour un livre */}
               <div className='photo_btn'> {/* container avec la photo de couverture et le btn en savoir plus */}
@@ -223,4 +224,4 @@ function App() {
   );
 }
 
-export default App;
+export default Recherche;
