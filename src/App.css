@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+ */
+
+ /* pour le carousel dans la partie livre */
+
+ .carousel-container {
+  margin: 20px 0;
+}
+
+.carousel-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.carousel-slide {
+  text-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.carousel-book-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.carousel-book-author {
+  font-size: 14px;
+  color: gray;
 }
