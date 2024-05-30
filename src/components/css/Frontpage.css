@@ -1,0 +1,92 @@
+.section-frontpage {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+    margin:0 15px;
+}
+  
+.slider img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.react-multi-carousel-track {
+    margin-bottom: 5%;
+}
+  
+.react-multi-carousel-list {
+    padding: 0rem 0 2rem 0;
+}
+  
+.custom-dot-list-style button{
+    border: none;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2F2C7E;
+}
+
+.react-multi-carousel-dot-list {
+    gap: 1%;
+}
+
+.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+    background: #2F2C7E;
+}
+
+.gd-carousel-wrapper {
+    position:relative;
+    width: 110%;
+    align-self: center;
+    display:grid;
+}
+
+.gd-carousel {
+    position:unset;
+    margin-inline: 80px;
+    overflow: hidden ;
+    width: 80%;
+    justify-self: center;
+}
+
+.react-multiple-carousel__arrow {
+    position:absolute;
+    background: none;
+    filter: brightness(0);
+}
+
+.react-multiple-carousel__arrow::before {
+    font-size: 38px;
+    top: -30px;
+}
+
+.react-multiple-carousel__arrow:hover {
+    background: none;
+}
+
+.react-multi-carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-slider {
+    padding-inline : 5%;
+    position: absolute;
+    bottom: 60px;
+    color: white;
+}
+
+.info-slider h3 {
+    font-size: 20px;
+    margin-bottom: 0.2em;
+}
+
+.section-frontpage .button {
+    position: absolute;
+    bottom: -22px;
+    border-radius: 20px;
+}
