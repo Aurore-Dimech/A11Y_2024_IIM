@@ -1,0 +1,44 @@
+.search-bar {
+    display: flex;
+    width: 60%;
+}
+
+.search, .search-catalogue select{
+    background-color: #2F2C7E;
+    color: white;
+    padding: 0.7em 1.4em;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.search-catalogue {
+    border-radius: 25px 0 0 25px;
+    width: 100%;
+}
+
+.search-button {
+    border-radius: 0 25px 25px 0;
+    width: 80%;
+    gap:5%;
+}
+
+.search-input {
+    width: 180%;
+    padding-inline: 2%;
+    font-size: 16px;
+}
+
+.search-catalogue select {
+    padding: 0;
+}
+
+select option {
+    width: 100%;
+}
+
+input {
+    border: none;
+}

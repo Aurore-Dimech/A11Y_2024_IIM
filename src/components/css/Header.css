@@ -1,0 +1,29 @@
+header {
+    background-color: #FBE11A;
+    padding: 0.5em 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 15%;
+}
+
+nav {
+    background-color: #2F2C7E;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 15%;
+    height: 4.5em;
+    align-items: center;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}

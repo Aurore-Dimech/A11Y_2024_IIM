@@ -1,0 +1,20 @@
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.projects li {
+    display: flex;
+    gap: 5%;
+}
+
+.projects ul img {
+    width: 50%;
+}
+
+.projects-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
