@@ -20,12 +20,12 @@ function App() {
             element={<MainPage />}
           />
           <Route
-            path= "/livre_infos"
+            path= "/livre/:id"
             element= {<SingleBookPage />}
           />
           { /* changer pour mettre le nom du livre ? */}
           <Route
-            path="/recherche"
+            path="/recherche/:query"
             element={<Search />}
           />
           { /* changer pour mettre la query ? */}

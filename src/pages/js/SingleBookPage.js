@@ -1,8 +1,42 @@
-import Navbar from "../../components/js/Header";
-import couverture from "../../images/couverture.jpeg";
-import correct from "../../images/correct.png";
+import React from "react";
+
+import greenTick from "../../assets/greenTick.svg";
+import redTick from "../../assets/redTick.svg";
 import Carousel from "../../components/CarouselLivres";
+
+import bookList from "../../data/bookList";
+
+const disponibility = (availableCopiesNumber) => {
+  if (availableCopiesNumber === 0) {
+    return {
+      text: "INDISPONIBLE",
+      img: redTick,
+      alt: "croix rouge",
+      style: { color: "red" },
+    };
+  } else if (availableCopiesNumber === 1) {
+    return {
+      text: "1 exemplaire DISPONIBLE",
+      img: greenTick,
+      alt: "tick vert",
+      style: { color: "green" },
+    };
+  } else {
+    return {
+      text: `${availableCopiesNumber} exemplaires DISPONIBLES`,
+      img: greenTick,
+      alt: "tick vert",
+      style: { color: "green" },
+    };
+  }
+};
+
 function LivreInfos() {
+  const bookListArray = Object.values(bookList);
+  const selectedBook = bookListArray.find(
+    (book) => book.id === Number(window.location.href.split("/").pop())
+  );
+
   const data = [
     {
       library: "Bibliothèque Alfred Hart",
@@ -90,86 +124,80 @@ function LivreInfos() {
 
   return (
     <>
-      <Navbar />
-      <main class="container">
+      <main className="container">
         <div>
-          <article class="book-info">
-            <div class="rating">
+          <article className="book-info">
+            <div className="rating">
               <img
-                src={couverture}
-                alt="Couverture du livre Ariol Chante Comme Un Rossignol"
-                class="book-cover"
+                src={selectedBook.cover}
+                alt={`Couverture du livre ${selectedBook.title}`}
+                className="book-cover"
               />
               <span
                 aria-label="5 étoiles"
-                class="rating-stars"
+                className="rating-stars"
               >
                 ★★★★★
               </span>
             </div>
-            <section class="book-details">
-              <h1 class="book-title">ARIOL CHANTE COMME UN ROSSIGNOL</h1>
-              <p class="book-author">
-                <strong>Guibert Emmanuel</strong>
+            <section className="book-details">
+              <h1 className="book-title">{selectedBook.title.toUpperCase()}</h1>
+              <p className="book-author">
+                <strong>{selectedBook.author}</strong>
               </p>
-              <p class="book-publisher">Éditeur - Année de parution</p>
-              <p class="book-description">Description</p>
-              <p class="book-description">Description</p>
-              <p class="book-description">Description</p>
-              <button class="reserve-button">Réserver</button>
-              <div class="availability">
-                <img
-                  src={correct}
-                  alt="Checkmark"
-                  class="checkmark-icon"
-                />
-                <span class="availability-text">2 exemplaires disponible</span>
+              <p className="book-publisher">{selectedBook.editor} - {selectedBook.publicationDate}</p>
+              <p className="book-description">{selectedBook.description}</p>
+              <button className="reserve-button">Réserver</button>
+              <div className="availability">
+              <img
+                src={disponibility(selectedBook.availableCopiesNumber).img}
+                alt={disponibility(selectedBook.availableCopiesNumber).alt}
+                className="checkmark-icon"
+              />
+              <span className="availability-text" style={disponibility(selectedBook.availableCopiesNumber).style}>{disponibility(selectedBook.availableCopiesNumber).text}</span>
               </div>
             </section>
           </article>
 
-          <section class="description-section">
-            <h2 class="description-title">DESCRIPTION</h2>
-            <ul class="description-list">
-              <li class="description-item">
-                <strong>Type de document:</strong> Bandes dessinées
+          <section className="description-section">
+            <h2 className="description-title">DESCRIPTION</h2>
+            <ul className="description-list">
+              <li className="description-item">
+                <strong>Type de document:</strong> {selectedBook.documentType}
               </li>
-              <li class="description-item">
-                <strong>Langue:</strong> Français
+              <li className="description-item">
+                <strong>Langue:</strong> {selectedBook.language}
               </li>
-              <li class="description-item">
-                <strong>Date de publication:</strong> 2023
+              <li className="description-item">
+                <strong>Date de publication:</strong> {selectedBook.publicationDate}
               </li>
-              <li class="description-item">
-                <strong>Série:</strong> Ariol, Tome 19
+              <li className="description-item">
+                <strong>Série:</strong> {selectedBook.serie}
               </li>
-              <li class="description-item">
-                <strong>Sections:</strong> Jeunesse
+              <li className="description-item">
+                <strong>Sections:</strong> {selectedBook.section}
               </li>
-              <li class="description-item">
-                <strong>Description physique:</strong> 1 vol. (124 p.) : ill. en
-                coul. ; 26 cm
+              <li className="description-item">
+                <strong>Description physique:</strong> {selectedBook.physicalAspect}
               </li>
-              <li class="description-item">
-                <strong>Contributeurs:</strong> Chauveau, Rémi (1970- ) -
-                Technicien graphique
+              <li className="description-item">
+                <strong>Contributeurs:</strong> {selectedBook.contributors}
               </li>
-              <li class="description-item">
-                <strong>ISBN:</strong> 979-10-363-5888-3
+              <li className="description-item">
+                <strong>ISBN:</strong> {selectedBook.isbn}
               </li>
-              <li class="description-item">
-                <strong>EAN:</strong> 9791036358883
+              <li className="description-item">
+                <strong>EAN:</strong> {selectedBook.ean}
               </li>
-              <li class="description-item">
-                <strong>Popularité:</strong> Document emprunté 21 fois ces 6
-                derniers mois
+              <li className="description-item">
+                <strong>Popularité:</strong> {selectedBook.popularity}
               </li>
             </ul>
           </section>
         </div>
         <section className="availability-section">
           <h2 className="availability-title">DISPONIBILITÉ</h2>
-          <h3 className="book-title">ARIOL CHANTE COMME UN ROSSIGNOL</h3>
+          <h3 className="book-title">{selectedBook.title.toUpperCase()}</h3>
           <table className="availability-table">
             <thead>
               <tr>

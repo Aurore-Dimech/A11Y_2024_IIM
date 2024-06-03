@@ -25,7 +25,6 @@ const responsive = {
 
 const article = {
   title: "Les Jeudis Littéraires",
-  description: "Description",
   button: "Consulter l'article",
   ariaLabel: ": Les jeudis littéraires",
   image: jeudisLitte,
@@ -63,10 +62,9 @@ const FrontPage = () => {
           >
             {frontPage.map((article, index) => {
               return (
-                <Fragment>
+                <Fragment key={index}>
                   <div
                     className="slider"
-                    key={index}
                   >
                     <img
                       src={article.image}
@@ -74,7 +72,6 @@ const FrontPage = () => {
                     />
                     <div className="info-slider">
                       <h3>{article.title}</h3>
-                      <p>{article.description}</p>
                     </div>
                   </div>
                   <a href="/jeudis-litteraires" className="button" aria-label={article.button + article.ariaLabel}>{article.button}</a>

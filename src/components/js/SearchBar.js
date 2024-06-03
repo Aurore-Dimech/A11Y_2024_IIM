@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/SearchBar.css";
 import SearchIcon from "../../assets/searchIcon.svg";
 
 const SearchBar = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    window.location.href = `/recherche/${inputValue}`;
+  };
+
   return (
     <form
       role="search"
       className="search-bar"
+      onSubmit={handleSubmit}
     >
       <div className="search search-catalogue">
         <select title="Listes des fonctionnailités et disponibilités du site internet">
@@ -23,9 +35,11 @@ const SearchBar = () => {
         title="Recherchez par mots-clés"
         placeholder="Recherchez votre document..."
         className="search-input"
+        onChange={handleInputChange}
       />
-      <button
+      <a
         type="submit"
+        href={`/recherche/${inputValue}`}
         value="Rechercher"
         className="search search-button"
       >
@@ -34,7 +48,7 @@ const SearchBar = () => {
           src={SearchIcon}
           alt=""
         />
-      </button>
+      </a>
     </form>
   );
 };
