@@ -1,3 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing : border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+section{
+  margin-inline: 15%;
+  margin-top: 10%;
+}
+
+.section-title {
+  display: flex;
+  gap: 4%;
+  margin-bottom: 6%;
+  align-items: center;
+}
+
+.button {
+  background-color: #4237CB;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* .App {
   text-align: center;
 }
@@ -22,21 +67,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
- */
+*/
 
  /* pour le carousel dans la partie livre */
 

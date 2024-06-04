@@ -1,0 +1,10 @@
+.main-collection{
+    display: flex;
+}
+
+.main-collection div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+}
