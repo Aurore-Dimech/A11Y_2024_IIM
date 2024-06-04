@@ -44,8 +44,8 @@ function CarouselLivres({title, books}) {
             <Slider {...settings}>
                 {books.map((book, index) => (
                     <div key={index} className="carousel-slide">
-                        <img src={book.image} alt={book.title} className="carousel-image" />
-                        <p className="carousel-book-title">{book.title}</p>
+                        <img src={book.cover} alt={book.title.toUpperCase()} className="carousel-image" />
+                        <p className="carousel-book-title">{book.title.toUpperCase()}</p>
                         <p className="carousel-book-author">{book.author}</p>
                     </div>
                 ))}

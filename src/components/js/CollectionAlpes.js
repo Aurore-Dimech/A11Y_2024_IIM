@@ -1,5 +1,5 @@
 import React from "react";
-import greySquare from "../../assets/greySquare.svg";
+import blueMoon from "../../assets/blueMoon.svg";
 import cartesAlpes from "../../assets/alpes.svg";
 import "../css/CollectionAlpes.css";
 
@@ -8,7 +8,7 @@ const CollectionAlpes = () => {
     <section>
       <div className="section-title">
         <img
-          src={greySquare}
+          src={blueMoon}
           alt=""
         />
         <h2>COLLECTION SPECIALE ALPES</h2>

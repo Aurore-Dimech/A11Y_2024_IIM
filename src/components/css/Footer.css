@@ -1,7 +1,7 @@
 footer {
     background-color: #2F2C7E;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.5fr 1fr;
     padding: 5.5% 4% 4% 4%;
     gap:calc( 5% + 10px);
     color: white;
@@ -42,12 +42,20 @@ footer a:hover {
     justify-content: space-evenly;
 }
 
+.address p {
+    font-size: 20px;
+}
+
 .links ul {
     padding-block: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.links a {
+    font-size: 20px;
 }
 
 .socials ul {
@@ -58,4 +66,78 @@ footer a:hover {
 
 li {
     list-style-type: none;
+}
+
+.footer-second-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+form {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.newsletter-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.newsletter-container label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.input-newsletter {
+    width: 100%;
+    display: flex;
+
+}
+
+.input-newsletter input[type="email"] {
+    width: 75%;
+    border-radius: 0.5em 0 0 0.5em;
+    padding: 1em;
+    font-size: 16px;
+}
+
+.input-newsletter .submit-newsletter {
+    width: 25%;
+    background-color: #FBE11A;
+    border-radius: 0 0.5em 0.5em 0;
+    font-size: 24px;
+    height: 100%;
+}
+
+.checkbox-newsletter {
+    display: flex;
+    gap: 1.5%;
+}
+
+.checkbox-newsletter input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.checkbox-newsletter input[type="checkbox"]::before{
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid #FBE11A;
+    border-radius: 0.5em;
+    background-color: transparent;
+}
+.checkbox-newsletter input[type="checkbox"]:checked:before{
+    background-color: #FBE11A;
+}
+
+.logo ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 }

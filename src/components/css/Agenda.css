@@ -23,6 +23,7 @@
 .events-list li {
     background-color: white;
     border-radius: 10px;
+    /* overflow: hidden; */
 }
 
 .activity1 {
@@ -47,13 +48,16 @@
     margin-inline: 10%;
     padding: 5% 5%;
     position: relative;
-    top: -80px;
-    height: 52%;
+    top: -12%;
+    height: 50%;
 }
 
 .events-list li:not(:first-of-type) {
     display: flex;
-    gap: 5%;
+}
+
+.events-list li:not(:first-of-type) ol {
+    padding-inline: 1.5em;
 }
 
 .cards-info {

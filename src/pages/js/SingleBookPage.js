@@ -6,6 +6,10 @@ import Carousel from "../../components/CarouselLivres";
 
 import bookList from "../../data/bookList";
 
+import sugCover1 from "../../assets/sugCover1.svg";
+import sugCover2 from "../../assets/sugCover2.svg";
+import sugCover3 from "../../assets/sugCover3.svg";
+
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
     return {
@@ -80,43 +84,26 @@ function LivreInfos() {
     },
   ];
 
-  const sameAuthorBooks = [
-    {
-      image: "path/to/image1.jpg",
-      title: "ARIOL VIEUX SAC À PUCES !",
-      author: "Auteur",
-    },
-    {
-      image: "path/to/image2.jpg",
-      title: "ARIOL LA CHOUETTE CLASSE VERTE",
-      author: "Auteur",
-    },
-    {
-      image: "path/to/image3.jpg",
-      title: "ARIOL NAPHTALINE NOUS DIT TOUTOU",
-      author: "Auteur",
-    },
-    { image: "path/to/image4.jpg", title: "Autre livre", author: "Auteur" },
-  ];
+  const sameAuthorBooks = bookListArray.filter((book) => book.author === selectedBook.author && book.id !== selectedBook.id);
 
   const suggestions = [
     {
-      image: "path/to/image5.jpg",
+      cover: sugCover1,
       title: "Mortel un jour, mortel toujours !",
       author: "Mr Tan",
     },
     {
-      image: "path/to/image6.jpg",
+      cover: sugCover2,
       title: "Pico Love",
       author: "Dominique Roques",
     },
     {
-      image: "path/to/image7.jpg",
+      cover: "path/to/image7.jpg",
       title: "Cendre & Hazel",
       author: "Thom Pico, Karensac",
     },
     {
-      image: "path/to/image8.jpg",
+      cover: sugCover3,
       title: "Les sorcières chèvres",
       author: "Thom Pico, Karensac",
     },
@@ -145,16 +132,25 @@ function LivreInfos() {
               <p className="book-author">
                 <strong>{selectedBook.author}</strong>
               </p>
-              <p className="book-publisher">{selectedBook.editor} - {selectedBook.publicationDate}</p>
+              <p className="book-publisher">
+                {selectedBook.editor} - {selectedBook.publicationDate}
+              </p>
               <p className="book-description">{selectedBook.description}</p>
               <button className="reserve-button">Réserver</button>
               <div className="availability">
-              <img
-                src={disponibility(selectedBook.availableCopiesNumber).img}
-                alt={disponibility(selectedBook.availableCopiesNumber).alt}
-                className="checkmark-icon"
-              />
-              <span className="availability-text" style={disponibility(selectedBook.availableCopiesNumber).style}>{disponibility(selectedBook.availableCopiesNumber).text}</span>
+                <img
+                  src={disponibility(selectedBook.availableCopiesNumber).img}
+                  alt={disponibility(selectedBook.availableCopiesNumber).alt}
+                  className="checkmark-icon"
+                />
+                <span
+                  className="availability-text"
+                  style={
+                    disponibility(selectedBook.availableCopiesNumber).style
+                  }
+                >
+                  {disponibility(selectedBook.availableCopiesNumber).text}
+                </span>
               </div>
             </section>
           </article>
@@ -169,7 +165,8 @@ function LivreInfos() {
                 <strong>Langue:</strong> {selectedBook.language}
               </li>
               <li className="description-item">
-                <strong>Date de publication:</strong> {selectedBook.publicationDate}
+                <strong>Date de publication:</strong>{" "}
+                {selectedBook.publicationDate}
               </li>
               <li className="description-item">
                 <strong>Série:</strong> {selectedBook.serie}
@@ -178,7 +175,8 @@ function LivreInfos() {
                 <strong>Sections:</strong> {selectedBook.section}
               </li>
               <li className="description-item">
-                <strong>Description physique:</strong> {selectedBook.physicalAspect}
+                <strong>Description physique:</strong>{" "}
+                {selectedBook.physicalAspect}
               </li>
               <li className="description-item">
                 <strong>Contributeurs:</strong> {selectedBook.contributors}

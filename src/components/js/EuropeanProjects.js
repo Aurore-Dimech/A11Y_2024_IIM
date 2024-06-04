@@ -1,5 +1,5 @@
 import React from "react";
-import greySquare from "../../assets/greySquare.svg";
+import blueMoon from "../../assets/blueMoon.svg";
 import project1 from "../../assets/project1.svg";
 import project2 from "../../assets/project2.svg";
 import "../css/EuropeanProjects.css";
@@ -49,7 +49,7 @@ const EuropeanProjects = () => {
     <section>
       <div className="section-title">
         <img
-          src={greySquare}
+          src={blueMoon}
           alt=""
         />
         <h2>PROJET EUROPEEN</h2>

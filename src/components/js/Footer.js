@@ -8,6 +8,8 @@ import pinterest from "../../assets/pinterest.svg";
 import x from "../../assets/x.svg";
 import tumblr from "../../assets/tumblr.svg";
 import facebook from "../../assets/facebook.svg";
+import logo from "../../assets/logo.svg";
+import logoNice from "../../assets/logoNice.svg";
 
 const Footer = () => {
   return (
@@ -107,33 +109,70 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
-        <div>
-          <form>
-            <h3>NEWSLETTER</h3>
+      <div className="footer-second-section">
+        <form>
+          <h3>NEWSLETTER</h3>
+          <div className="newsletter-container">
             <label for="newsletter">
               Votre adresse mail
-              <div>
+              <div className="input-newsletter">
                 <input
                   type="email"
                   id="newsletter"
                   name="email"
-                  placeholder="Remplir ici"
+                  placeholder="Renseigner votre adresse email..."
                   autoComplete="on"
                   aria-invalid="true"
                 />
                 <input
                   type="submit"
                   value="S'abonner"
+                  className="submit-newsletter"
                 ></input>
               </div>
-              <span>Veuillez respecter le format de l'email (exemple@domaine.com)</span>
+              <span>
+                Veuillez respecter le format de l'email (exemple@domaine.com)
+              </span>
             </label>
-          </form>
-          <div>
-            {/*logo de la bibli*/}
-            {/*logo de nice*/}
+            <div className="checkbox-newsletter">
+              <input
+                className="input-checkbox"
+                type="checkbox"
+                id="abonnement_newsletter"
+                name="abonnement_newsletter"
+              />
+              <label for="abonnement_newsletter">
+                J’accepte de recevoir cette newsletter et je comprends que je
+                peux me désabonner facilement à tout moment.
+              </label>
+            </div>
           </div>
+        </form>
+        <div className="logo">
+          <ol>
+            <li>
+              <a href="/">
+                <img
+                  src={logo}
+                  className="logo"
+                  alt="logo de la bibliothèque - Accueil"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.nice.fr/fr/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={logoNice}
+                  className="logo"
+                  alt="logo de la ville de Nice"
+                />
+              </a>
+            </li>
+          </ol>
         </div>
       </div>
     </footer>

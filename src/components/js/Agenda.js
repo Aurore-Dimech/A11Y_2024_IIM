@@ -1,5 +1,5 @@
 import React from "react";
-import greySquare from "../../assets/greySquare.svg";
+import yellowMoon from "../../assets/yellowMoon.svg";
 import agenda1 from "../../assets/agenda1.svg";
 import agenda2 from "../../assets/agenda2.svg";
 import agenda3 from "../../assets/agenda3.svg";
@@ -20,24 +20,24 @@ const activities = {
     ref: "/activities/initiation-dessin-encre-chine",
   },
   activity2: {
-    title: "L'HEURE DES BELLES HISTOIRES",
-    dates: "24/05/2024 de 14h30 à 16h30",
-    place: "Bibliothèque St Roch",
-    type: "Lecture Jeunesse",
-    image: agenda2,
-    alt: "",
-    id: "activity2",
-    ref: "/activities/heure-belles-histoires",
-  },
-  activity3: {
     title: "PROJECTION A L'ITALIENNE",
     dates: "25/05/2024 de 13h00 à 15h00",
     place: "Bibliothèque Albert Hart - Fontaine du Temple",
-    type: "Projection",
+    type: "Atelier Jeunesse",
     image: agenda3,
     alt: "",
     id: "activity3",
     ref: "/activities/projection-italienne",
+  },
+  activity3: {
+    title: "C'EST QUOI LA PHILO ?",
+    dates: "05/06/2024 de 15h00 à 16h00",
+    place: "Bibliothèque Alain Lefeuvre - Les Moulins",
+    type: "Atelier",
+    image: agenda2,
+    alt: "",
+    id: "activity2",
+    ref: "/activities/cest-quoi-la-philo",
   },
 };
 
@@ -98,7 +98,7 @@ const FrontPage = () => {
       <section className="agenda-section">
         <div className="section-title">
           <img
-            src={greySquare}
+            src={yellowMoon}
             alt=""
           />
           <h2>AGENDA</h2>
