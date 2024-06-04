@@ -1,0 +1,19 @@
+
+.container_searchpage {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    gap: 90px; 
+    margin-top: 6rem;
+    
+}
+
+.container_livres {
+   width: 70%;
+}
+
+.all_books{
+    display: flex ;
+    flex-direction: column;
+    gap: 3rem;
+}

@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
+import "../css/SearchedBooksCard.css";
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -38,7 +39,6 @@ const Book = ({
   documentType,
 }) => {
   return (
-    <Fragment>
       <div className="one_book">
         {" "}
         {/* container avec infos pour un livre */}
@@ -50,38 +50,40 @@ const Book = ({
             src={cover}
             alt="couverture du livre"
           />
-          <div className="btn">
-            {" "}
-            {/* le lien e savoir plus */}
-            <a
-              href={"/livre/" + id}
-              aria-label="En savoir plus"
-            >
-              {" "}
-              En savoir plus
-            </a>
-          </div>
         </div>
         <div className="info">
           {" "}
           {/* informations sur le livre */}
-          <div>
+          <div className="text_informations">
             {" "}
             {/* premiere partie  */}
-            <h2>{title}</h2>
-            <p>
+            <div>
+            <h2 className="title_book">{title}</h2>
+            <p className="autor">
               {author} - {publicationDate}
             </p>
             <p className="description">{description}</p>
+            </div>
+            <div className="btn">
+              {" "}
+              {/* le lien e savoir plus */}
+              <a
+                href={"/livre/" + id}
+                aria-label="En savoir plus"
+              >
+                {" "}
+                En savoir plus
+              </a>
+            </div>
           </div>
           <div>
-            <div
+            {/* <div
               role="button"
               tabIndex="0"
               className="accessible-button"
             >
               {documentType}
-            </div>
+            </div> */}
             <div className="availability">
               <img
                 src={disponibility(availableCopiesNumber).img}
@@ -93,7 +95,6 @@ const Book = ({
           </div>
         </div>
       </div>
-    </Fragment>
   );
 };
 
