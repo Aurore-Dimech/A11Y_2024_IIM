@@ -74,19 +74,21 @@
 }
 
 .info-slider {
-    padding-inline : 5%;
+    padding-inline : 2em;
     position: absolute;
-    bottom: 60px;
+    top: 14em;
     color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
 
 .info-slider h3 {
-    font-size: 20px;
-    margin-bottom: 0.2em;
+    text-align: center;
 }
 
 .section-frontpage .button {
     position: absolute;
     bottom: -22px;
-    border-radius: 20px;
+    border-radius: 10px;
 }

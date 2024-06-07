@@ -14,7 +14,7 @@ footer h3{
 
 footer a {
     color: white;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 footer a:hover {
@@ -133,11 +133,31 @@ form {
     background-color: transparent;
 }
 .checkbox-newsletter input[type="checkbox"]:checked:before{
-    background-color: #FBE11A;
+    background-image: url(../../assets/check.svg);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    display: flex;
+    align-items: end;
 }
 
 .logo ol {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+
+.logo ol .bibli-logo-prog {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.logo ol .bibli-logo-prog li {
+    width: 100%;
+    text-align: left;
 }

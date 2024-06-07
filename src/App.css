@@ -19,7 +19,7 @@ p {
 }
 
 section{
-  margin-inline: 15%;
+  margin-inline: 13%;
   margin-top: 10%;
 }
 
@@ -39,7 +39,7 @@ section{
   text-align: center;
   padding: 10px 15px;
   border-radius: 10px;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
 }
 
