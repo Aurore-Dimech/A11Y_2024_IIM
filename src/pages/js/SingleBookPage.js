@@ -1,14 +1,16 @@
 import React from "react";
-
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
 import Carousel from "../../components/CarouselLivres";
-
 import bookList from "../../data/bookList";
-
+import "../css/SingleBookPage.css";
 import sugCover1 from "../../assets/sugCover1.svg";
 import sugCover2 from "../../assets/sugCover2.svg";
 import sugCover3 from "../../assets/sugCover3.svg";
+import josh from "../../images/Josh_brand.png";
+import willie from "../../images/willie.png";
+import lila from "../../images/Lila.png";
+
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -84,6 +86,7 @@ function LivreInfos() {
     },
   ];
 
+
   const sameAuthorBooks = bookListArray.filter((book) => book.author === selectedBook.author && book.id !== selectedBook.id);
 
   const suggestions = [
@@ -97,11 +100,7 @@ function LivreInfos() {
       title: "Pico Love",
       author: "Dominique Roques",
     },
-    {
-      cover: "path/to/image7.jpg",
-      title: "Cendre & Hazel",
-      author: "Thom Pico, Karensac",
-    },
+   
     {
       cover: sugCover3,
       title: "Les sorcières chèvres",
@@ -109,34 +108,59 @@ function LivreInfos() {
     },
   ];
 
+  const comments = [
+    {
+      photo : josh,
+      name : "Josh Brand",
+      publicationDate : "05 Juin 2024",
+      alt : "photo de profil de Josh Brand",
+      content : "J'ai adoré le dernier Ariol ! Les dessins sont superbes et l'histoire est très drôle. Les personnages sont toujours aussi attachants. C'est un vrai plaisir à lire.",
+    },
+    {
+      photo : willie,
+      name : "Willie Lundi",
+      publicationDate : "31 mai 2024",
+      alt : "photo de profil de Willie Lundi",
+      content : "Le nouveau tome d'Ariol est sympa, mais je trouve que certaines histoires se répètent un peu. Cela reste une bonne lecture pour les enfants.",
+    },
+    {
+      photo : lila,
+      name : "Lila Bernard",
+      publicationDate : "10 Janvier 2024",
+      alt : "photo de profil de Lila Bernard",
+      content : "Le dernier tome d'Ariol est fantastique ! Les nouvelles aventures sont vraiment amusantes et les personnages sont toujours aussi adorables.",
+    },
+  ];
+
   return (
     <>
-      <main className="container">
-        <div>
-          <article className="book-info">
-            <div className="rating">
-              <img
-                src={selectedBook.cover}
-                alt={`Couverture du livre ${selectedBook.title}`}
-                className="book-cover"
-              />
+      <main role="main" className="container">
+        <div className="SingleBookPage">
+          <div className="Book_img"> {/* Image du livre */}
+            <img
+              src={selectedBook.cover}
+              alt={`Couverture du livre ${selectedBook.title}`}
+              className="book-cover"
+            />
+          </div> 
+          <div className="Book_informations"> {/* Tous les informations textuelles su livres jusqu'à la description */}
+            <div className="book-details">
+              <h1 className="book-title">{selectedBook.title.toUpperCase()}</h1>
+              <div>
+                <p className="book-author">
+                  <strong>{selectedBook.author}</strong>
+                </p>
+                <p className="book-publisher">
+                  {selectedBook.editor} - {selectedBook.publicationDate}
+                </p>
+              </div>
+              <p className="book-description">{selectedBook.description}</p>
               <span
                 aria-label="5 étoiles"
                 className="rating-stars"
               >
                 ★★★★★
               </span>
-            </div>
-            <section className="book-details">
-              <h1 className="book-title">{selectedBook.title.toUpperCase()}</h1>
-              <p className="book-author">
-                <strong>{selectedBook.author}</strong>
-              </p>
-              <p className="book-publisher">
-                {selectedBook.editor} - {selectedBook.publicationDate}
-              </p>
-              <p className="book-description">{selectedBook.description}</p>
-              <button className="reserve-button">Réserver</button>
               <div className="availability">
                 <img
                   src={disponibility(selectedBook.availableCopiesNumber).img}
@@ -152,53 +176,68 @@ function LivreInfos() {
                   {disponibility(selectedBook.availableCopiesNumber).text}
                 </span>
               </div>
-            </section>
-          </article>
-
-          <section className="description-section">
-            <h2 className="description-title">DESCRIPTION</h2>
-            <ul className="description-list">
-              <li className="description-item">
-                <strong>Type de document:</strong> {selectedBook.documentType}
-              </li>
-              <li className="description-item">
-                <strong>Langue:</strong> {selectedBook.language}
-              </li>
-              <li className="description-item">
-                <strong>Date de publication:</strong>{" "}
-                {selectedBook.publicationDate}
-              </li>
-              <li className="description-item">
-                <strong>Série:</strong> {selectedBook.serie}
-              </li>
-              <li className="description-item">
-                <strong>Sections:</strong> {selectedBook.section}
-              </li>
-              <li className="description-item">
-                <strong>Description physique:</strong>{" "}
-                {selectedBook.physicalAspect}
-              </li>
-              <li className="description-item">
-                <strong>Contributeurs:</strong> {selectedBook.contributors}
-              </li>
-              <li className="description-item">
-                <strong>ISBN:</strong> {selectedBook.isbn}
-              </li>
-              <li className="description-item">
-                <strong>EAN:</strong> {selectedBook.ean}
-              </li>
-              <li className="description-item">
-                <strong>Popularité:</strong> {selectedBook.popularity}
-              </li>
-            </ul>
-          </section>
+              <div>
+                <button className="reserve-button">Réserver ce livre</button>
+              </div>
+            </div>
+            <div className="description-section"> {/* Section de description du livre */}
+              <h2 className="description-title">DESCRIPTION</h2>
+              <dl>
+                <div className="description-row">
+                    <dt className="label">Type de document:</dt>
+                    <dd className="value">{selectedBook.documentType}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Langue:</dt>
+                    <dd className="value">{selectedBook.language}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Date de publication:</dt>
+                    <dd className="value">{selectedBook.publicationDate}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Série:</dt>
+                    <dd className="value">{selectedBook.serie}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Sections:</dt>
+                    <dd className="value">{selectedBook.section}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Description physique:</dt>
+                    <dd className="value">{selectedBook.physicalAspect}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Contributeurs:</dt>
+                    <dd className="value">{selectedBook.contributors}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">ISBN:</dt>
+                    <dd className="value">{selectedBook.isbn}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">EAN:</dt>
+                    <dd className="value">{selectedBook.ean}</dd>
+                </div>
+                <div className="description-row">
+                    <dt className="label">Popularité:</dt>
+                    <dd className="value">{selectedBook.popularity}</dd>
+                </div>
+             </dl>
+            </div>
+          </div>
         </div>
+        {/* Proposition de livres */}
         <section className="availability-section">
-          <h2 className="availability-title">DISPONIBILITÉ</h2>
-          <h3 className="book-title">{selectedBook.title.toUpperCase()}</h3>
+          <div className="disponible_style"> {/* container avec le titre "disponibilité et le traits" */}
+            <div className="trait"></div>
+            <h3 className="availability-title">DISPONIBILITÉS</h3>
+            <div className="trait"></div>
+          </div> {/* /////////////// */}
+          <h4 className="book-title">{selectedBook.title.toUpperCase()}</h4>
           <table className="availability-table">
-            <thead>
-              <tr>
+            <thead className="tableTitles">
+              <tr className="tr" >
                 <th>Bibliothèque</th>
                 <th>Section</th>
                 <th>Cote</th>
@@ -217,9 +256,7 @@ function LivreInfos() {
                   <td>{item.section}</td>
                   <td>{item.cote}</td>
                   <td>{item.type}</td>
-                  <td
-                    className={`availability-status ${item.availability.toLowerCase()}`}
-                  >
+                  <td className={`availability-status ${item.availability.toLowerCase()}`}>
                     {item.availability}
                   </td>
                   <td>{item.returnDate}</td>
@@ -228,7 +265,29 @@ function LivreInfos() {
             </tbody>
           </table>
         </section>
-        <div className="App">
+        <div className="App" id="singlePageComments">
+          <div className="CommentContainer">
+            <div className="disponible_style"> {/* container avec le titre "disponibilité et le traits" */}
+              <div className="trait"></div>
+              <h3 className="availability-title">AVIS DES LECTEURS</h3>
+              <div className="trait"></div>
+            </div>
+            <div className="containerAllComments"> {/* section sur les avis */}
+              { comments.map((comment, index)=> (
+                 <div className="CommentCard"> {/* chaque card avis */}
+                    <div className="commentHeader">
+                      <img src={comment.photo} alt={comment.alt} className="commentPhoto" />
+                      <div className="commentNameDate">
+                        <h3 className="commentName">{comment.name}</h3>
+                        <p className="commentDate">{comment.publicationDate}</p>
+                      </div>
+                    </div>
+                    <p className="commentContent">{comment.content}</p>
+                 </div>
+                ))
+              }
+            </div> 
+          </div>
           <Carousel
             title="DU MÊME AUTEUR"
             books={sameAuthorBooks}

@@ -1,0 +1,199 @@
+.container {  /* main */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+
+.SingleBookPage {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 8rem;
+    gap: 2rem;
+}
+.book-details {  /* container avec toutes les informations du livres */
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+}
+
+.book-title {
+    margin: 0;
+    text-align: start;
+}
+
+.book-cover {
+    width: 16rem;
+    height: auto;
+}
+
+.rating-stars {
+    font-size: 2.5rem;
+    height: auto;
+}
+
+.reserve-button {
+    background-color: rgba(66, 55, 203, 1);
+    border-radius: 0.4rem; 
+    padding: 0.5rem; 
+    border-style: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.Book_informations{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* Container DESCRIPTION du livre*/
+.description-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+}
+.description-title{
+    font-size: 1.8rem;
+    
+}
+
+.description-row {
+    display: flex;
+    margin-bottom: 0.6em;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 150px; /* Ensuring alignment */
+}
+
+.value {
+    color: #333;
+}
+
+dt, dd {
+    margin: 0;
+}
+
+dl {
+    margin: 0;
+}
+
+/* ////////////////////////////////////// */
+/* Disponibitlité container avec le tableau */
+.availability-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.availability-title{
+    padding: 0 1rem;
+}
+.disponible_style{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.trait{
+ flex-grow: 1;
+ background-color: rgba(47, 44, 126, 1);
+ height: 0.5rem;
+ border-radius: 0.4rem;
+}
+
+th {
+    text-align: start;
+    padding: 0.5rem;
+    background-color: rgba(47, 44, 126, 1);
+    color : white;
+}
+
+.tr th:first-child {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+
+}
+.tr th:last-child {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+
+}
+
+td {
+    padding: 0.4rem;
+    
+ 
+}
+
+/* ////////////////////////////////////// */
+/* Section pour les avis  */
+
+.CommentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#singlePageComments {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.containerAllComments{
+    display: flex;
+   
+    gap: 2rem;
+    width:  100%;
+    justify-items: center;
+    align-content: center;
+    background-color: rgba(47, 44, 126, 1);
+    padding: 3rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.CommentCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background-color: #fff;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+
+}
+
+.commentHeader{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.commentNameDate p {
+    color:  grey;
+}
+
+
+/* Carousel container */
+

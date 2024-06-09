@@ -1,0 +1,177 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style correspondant à la pagination et aux résultat en haut de la page recherche */
+.container_numberOnTheTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Code pour la pagination de la liste des livres allant de 1 à 100 */
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+}
+
+.pagination li {
+    margin: 0 4px;
+}
+
+.pagination a,
+.pagination span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(66, 55, 203, 1);
+    border-radius: 8px;
+    
+}
+
+.pagination .page {
+    background-color: rgba(66, 55, 203, 1);
+    color: white;
+    transition: background-color 0.3s;
+    /* padding: 1.1rem; */
+}
+
+.pagination .page:hover,
+.pagination .page:focus {
+    background-color: rgba(66, 55, 203, 1);
+    outline: 2px solid #000; 
+}
+
+.pagination .active {
+    background-color: rgba(66, 55, 203, 1);
+}
+
+.pagination .arrow {
+    background-color: transparent;
+    color: black;
+    border-radius: 50%;
+    width: 2px;
+    height: 32px;
+    font-size: 1.5em;
+    
+}
+.pagination .arrow.left{
+    margin-right: 2rem;
+}
+.pagination .arrow.right{
+    margin-left: 2rem;
+}
+
+.pagination .arrow:hover,
+.pagination .arrow:focus {
+    background-color: #f0f0f0;
+    outline: 2px solid #000; 
+}
+
+.pagination .dots {
+    background-color: transparent;
+    color: black;
+}
+
+/* ////////////////////////////////// */
+/* Style correspondant au nombre de résultat en haut de la page recherche */
+.numberOnTheTop {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tenPerPage {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+
+}
+.ten {
+    text-decoration: underline;
+
+}
+
+.SecondLineFilter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.tenPerPage img {
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+.Tri_Affichage{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+}
+.filtreTri{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.filtreTri img {
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+
+/* ////////////////////////////////// */
+/* Container des livres */
+.container_searchpage {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    gap: 90px; 
+    margin-top: 6rem;
+    
+}
+
+.container_livres {
+   width: 70%;
+   padding-right: 3em;
+}
+
+.all_books{
+    display: flex ;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+h1 {
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.ma_recherche {
+    text-align: center;
+    margin-bottom: 01em;
+    font-size: 1.4em;
+
+}
+
+.btn_change {
+    padding: 0.6rem;
+    border-radius: 0.6em;
+    border-style: none;
+    background-color: rgba(66, 55, 203, 1);
+    color: white;
+    font-size: 1rem
+}

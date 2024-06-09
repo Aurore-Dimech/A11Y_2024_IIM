@@ -1,0 +1,65 @@
+/* CSS liée au filterItem */
+
+.individual_filter_label{
+    display: flex;
+    justify-content: space-between;
+}
+.individual_filter {
+    display: flex;
+    gap: 0.4em;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    /* height: 20px; */
+    width: 21px;
+    height: 21px;
+    border: 3px solid rgba(47, 44, 126, 1);
+    border-radius: 0.3em;
+   
+}
+
+input[type="checkbox"]:checked {
+    border-color: rgba(47, 44, 126, 1); /* Couleur de la bordure lorsque cochée */
+    background-color: rgba(251, 225, 26, 1); /* Couleur de fond lorsque cochée */
+}
+
+
+
+
+/* ////////////////////////////////// */
+
+/* Limite entre le FIlterCategory et le Filter */
+fieldset {
+    border-style: none;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+legend {
+  font-size: 1.3em;
+  
+}
+.individual_group_filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* ////////////////////////////////// */
+
+
+/* CSS liée au filterGroup */
+
+.all_filter {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
