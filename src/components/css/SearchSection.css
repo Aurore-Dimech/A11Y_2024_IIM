@@ -1,0 +1,19 @@
+.section-search{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section-search h2 {
+    text-transform: uppercase;
+    margin-bottom: 6%;
+    /* font-size: 32px; */
+    font-size: 2rem;
+  }
+  
+  .section-search .advanced-search {
+    width: 60%;
+    text-align: right;
+    color: black;
+    margin-top: 1em;
+    padding-right: 1.4em;
+  }

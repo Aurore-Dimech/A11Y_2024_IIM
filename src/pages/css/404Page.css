@@ -1,0 +1,26 @@
+.unfound-page {
+    display: grid;
+}
+
+.unfound-page .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 5em;
+}
+
+.unfound-page .section-title {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.unfound-page .section-title h2 {
+    /* font-size: 148px; */
+    font-size: 9.25rem;
+}
+
+.unfound-page .button {
+    display: flex;
+    justify-self: center;
+}

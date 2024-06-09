@@ -84,10 +84,10 @@ const FrontPage = () => {
             href={activities[activity].ref}
             className="button"
             aria-label={
-              "Se renseigner sur l'atelier :" + activities[activity].title
+              "Consulter l'évènement :" + activities[activity].title
             }
           >
-            Se renseigner sur l'atelier
+            Consulter l'évènement
           </a>
         </ol>
       </li>

@@ -3,7 +3,7 @@ import FrontPage from "../../components/js/Frontpage";
 import Agenda from "../../components/js/Agenda";
 import CollectionAlpes from "../../components/js/CollectionAlpes";
 import EuropeanProjects from "../../components/js/EuropeanProjects";
-import SearchBar from "../../components/js/SearchBar";
+import SearchSection from "../../components/js/SearchSection";
 import "../css/MainPage.css";
 
 const MainPage = () => {
@@ -16,10 +16,7 @@ const MainPage = () => {
     <main role="main">
       <FrontPage />
       <Agenda />
-      <section className="section-search">
-        <SearchBar />
-      </section>
-      {/*barre de recherche*/}
+      <SearchSection />
       <CollectionAlpes />
       <EuropeanProjects />
     </main>

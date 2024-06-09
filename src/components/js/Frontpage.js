@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
 import blueMoon from "../../assets/blueMoon.svg";
-import jeudisLitte from "../../assets/jeudisLitte.svg";
-import festivalLivreNice from "../../assets/festivalLivreNice.svg";
-import oceanDay from "../../assets/oceanDay.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../css/Frontpage.css";
+import articles from "../../data/articlesFrontPage.js";
 
 const responsive = {
   desktop: {
@@ -24,27 +22,6 @@ const responsive = {
     slidesToSlide: 1,
   },
 };
-
-const articles = [
-  {
-    title: "Les Jeudis Littéraires",
-    button: "Consulter l'article",
-    ariaLabel: ": Les jeudis littéraires",
-    image: jeudisLitte,
-  },
-  {
-    title: "Festival de Livre de Nice",
-    button: "Consulter l'article",
-    ariaLabel: ": Festival de Livre de Nice",
-    image: festivalLivreNice,
-  },
-  {
-    title: "Journée de l'Océan",
-    button: "Consulter l'article",
-    ariaLabel: ": Journée de l'Océan",
-    image: oceanDay,
-  }
-];
 
 const FrontPage = () => {
   return (

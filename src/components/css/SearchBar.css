@@ -10,25 +10,30 @@
     border: none;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
     justify-content: space-between;
 }
 
 .search-catalogue {
     border-radius: 25px 0 0 25px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .search-button {
     border-radius: 0 25px 25px 0;
     width: 80%;
-    gap:5%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .search-input {
     width: 180%;
     padding-inline: 2%;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
 }
 
 .search-catalogue select {

@@ -8,7 +8,7 @@ import pinterest from "../../assets/pinterest.svg";
 import x from "../../assets/x.svg";
 import tumblr from "../../assets/tumblr.svg";
 import facebook from "../../assets/facebook.svg";
-import logo from "../../assets/logo.svg";
+import logoFooter from "../../assets/logoFooter.svg";
 import logoNice from "../../assets/logoNice.svg";
 
 const Footer = () => {
@@ -151,13 +151,20 @@ const Footer = () => {
         <div className="logo">
           <ol>
             <li>
-              <a href="/">
-                <img
-                  src={logo}
-                  className="logo"
-                  alt="logo de la bibliothèque - Accueil"
-                />
-              </a>
+              <ol className="bibli-logo-prog">
+                <li>
+                  <a href="/">
+                    <img
+                      src={logoFooter}
+                      className="logo"
+                      alt="logo de la bibliothèque - Accueil"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="/programme">Voir le programme</a>
+                </li>
+              </ol>
             </li>
             <li>
               <a
