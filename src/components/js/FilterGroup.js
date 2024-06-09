@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import filter from "./filter";
 import chevronRight from "../../images/Chevron-right.png";
 import "../css/FilterGroup.css";
 
