@@ -59,7 +59,8 @@
 }
 
 .react-multiple-carousel__arrow::before {
-    font-size: 38px;
+    /* font-size: 38px; */
+    font-size: 2.375rem;
     top: -30px;
 }
 

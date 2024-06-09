@@ -16,7 +16,8 @@
 }
 
 .unfound-page .section-title h2 {
-    font-size: 148px;
+    /* font-size: 148px; */
+    font-size: 9.25rem;
 }
 
 .unfound-page .button {

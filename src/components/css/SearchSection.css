@@ -6,7 +6,8 @@
   .section-search h2 {
     text-transform: uppercase;
     margin-bottom: 6%;
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 2rem;
   }
   
   .section-search .advanced-search {

@@ -10,7 +10,8 @@
     border: none;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
     justify-content: space-between;
 }
 
@@ -31,7 +32,8 @@
 .search-input {
     width: 180%;
     padding-inline: 2%;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
 }
 
 .search-catalogue select {
