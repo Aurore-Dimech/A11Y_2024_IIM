@@ -1,0 +1,76 @@
+.App {
+    width: 100%;
+    height: auto;
+}
+
+.slick-slider.slick-initialized{ /* class css du slider à retrouver dans l'inspecteur */
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+}
+.container-carousel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.slick-track{
+    display: flex;
+    gap: 2rem;
+
+}
+
+
+.slick-slide {
+    display: flex;
+    
+}
+.slick-slide img  {
+    width: 50%;
+    height: auto;
+}
+
+.carousel-slides {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.carouselBookInformation{
+    width: 10rem;
+    text-align: left;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.carousel-author {
+    font-size: 0.8rem;
+}
+
+.slick-arrow::before {
+    color: black;
+    font-size: 2rem;
+}
+
+.book_title_style {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_carousel {
+    padding:  0 1rem;
+}

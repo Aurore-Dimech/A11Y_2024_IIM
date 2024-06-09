@@ -1,7 +1,0 @@
-
-function   Filtres ( {  filtres ,  setFiltres  } )   { 
-   
-
-  
-     
- }

@@ -1,409 +1,103 @@
 
 import React from "react";
 import "../../App.css";
+import "../css/Filter.css";
 import SearchedBooksCard from "../../components/js/SearchedBooksCard";
 import bookList from "../../data/bookList";
-import "../css/Filter.css";
 import chevronRight from "../../images/Chevron-right.png";
 
 
-function filter() {
-  return (
-    <div className="container_filter">
-          <p>Affiner votre recherche</p>
-          <div className="all_filter">
-            {" "}
-            {/* tout le container après le titre */}
-            <fieldset className="ACCES RAPIDE">
-              {" "}
-              {/* première catégorie de filtre */}
-              <div>
-                {" "}
-                {/* container aves le titre de la catégorie et la flèche vers bas */}
-                <legend>ACCES RAPIDE</legend>
-                <img
-                  className="chevron"
-                  src={chevronRight}
-                  alt="flèche vers bas"
-                />
-              </div>
-              <div className="individual_group_filter">
-                {" "}
-                {/* container contenant les inputs des filtres */}
-                <div className="individual_filter_label">
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div className="individual_filter">
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Documents numérique"
-                    />
-                    <label for="Documents numérique">Documents numérique</label>
-                  </div>
-                  <p>241</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Disponibles"
-                    />
-                    <label for="Disponibles">Disponibles</label>
-                  </div>
-                  <p>117</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Nouveautés "
-                    />
-                    <label for="Nouveautés ">Nouveautés </label>
-                  </div>
-                  <p>7</p>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset className="ACCES RAPIDE">
-              {" "}
-              {/* première catégorie de filtre */}
-              <div>
-                {" "}
-                {/* container aves le titre de la catégorie et la flèche vers bas */}
-                <legend>LOCALISATION</legend>
-                <img
-                  className="chevron"
-                  src={chevronRight}
-                  alt="flèche vers bas"
-                />
-              </div>
-              <div className="individual_group_filter">
-                {" "}
-                {/* container contenant les inputs des filtres */}
-                <div className="individual_filter_label">
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div className="individual_filter">
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Bibliothèque-Louis Nucéra"
-                      name="Bibliothèque-Louis-Nucéra"
-                    />
-                    <label for="Bibliothèque-Louis-Nucéra">
-                      Bibliothèque Louis Nucéra{" "}
-                    </label>
-                  </div>
-                  <p>241</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Nouveautés "
-                    />
-                    <label for="Nouveautés ">Conservatoire de Nice </label>
-                  </div>
-                  <p>117</p>
-                </div>
-              </div>
-              <div>
-                {" "}
-                {/* container de l'input et son nom + le nombre à côté*/}
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom uniquement */}
-                  <input
-                    className="input_checkbox"
-                    type="checkbox"
-                    id="Bibliothèque-de-Saint-Roch"
-                    name="Bibliothèque-de-Saint-Roch"
-                  />
-                  <label for="Bibliothèque-de-Saint-Roch ">
-                    Bibliothèque de Saint-Roch{" "}
-                  </label>
-                </div>
-                <p>36</p>
-              </div>
-              <div>
-                {" "}
-                {/* container de l'input et son nom + le nombre à côté*/}
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom uniquement */}
-                  <input
-                    className="input_checkbox"
-                    type="checkbox"
-                    id="Bib’Mobile"
-                    name="Bib’Mobile"
-                  />
-                  <label for="Bib’Mobile">Bib’Mobile </label>
-                </div>
-                <p>36</p>
-              </div>
-            </fieldset>
-            <fieldset className="support">
-              {" "}
-              {/* première catégorie de filtre */}
-              <div>
-                {" "}
-                {/* container aves le titre de la catégorie et la flèche vers bas */}
-                <legend>SUPPORT</legend>
-                <img
-                  className="chevron"
-                  src={chevronRight}
-                  alt="flèche vers bas"
-                />
-              </div>
-              <div className="individual_group_filter">
-                {" "}
-                {/* container contenant les inputs des filtres */}
-                <div className="individual_filter_label">
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div className="individual_filter">
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Disque-Compact"
-                      name="Disque-Compact"
-                    />
-                    <label for="Disque-Compact">Disque Compact</label>
-                  </div>
-                  <p>241</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Disque-33t"
-                      name="Disque-33t"
-                    />
-                    <label for="Disque-33t">Disque 33t</label>
-                  </div>
-                  <p>117</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Bande-Dessinées"
-                      name="Bande-Dessinées "
-                    />
-                    <label for="Bande-Dessinées ">Bande Dessinées </label>
-                  </div>
-                  <p>36</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Disque-45t"
-                      name="Disque-45t "
-                    />
-                    <label for="Disque-45t ">Disque 45t </label>
-                  </div>
-                  <p>36</p>
-                </div>
-                <p className="more">Voir plus</p>
-              </div>
-            </fieldset>
-            <fieldset className="type-de-document">
-              {" "}
-              {/* première catégorie de filtre */}
-              <div>
-                {" "}
-                {/* container aves le titre de la catégorie et la flèche vers bas */}
-                <legend>TYPE DE DOCUMENT </legend>
-                <img
-                  className="chevron"
-                  src={chevronRight}
-                  alt="flèche vers bas"
-                />
-              </div>
-              <div className="individual_group_filter">
-                {" "}
-                {/* container contenant les inputs des filtres */}
-                <div className="individual_filter_label">
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div className="individual_filter">
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Document-Sonore"
-                      name="Document-Sonore"
-                    />
-                    <label for="Document-Sonore">Document Sonore</label>
-                  </div>
-                  <p>241</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Disponibles"
-                    />
-                    <label for="Disponibles">Disponibles</label>
-                  </div>
-                  <p>117</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Conservatoire-de-Nice"
-                      name="Conservatoire-de-Nice"
-                    />
-                    <label for="Conservatoire-de-Nice">
-                      Conservatoire de Nice{" "}
-                    </label>
-                  </div>
-                  <p>36</p>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset className="ACCES RAPIDE">
-              {" "}
-              {/* première catégorie de filtre */}
-              <div>
-                {" "}
-                {/* container aves le titre de la catégorie et la flèche vers bas */}
-                <legend>ACCES RAPIDE</legend>
-                <img
-                  className="chevron"
-                  src={chevronRight}
-                  alt="flèche vers bas"
-                />
-              </div>
-              <div className="individual_group_filter">
-                {" "}
-                {/* container contenant les inputs des filtres */}
-                <div className="individual_filter_label">
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div className="individual_filter">
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Documents numérique"
-                      name="Documents numérique"
-                    />
-                    <label for="Documents numérique">Documents numérique</label>
-                  </div>
-                  <p>241</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Livre"
-                      name="Livre"
-                    />
-                    <label for="Livre">Livre</label>
-                  </div>
-                  <p>117</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Livre-Numérique"
-                      name="Livre-Numérique "
-                    />
-                    <label for="Livre-Numérique ">Livre Numérique </label>
-                  </div>
-                  <p>36</p>
-                </div>
-                <div>
-                  {" "}
-                  {/* container de l'input et son nom + le nombre à côté*/}
-                  <div>
-                    {" "}
-                    {/* container de l'input et son nom uniquement */}
-                    <input
-                      className="input_checkbox"
-                      type="checkbox"
-                      id="Vidéo"
-                      name="Vidéo "
-                    />
-                    <label for="Vidéo ">Vidéo</label>
-                  </div>
-                  <p>36</p>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+import {FilterGroup} from "../js/FilterGroup";
+
+const filter = ()=>  {
+
+    const categories = [
+        {
+            title: "ACCES RAPIDE",
+            items : [
+                {id: 'Documents numériques',name: 'Documents numériques',label: 'Documents numériques',count : 241} ,
+                {id: 'Disponibles',name: 'Disponibles',label: 'Disponibles',count : 117},
+                {id: 'Nouveautés',name: 'Nouveautés',label: 'Nouveautés',count : 7},
+            ]
+        }, 
+        {
+            title: 'LOCALISATION',
+            items: [
+              { id: 'Bibliothèque-Louis Nucéra', name: 'Bibliothèque-Louis-Nucéra', label: 'Bibliothèque Louis Nucéra', count: 241 },
+              { id: 'Conservatoire de Nice', name: 'Conservatoire-de-Nice', label: 'Conservatoire de Nice', count: 117 },
+              { id: 'Bibliothèque-de-Saint-Roch', name: 'Bibliothèque-de-Saint-Roch', label: 'Bibliothèque de Saint-Roch', count: 36 },
+              { id: 'Bib’Mobile', name: 'Bib’Mobile', label: 'Bib’Mobile', count: 36 }
+            ]
+        },
+        {
+          title: 'SUPPORT',
+          items: [
+            { id: 'Disque-Compact', name: 'Disque-Compact', label: 'Disque Compact', count: 241 },
+            { id: 'Disque-33t', name: 'Disque-33t', label: 'Disque 33t', count: 117 },
+            { id: 'Bande-Dessinées', name: 'Bande-Dessinées', label: 'Bande Dessinées', count: 36 },
+            { id: 'Disque-45t', name: 'Disque-45t', label: 'Disque 45t', count: 36 }
+          ]
+        },
+        {
+          title: 'TYPE DE DOCUMENT',
+          items: [
+            { id: 'Document-Sonore', name: 'Document-Sonore', label: 'Document Sonore', count: 241 },
+            { id: 'Livre', name: 'Livre', label: 'Livre', count: 117 },
+            { id: 'Livre-numérique', name: 'Livre-numérique', label: 'Livre Numérique', count: 36 },
+            { id: 'Video', name: 'Video', label: 'Vidéo', count: 36 }
+          ]
+        },
+        {
+          title: 'SECTION',
+          items: [
+            { id: 'Musique', name: 'Musique', label: 'Musique', count: 241 },
+            { id: 'Multimédia', name: 'Multimédia', label: 'Multimédia', count: 117 },
+            { id: 'Jeunesse', name: 'Jeunesse', label: 'Jeunesse', count: 36 },
+            { id: 'Adulte', name: 'Adulte', label: 'Adulte', count: 36 }
+          ]
+        }, 
+        {
+          title: 'AUTEUR/ARTISTE...',
+          items: [
+            { id: 'Gilbert-Emmanuel', name: 'Gilbert-Emmanuel', label: 'Gilbert Emmanuel', count: 241 },
+            { id: 'Boutavant-Marc', name: 'Boutavant-Marc', label: 'Boutavant Marc', count: 117 },
+            { id: 'Indochine', name: 'Indochine', label: 'Indochine', count: 36 },
+            { id: 'Beethoven-Ludwig-Van', name: 'Beethoven-Ludwig-Van', label: 'Beethoven Ludwig Van', count: 36 }
+          ]
+        }, 
+        {
+            title: "LANGUE", 
+            items: [
+                {id: 'Français',name: 'Français',label: 'Français',count : 241} ,
+                {id: 'Anglais',name: 'Anglais',label: 'Anglais',count : 117},
+                {id: 'Allemand',name: 'Allemand',label: 'Allemand',count : 36},
+                {id: 'Italien',name: 'Italien',label: 'Italien',count : 36},
+            ]
+        },
+        {
+            title: "SUJET", 
+            items: [
+                {id: '19e-siècle',name: '19e-siècle',label: '19e siècle',count : 241} ,
+                {id: 'Musique-Populaire',name: 'Musique-Populaire',label: 'Musique Populaire',count : 117},
+                {id: '20e-siècle',name: '20e-siècle',label: '20e siècle',count : 36},
+                {id: '18e-siècle',name: '18e-siècle',label: '18e siècle',count : 36},
+            ]
+        },
+        {
+            title: "ACCESSIBILITE", 
+            items: [
+                {id: 'Sous-titrage Sourds-et-malentendants',name: 'Sous-titrage Sourds-et-malentendants',label: 'Sous-titrage Sourds et malentendants',} ,
+                
+            ]
+        }
+    ];
+
+    return (
+        <div className="container_filter">
+          <h3 className="research_filter">Affiner votre recherche :</h3>
+          <FilterGroup categories={categories} />
         </div>
-
-  )
-}
-
+      );
+};
 
 export default filter;
