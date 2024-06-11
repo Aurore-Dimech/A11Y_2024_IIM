@@ -113,7 +113,7 @@ const Footer = () => {
         <form>
           <h3>NEWSLETTER</h3>
           <div className="newsletter-container">
-            <label for="newsletter">
+            <label htmlFor="newsletter">
               Votre adresse mail
               <div className="input-newsletter">
                 <input
@@ -141,7 +141,7 @@ const Footer = () => {
                 id="abonnement_newsletter"
                 name="abonnement_newsletter"
               />
-              <label for="abonnement_newsletter">
+              <label htmlFor="abonnement_newsletter">
                 J’accepte de recevoir cette newsletter et je comprends que je
                 peux me désabonner facilement à tout moment.
               </label>

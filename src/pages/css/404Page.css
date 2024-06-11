@@ -2,25 +2,35 @@
     display: grid;
 }
 
+.unfound-page .return {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5%;
+    gap: 1vw;
+}
+
+.unfound-page .return img {
+    height: 1vw;
+}
+
+.unfound-page .return a {
+    color: black;
+}
+
 .unfound-page .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-block: 5em;
 }
 
-.unfound-page .section-title {
-    justify-content: center;
-    margin-bottom: 0;
-}
-
-.unfound-page .section-title h2 {
-    /* font-size: 148px; */
-    font-size: 9.25rem;
+.unfound-page img {
+    height: 55vw;
 }
 
 .unfound-page .button {
+    margin-top: 5%;
     display: flex;
     justify-self: center;
+    font-size: 1.5rem;
 }
