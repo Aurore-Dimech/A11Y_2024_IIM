@@ -2,6 +2,10 @@ import React from "react";
 import Logo from "../../assets/logo.svg";
 import "../css/Header.css";
 import SearchBar from "./SearchBar";
+import horloge from "../../images/horloge.png";
+import accessibilite from "../../images/accessibilite.png";
+import icon_aide from "../../images/aide_icone.png";
+import drapeau from "../../images/drapeau.png";
 
 function Navbar() {
   return (
@@ -15,7 +19,42 @@ function Navbar() {
               alt="logo de la bibliothèque - Accueil"
             />
           </a>
-          <SearchBar />
+          <div className="search_bar_infos">
+            <SearchBar />
+            <ul className="infos">
+              <li>
+                <a href="/infos">
+                  <img src = {horloge} alt=""/>
+                  Horaires
+                </a>
+              </li>
+              <li>
+                <a href="/infos">
+                  <img src = {accessibilite} alt=""/>
+                  Accessibilité
+                </a>
+              </li>
+              <li>
+                <a href="/infos">
+                  <img src = {icon_aide} alt=""/>
+                  Aides
+                </a>
+              </li>
+              <li>
+                <a href="/infos">
+                  <img src = {drapeau} alt=""/>
+                  Français
+                </a>
+              </li>
+              <li>
+                <a href="/infos">
+                  Recherches avancées
+                </a>
+              </li>
+              
+            </ul>
+
+          </div>
         </div>
       </header>
       <nav
