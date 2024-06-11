@@ -5,7 +5,7 @@ footer {
     padding: 5.5% 4% 4% 4%;
     gap:calc( 5% + 10px);
     color: white;
-    margin-top: 12%;
+    margin-top: 9%;
 }
 
 footer h3{
@@ -75,9 +75,10 @@ li {
     grid-template-rows: 1fr 1fr;
 }
 
-form {
+footer form {
     display: grid;
     grid-auto-rows: auto;
+    margin-bottom: 1rem;
 }
 
 .newsletter-container{

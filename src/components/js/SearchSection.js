@@ -4,7 +4,7 @@ import "../css/SearchSection.css";
 
 const SearchSection = () => {
   return (
-    <section className="section-search">
+    <div className="section-search">
       <h2>Un Monde de Savoir à Portée de Recherche !</h2>
       <SearchBar />
       <a
@@ -13,7 +13,7 @@ const SearchSection = () => {
       >
         Recherche avancée
       </a>
-    </section>
+    </div>
   );
 };
 

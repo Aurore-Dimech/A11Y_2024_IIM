@@ -7,18 +7,18 @@ import articles from "../../data/articlesFrontPage.js";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1600 },
+    breakpoint: { max: 3000, min: 1430 },
     items: 3,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1600, min: 768 },
-    items: 3,
+    breakpoint: { max: 1430, min: 960 },
+    items: 2,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 767, min: 464 },
-    items: 2,
+    breakpoint: { max: 960, min: 464 },
+    items: 1,
     slidesToSlide: 1,
   },
 };

@@ -23,7 +23,8 @@ p {
 
 section{
   margin-inline: 13%;
-  margin-top: 10%;
+  /* margin-top: 10%; */
+  margin-top: 7%;
 }
 
 .section-title {

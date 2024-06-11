@@ -1,6 +1,8 @@
 .section-search{
     display: flex;
     flex-direction: column;
+    margin-inline: 13%;
+    margin-top: 7%;
   }
   
   .section-search h2 {

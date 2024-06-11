@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.section-frontpage .section-title {
+    margin-bottom: 2%;
+}
+
 .slider {
     margin:0 15px;
 }
@@ -14,7 +18,7 @@
 }
 
 .react-multi-carousel-track {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
   
 .react-multi-carousel-list {
@@ -75,7 +79,7 @@
 }
 
 .info-slider {
-    padding-inline : 2em;
+    padding-inline : 3rem;
     position: absolute;
     top: 14em;
     color: white;
@@ -90,6 +94,6 @@
 
 .section-frontpage .button {
     position: absolute;
-    bottom: -22px;
+    bottom: -15px;
     border-radius: 10px;
 }
