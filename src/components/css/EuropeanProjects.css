@@ -1,20 +1,46 @@
 .projects{
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5rem;
+    /* height: 50vh; */
+}
+
+.projects > div {
+    position: relative;
+}
+
+.projects img {
+    height: 60vh;
+    /* width: 55vh; */
+    object-fit: cover;
 }
 
 .projects li {
+    position: relative;
     display: flex;
-    gap: 5%;
-}
-
-.projects ul img {
-    width: 50%;
+    justify-content: center;
 }
 
 .projects-info {
+    position: absolute;
+    padding-inline: 20%;
+    color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 1.5em;
+    top: 50%;
+}
+
+.projects-info h3 {
+    font-weight: 600;
+}
+
+.projects a {
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-size: 1.25rem;
 }

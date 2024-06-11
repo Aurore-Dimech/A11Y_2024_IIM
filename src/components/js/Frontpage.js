@@ -1,50 +1,27 @@
 import React, { Fragment } from "react";
 import blueMoon from "../../assets/blueMoon.svg";
-import jeudisLitte from "../../assets/jeudisLitte.svg";
-import festivalLivreNice from "../../assets/festivalLivreNice.svg";
-import oceanDay from "../../assets/oceanDay.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../css/Frontpage.css";
+import articles from "../../data/articlesFrontPage.js";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1600 },
+    breakpoint: { max: 3000, min: 1430 },
     items: 3,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1600, min: 768 },
-    items: 3,
-    slidesToSlide: 1,
-  },
-  mobile: {
-    breakpoint: { max: 767, min: 464 },
+    breakpoint: { max: 1430, min: 960 },
     items: 2,
     slidesToSlide: 1,
   },
+  mobile: {
+    breakpoint: { max: 960, min: 464 },
+    items: 1,
+    slidesToSlide: 1,
+  },
 };
-
-const articles = [
-  {
-    title: "Les Jeudis Littéraires",
-    button: "Consulter l'article",
-    ariaLabel: ": Les jeudis littéraires",
-    image: jeudisLitte,
-  },
-  {
-    title: "Festival de Livre de Nice",
-    button: "Consulter l'article",
-    ariaLabel: ": Festival de Livre de Nice",
-    image: festivalLivreNice,
-  },
-  {
-    title: "Journée de l'Océan",
-    button: "Consulter l'article",
-    ariaLabel: ": Journée de l'Océan",
-    image: oceanDay,
-  }
-];
 
 const FrontPage = () => {
   return (

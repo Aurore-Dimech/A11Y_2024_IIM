@@ -5,7 +5,7 @@ footer {
     padding: 5.5% 4% 4% 4%;
     gap:calc( 5% + 10px);
     color: white;
-    margin-top: 12%;
+    margin-top: 9%;
 }
 
 footer h3{
@@ -43,7 +43,8 @@ footer a:hover {
 }
 
 .address p {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.25rem;
 }
 
 .links ul {
@@ -55,7 +56,8 @@ footer a:hover {
 }
 
 .links a {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.25rem;
 }
 
 .socials ul {
@@ -73,9 +75,10 @@ li {
     grid-template-rows: 1fr 1fr;
 }
 
-form {
+footer form {
     display: grid;
     grid-auto-rows: auto;
+    margin-bottom: 1rem;
 }
 
 .newsletter-container{
@@ -100,14 +103,16 @@ form {
     width: 75%;
     border-radius: 0.5em 0 0 0.5em;
     padding: 1em;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1rem;
 }
 
 .input-newsletter .submit-newsletter {
     width: 25%;
     background-color: #FBE11A;
     border-radius: 0 0.5em 0.5em 0;
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 1.5rem;
     height: 100%;
 }
 
@@ -133,11 +138,32 @@ form {
     background-color: transparent;
 }
 .checkbox-newsletter input[type="checkbox"]:checked:before{
-    background-color: #FBE11A;
+    background-image: url(../../assets/check.svg);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    display: flex;
+    align-items: end;
 }
 
 .logo ol {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center
+}
+
+.logo ol .bibli-logo-prog {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+    
+.logo ol .bibli-logo-prog li {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
 }

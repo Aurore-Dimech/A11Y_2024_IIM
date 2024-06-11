@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.section-frontpage .section-title {
+    margin-bottom: 2%;
+}
+
 .slider {
     margin:0 15px;
 }
@@ -14,7 +18,7 @@
 }
 
 .react-multi-carousel-track {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
   
 .react-multi-carousel-list {
@@ -59,7 +63,8 @@
 }
 
 .react-multiple-carousel__arrow::before {
-    font-size: 38px;
+    /* font-size: 38px; */
+    font-size: 2.375rem;
     top: -30px;
 }
 
@@ -74,19 +79,21 @@
 }
 
 .info-slider {
-    padding-inline : 5%;
+    padding-inline : 3rem;
     position: absolute;
-    bottom: 60px;
+    top: 14em;
     color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
 
 .info-slider h3 {
-    font-size: 20px;
-    margin-bottom: 0.2em;
+    text-align: center;
 }
 
 .section-frontpage .button {
     position: absolute;
-    bottom: -22px;
-    border-radius: 20px;
+    bottom: -15px;
+    border-radius: 10px;
 }
