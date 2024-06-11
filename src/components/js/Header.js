@@ -6,13 +6,14 @@ import horloge from "../../images/horloge.png";
 import accessibilite from "../../images/accessibilite.png";
 import icon_aide from "../../images/aide_icone.png";
 import drapeau from "../../images/drapeau.png";
+import flehe_bas from "../../images/flèche_vers_bas.png";
 
 function Navbar() {
   return (
     <>
       <header role="banner">
         <div className="header">
-          <a href="/">
+          <a  className="logo_flex " href="/">
             <img
               src={Logo}
               className="logo"
@@ -44,10 +45,11 @@ function Navbar() {
                 <a href="/infos">
                   <img src = {drapeau} alt=""/>
                   Français
+                  <img src = {flehe_bas} alt=""/>
                 </a>
               </li>
               <li>
-                <a href="/infos">
+                <a href="/infos" className="research">
                   Recherches avancées
                 </a>
               </li>

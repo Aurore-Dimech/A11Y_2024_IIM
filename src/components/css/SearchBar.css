@@ -1,6 +1,6 @@
 .search-bar {
     display: flex;
-    width: 60%;
+    width: 100%;
 }
 
 .search, .search-catalogue select{
