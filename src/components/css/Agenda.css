@@ -224,4 +224,8 @@
     .events-list {
         row-gap: 1.5em;
     }
+
+    .cards-info .button {
+        padding: 0.5em 1em;
+    }
 }

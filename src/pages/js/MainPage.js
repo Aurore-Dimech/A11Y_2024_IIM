@@ -25,7 +25,7 @@ const MainPage = () => {
       <Ariane position={[position]} />
       <FrontPage />
       <Agenda />
-      <SearchSection />
+      {/* <SearchSection /> */}
       <CollectionAlpes />
       <EuropeanProjects />
     </main>

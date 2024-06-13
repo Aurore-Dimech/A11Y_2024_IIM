@@ -21,6 +21,7 @@ header {
     margin-inline: 15%;
     height: 4.5em;
     align-items: center;
+    flex-flow: wrap;
 }
 
 .nav-principal ul li a {
@@ -51,4 +52,14 @@ header {
     display: flex;
     align-items: center;
     gap: 0.2em;
+}
+
+@media screen and (max-width: 700px) {
+    .header{
+        flex-direction: column;
+    }
+
+    .infos {
+        flex-flow: column;
+    }
 }

@@ -47,3 +47,10 @@ select option {
 input {
     border: none;
 }
+
+@media screen and (max-width: 700px) {
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
+    }
+}

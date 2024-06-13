@@ -22,8 +22,8 @@ function Navbar() {
               />
             </a>
           </h1>
-          <div className="search_bar_infos">
-            <SearchBar />
+          { <div className="search_bar_infos">
+            { <SearchBar /> }
             <ul className="infos">
               <li>
                 <a href="/infos">
@@ -65,7 +65,7 @@ function Navbar() {
                 <a href="/infos">Recherches avancées</a>
               </li>
             </ul>
-          </div>
+          </div> }
         </div>
       </header>
       <nav
