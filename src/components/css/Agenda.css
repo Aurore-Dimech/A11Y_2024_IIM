@@ -176,7 +176,7 @@
     }
     
     .events-list li:not(:first-of-type) {
-        margin-top: 0.2rem;
+        margin-top: 0.4rem;
     }
 
     .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
