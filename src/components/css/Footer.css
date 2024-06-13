@@ -235,8 +235,9 @@ footer form {
 }
         
 @media screen and (max-width: 550px) {
-    .contacts-links img {
+    .contacts-links > img {
         height: 212px;
+        width: 2px;
     }
 
     footer h2 {

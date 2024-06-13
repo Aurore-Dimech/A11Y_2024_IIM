@@ -90,6 +90,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .cards-info {
@@ -154,15 +155,18 @@
     }
 
     .cards-info h3 {
+        padding: 1rem 1.5rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+    }
+
+    .activity1 .cards-info h3 {
         position: absolute;
         width: fit-content;
         max-width: 80%;
         bottom: 90%;
         background-color: white;
-        padding: 1.5rem 2rem;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        text-align: center;
     }
 
     .events-list > li:first-of-type {
@@ -177,8 +181,13 @@
 
     .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
         margin-inline: 5%;
-        padding: 1rem;
+        padding-block: 1rem;
+        padding-inline: 0;
         position: relative;
+    }
+
+    .activity2 .cards-info, .activity3 .cards-info {
+        padding-top: 0.2em;
     }
 
     .cards-info > ol > li:first-of-type {
@@ -227,6 +236,7 @@
 
     .cards-info .button {
         padding: 0.5em 1em;
+        margin-top: 1em;
     }
 
     .info-line img {

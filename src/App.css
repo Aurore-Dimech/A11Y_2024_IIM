@@ -142,6 +142,7 @@ section{
 
   section, .section {
     margin-top : 4em;
+    margin-inline: 7%;
   }
 
   .button {
