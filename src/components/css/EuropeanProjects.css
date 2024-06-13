@@ -1,8 +1,7 @@
 .projects{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3.5rem;
-    /* height: 50vh; */
+    display: flex;
+    justify-content: center;
+    gap: 2em;
 }
 
 .projects > div {
@@ -10,7 +9,7 @@
 }
 
 .projects img {
-    height: 60vh;
+    height: 30vw;
     /* width: 55vh; */
     object-fit: cover;
 }
@@ -38,9 +37,20 @@
 
 .projects a {
     position: absolute;
-    bottom: -17px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
     font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1450px) {
+    .projects {
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .projects img {
+        height: 50vh;
+    }
 }

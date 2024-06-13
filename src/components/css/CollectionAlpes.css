@@ -8,3 +8,21 @@
     justify-content: space-between;
     padding: 3% 5%;
 }
+
+@media screen and (max-width: 1100px) {
+    .main-collection{
+        flex-direction: column;
+    }
+
+    .main-collection img {
+        height: 50vh;
+    }
+
+    .main-collection div{
+        gap: 1rem;
+    }
+
+    .main-collection > div :last-child {
+        align-self: center;
+    }
+}

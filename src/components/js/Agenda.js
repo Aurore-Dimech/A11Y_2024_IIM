@@ -46,7 +46,7 @@ const FrontPage = () => {
     return (
       <li
         key={activity}
-        className={activities[activity].id}
+        className={"cards " + activities[activity].id} 
       >
         <img
           src={activities[activity].image}

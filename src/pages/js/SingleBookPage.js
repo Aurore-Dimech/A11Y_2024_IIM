@@ -10,7 +10,7 @@ import sugCover3 from "../../assets/sugCover3.svg";
 import josh from "../../images/Josh_brand.png";
 import willie from "../../images/willie.png";
 import lila from "../../images/Lila.png";
-
+import Ariane from "../../components/js/AriadnesThread";
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -86,8 +86,9 @@ function LivreInfos() {
     },
   ];
 
-
-  const sameAuthorBooks = bookListArray.filter((book) => book.author === selectedBook.author && book.id !== selectedBook.id);
+  const sameAuthorBooks = bookListArray.filter(
+    (book) => book.author === selectedBook.author && book.id !== selectedBook.id
+  );
 
   const suggestions = [
     {
@@ -100,7 +101,7 @@ function LivreInfos() {
       title: "Pico Love",
       author: "Dominique Roques",
     },
-   
+
     {
       cover: sugCover3,
       title: "Les sorcières chèvres",
@@ -110,40 +111,74 @@ function LivreInfos() {
 
   const comments = [
     {
-      photo : josh,
-      name : "Josh Brand",
-      publicationDate : "05 Juin 2024",
-      alt : "photo de profil de Josh Brand",
-      content : "J'ai adoré le dernier Ariol ! Les dessins sont superbes et l'histoire est très drôle. Les personnages sont toujours aussi attachants. C'est un vrai plaisir à lire.",
+      photo: josh,
+      name: "Josh Brand",
+      publicationDate: "05 Juin 2024",
+      alt: "photo de profil de Josh Brand",
+      content:
+        "J'ai adoré le dernier Ariol ! Les dessins sont superbes et l'histoire est très drôle. Les personnages sont toujours aussi attachants. C'est un vrai plaisir à lire.",
     },
     {
-      photo : willie,
-      name : "Willie Lundi",
-      publicationDate : "31 mai 2024",
-      alt : "photo de profil de Willie Lundi",
-      content : "Le nouveau tome d'Ariol est sympa, mais je trouve que certaines histoires se répètent un peu. Cela reste une bonne lecture pour les enfants.",
+      photo: willie,
+      name: "Willie Lundi",
+      publicationDate: "31 mai 2024",
+      alt: "photo de profil de Willie Lundi",
+      content:
+        "Le nouveau tome d'Ariol est sympa, mais je trouve que certaines histoires se répètent un peu. Cela reste une bonne lecture pour les enfants.",
     },
     {
-      photo : lila,
-      name : "Lila Bernard",
-      publicationDate : "10 Janvier 2024",
-      alt : "photo de profil de Lila Bernard",
-      content : "Le dernier tome d'Ariol est fantastique ! Les nouvelles aventures sont vraiment amusantes et les personnages sont toujours aussi adorables.",
+      photo: lila,
+      name: "Lila Bernard",
+      publicationDate: "10 Janvier 2024",
+      alt: "photo de profil de Lila Bernard",
+      content:
+        "Le dernier tome d'Ariol est fantastique ! Les nouvelles aventures sont vraiment amusantes et les personnages sont toujours aussi adorables.",
+    },
+  ];
+
+  const position = [
+    {
+      name: "Accueil ",
+      link: "/",
+    },
+    {
+      name: ">",
+      link: null,
+    },
+    {
+      name: "Résultats de la recherche",
+      link: "/recherche",
+    },
+    {
+      name: ">",
+      link: null,
+    },
+    {
+      name: "Page du document",
+      link: null,
     },
   ];
 
   return (
     <>
-      <main role="main" className="container">
+      <main
+        role="main"
+        className="container"
+      >
+        <Ariane position={[position]} />
         <div className="SingleBookPage">
-          <div className="Book_img"> {/* Image du livre */}
+          <div className="Book_img">
+            {" "}
+            {/* Image du livre */}
             <img
               src={selectedBook.cover}
               alt={`Couverture du livre ${selectedBook.title}`}
               className="book-cover"
             />
-          </div> 
-          <div className="Book_informations"> {/* Tous les informations textuelles su livres jusqu'à la description */}
+          </div>
+          <div className="Book_informations">
+            {" "}
+            {/* Tous les informations textuelles su livres jusqu'à la description */}
             <div className="book-details">
               <h1 className="book-title">{selectedBook.title.toUpperCase()}</h1>
               <div>
@@ -180,64 +215,69 @@ function LivreInfos() {
                 <button className="reserve-button">Réserver ce livre</button>
               </div>
             </div>
-            <div className="description-section"> {/* Section de description du livre */}
+            <div className="description-section">
+              {" "}
+              {/* Section de description du livre */}
               <h2 className="description-title">DESCRIPTION</h2>
               <dl>
                 <div className="description-row">
-                    <dt className="label">Type de document:</dt>
-                    <dd className="value">{selectedBook.documentType}</dd>
+                  <dt className="label">Type de document:</dt>
+                  <dd className="value">{selectedBook.documentType}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Langue:</dt>
-                    <dd className="value">{selectedBook.language}</dd>
+                  <dt className="label">Langue:</dt>
+                  <dd className="value">{selectedBook.language}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Date de publication:</dt>
-                    <dd className="value">{selectedBook.publicationDate}</dd>
+                  <dt className="label">Date de publication:</dt>
+                  <dd className="value">{selectedBook.publicationDate}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Série:</dt>
-                    <dd className="value">{selectedBook.serie}</dd>
+                  <dt className="label">Série:</dt>
+                  <dd className="value">{selectedBook.serie}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Sections:</dt>
-                    <dd className="value">{selectedBook.section}</dd>
+                  <dt className="label">Sections:</dt>
+                  <dd className="value">{selectedBook.section}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Description physique:</dt>
-                    <dd className="value">{selectedBook.physicalAspect}</dd>
+                  <dt className="label">Description physique:</dt>
+                  <dd className="value">{selectedBook.physicalAspect}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Contributeurs:</dt>
-                    <dd className="value">{selectedBook.contributors}</dd>
+                  <dt className="label">Contributeurs:</dt>
+                  <dd className="value">{selectedBook.contributors}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">ISBN:</dt>
-                    <dd className="value">{selectedBook.isbn}</dd>
+                  <dt className="label">ISBN:</dt>
+                  <dd className="value">{selectedBook.isbn}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">EAN:</dt>
-                    <dd className="value">{selectedBook.ean}</dd>
+                  <dt className="label">EAN:</dt>
+                  <dd className="value">{selectedBook.ean}</dd>
                 </div>
                 <div className="description-row">
-                    <dt className="label">Popularité:</dt>
-                    <dd className="value">{selectedBook.popularity}</dd>
+                  <dt className="label">Popularité:</dt>
+                  <dd className="value">{selectedBook.popularity}</dd>
                 </div>
-             </dl>
+              </dl>
             </div>
           </div>
         </div>
         {/* Proposition de livres */}
         <section className="availability-section">
-          <div className="disponible_style"> {/* container avec le titre "disponibilité et le traits" */}
+          <div className="disponible_style">
+            {" "}
+            {/* container avec le titre "disponibilité et le traits" */}
             <div className="trait"></div>
             <h3 className="availability-title">DISPONIBILITÉS</h3>
             <div className="trait"></div>
-          </div> {/* /////////////// */}
+          </div>{" "}
+          {/* /////////////// */}
           <h4 className="book-title">{selectedBook.title.toUpperCase()}</h4>
           <table className="availability-table">
             <thead className="tableTitles">
-              <tr className="tr" >
+              <tr className="tr">
                 <th>Bibliothèque</th>
                 <th>Section</th>
                 <th>Cote</th>
@@ -256,7 +296,9 @@ function LivreInfos() {
                   <td>{item.section}</td>
                   <td>{item.cote}</td>
                   <td>{item.type}</td>
-                  <td className={`availability-status ${item.availability.toLowerCase()}`}>
+                  <td
+                    className={`availability-status ${item.availability.toLowerCase()}`}
+                  >
                     {item.availability}
                   </td>
                   <td>{item.returnDate}</td>
@@ -265,28 +307,40 @@ function LivreInfos() {
             </tbody>
           </table>
         </section>
-        <div className="App" id="singlePageComments">
+        <div
+          className="App"
+          id="singlePageComments"
+        >
           <div className="CommentContainer">
-            <div className="disponible_style"> {/* container avec le titre "disponibilité et le traits" */}
+            <div className="disponible_style">
+              {" "}
+              {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
               <h3 className="availability-title">AVIS DES LECTEURS</h3>
               <div className="trait"></div>
             </div>
-            <div className="containerAllComments"> {/* section sur les avis */}
-              { comments.map((comment, index)=> (
-                 <div className="CommentCard"> {/* chaque card avis */}
-                    <div className="commentHeader">
-                      <img src={comment.photo} alt={comment.alt} className="commentPhoto" />
-                      <div className="commentNameDate">
-                        <h3 className="commentName">{comment.name}</h3>
-                        <p className="commentDate">{comment.publicationDate}</p>
-                      </div>
+            <div className="containerAllComments">
+              {" "}
+              {/* section sur les avis */}
+              {comments.map((comment, index) => (
+                <div className="CommentCard">
+                  {" "}
+                  {/* chaque card avis */}
+                  <div className="commentHeader">
+                    <img
+                      src={comment.photo}
+                      alt={comment.alt}
+                      className="commentPhoto"
+                    />
+                    <div className="commentNameDate">
+                      <h3 className="commentName">{comment.name}</h3>
+                      <p className="commentDate">{comment.publicationDate}</p>
                     </div>
-                    <p className="commentContent">{comment.content}</p>
-                 </div>
-                ))
-              }
-            </div> 
+                  </div>
+                  <p className="commentContent">{comment.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <Carousel
             title="DU MÊME AUTEUR"

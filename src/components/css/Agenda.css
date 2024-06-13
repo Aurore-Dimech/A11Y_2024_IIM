@@ -113,3 +113,65 @@
 .all-events:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 1100px) {
+    .events-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .events-list > li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards > img {
+        height: 50vh;
+    }
+
+    .cards-info h3 {
+        position: absolute;
+        width: 80%;
+        bottom: 75%;
+        background-color: white;
+        padding: 1rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+    }
+
+    .events-list li:first-of-type {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .events-list li:not(:first-of-type) {
+        margin-top: 0.5rem;
+    }
+
+    .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
+        margin-inline: 5%;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .cards-info .button {
+        padding-block: 1.5rem;
+    }
+
+    .activity2, .activity3 {
+        position: relative;
+    }
+
+    .activity2 > img, .activity3 > img {
+        height: 50vh;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}

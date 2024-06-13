@@ -3,14 +3,31 @@ import React, { useEffect } from "react";
 import "../css/404Page.css";
 import image from "../../assets/404.svg";
 import returnArrow from "../../assets/returnArrow.svg";
+import Ariane from "../../components/js/AriadnesThread";
 
 const NotFoundPage = () => {
   useEffect(() => {
     document.title = "Page introuvable | Bibliothèques de Nice";
   }, []);
 
+  const position = [
+    {
+      name: "Accueil ",
+      link: "/",
+    },
+    {
+      name: ">",
+      link: null,
+    },
+    {
+      name: "Page introuvable",
+      link: null,
+    },
+  ];
+
   return (
     <main role="main">
+      <Ariane position={[position]} />
       <section className="unfound-page">
         <div className="return">
           <img
