@@ -119,12 +119,16 @@
             margin: 0.5em 0;
     }
 
+    .react-multiple-carousel__arrow::before {
+        font-size: 1.8rem;
+    }
+
     .react-multiple-carousel__arrow--right {
-        right: calc(4% - 10px);
+        right: calc(4% - 20px);
     }
 
     .react-multiple-carousel__arrow--left {
-        left: calc(4% - 10px);
+        left: calc(4% - 20px);
     }
 
 }

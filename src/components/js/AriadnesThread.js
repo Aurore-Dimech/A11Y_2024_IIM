@@ -29,7 +29,7 @@ const AriadnesThread = (props) => {
                   key={index}
                   aria-current="page"
                 >
-                  <strong>{element.name}</strong>
+                  <p>{element.name}</p>
                 </li>
               );
             } else {

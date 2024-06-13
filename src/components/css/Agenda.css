@@ -172,7 +172,7 @@
     }
     
     .events-list li:not(:first-of-type) {
-        margin-top: 0.5rem;
+        margin-top: 0.2rem;
     }
 
     .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
@@ -227,5 +227,9 @@
 
     .cards-info .button {
         padding: 0.5em 1em;
+    }
+
+    .info-line img {
+        width: 14px;
     }
 }
