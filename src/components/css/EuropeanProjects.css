@@ -20,15 +20,21 @@
     justify-content: center;
 }
 
+.project-cards > div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .projects-info {
     position: absolute;
-    padding-inline: 20%;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    top: 50%;
+    bottom: 15%;
+    width: 80%;
 }
 
 .projects-info h3 {
@@ -44,13 +50,53 @@
     font-size: 1.25rem;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1200px) {
     .projects {
         flex-direction: column;
         gap: 3em;
     }
 
+    .projects-info {
+        bottom: 20%;
+    }
+
     .projects img {
         height: 50vh;
+    }
+
+    .projects a {
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .projects {
+        gap: 1em;
+    }
+    
+    .projects img {
+        height: 30vh;
+    }
+    .projects-info {
+        gap: 1em;
+        bottom: 30%;
+    }
+
+    .projects-info h3 {
+        font-size: 0.875em;
+    }
+
+    .projects img {
+        height: 30vh;
+        width: 80vw;
+        border-radius: 10px;
+    }
+
+    .projects a {
+        font-size: 0.75em;
+    }
+
+    .projects .button {
+        padding: 0.5em 1em;
     }
 }

@@ -26,8 +26,8 @@ const projects = {
 const EuropeanProjects = () => {
   const list = Object.keys(projects).map((project) => {
     return (
-      <div className="project-cards" key={project}>
-        <li >
+      <li className="project-cards" key={project}>
+        <div >
           <img
             src={projects[project].image}
             alt={projects[project].alt}
@@ -36,7 +36,7 @@ const EuropeanProjects = () => {
             <h3>{projects[project].title}</h3>
             <p>{projects[project].description}</p>
           </div>
-        </li>
+        </div>
         <a
           href={projects[project].ref}
           className="button"
@@ -44,7 +44,7 @@ const EuropeanProjects = () => {
         >
           Découvrir le projet
         </a>
-      </div>
+      </li>
     );
   });
   return (

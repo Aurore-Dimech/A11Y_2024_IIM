@@ -12,48 +12,59 @@ function Navbar() {
     <>
       <header role="banner">
         <div className="header">
-          <a href="/">
-            <img
-              src={Logo}
-              className="logo"
-              alt="logo de la bibliothèque - Accueil"
-            />
-          </a>
+          <h1>
+            <a href="/">
+              <img
+                src={Logo}
+                className="logo"
+                alt="logo de la bibliothèque - Accueil"
+                aria-label="Accueil de la bibliothèque"
+              />
+            </a>
+          </h1>
           <div className="search_bar_infos">
             <SearchBar />
             <ul className="infos">
               <li>
                 <a href="/infos">
-                  <img src = {horloge} alt=""/>
+                  <img
+                    src={horloge}
+                    alt=""
+                  />
                   Horaires
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {accessibilite} alt=""/>
+                  <img
+                    src={accessibilite}
+                    alt=""
+                  />
                   Accessibilité
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {icon_aide} alt=""/>
+                  <img
+                    src={icon_aide}
+                    alt=""
+                  />
                   Aides
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {drapeau} alt=""/>
+                  <img
+                    src={drapeau}
+                    alt=""
+                  />
                   Français
                 </a>
               </li>
               <li>
-                <a href="/infos">
-                  Recherches avancées
-                </a>
+                <a href="/infos">Recherches avancées</a>
               </li>
-              
             </ul>
-
           </div>
         </div>
       </header>

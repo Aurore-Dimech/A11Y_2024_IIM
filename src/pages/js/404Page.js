@@ -37,10 +37,12 @@ const NotFoundPage = () => {
           <a href="/">Retour à la page d'accueil</a>
         </div>
         <div className="main">
-          <img
-            src={image}
-            alt="Page introuvable, veuillez retourner à la page d'accueil avec le bouton ci-dessous."
-          />
+          <h2>
+            <img
+              src={image}
+              alt="Page introuvable, veuillez retourner à la page d'accueil avec le bouton ci-dessous."
+            />
+          </h2>
         </div>
         <a
           href="/"

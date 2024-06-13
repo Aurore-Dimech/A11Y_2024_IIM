@@ -61,7 +61,7 @@ const FrontPage = () => {
                   </div>
                 </div>
                 <a
-                  href="/jeudis-litteraires"
+                  href={"/articles/"+ article.id}
                   className="button"
                   aria-label={article.button + article.ariaLabel}
                 >
