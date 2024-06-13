@@ -256,4 +256,11 @@ footer form {
         max-width: 35vw;
     }
 
+    .checkbox-newsletter input[type="checkbox"]::before{
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.313em;
+    }
+
+
 }

@@ -74,9 +74,6 @@
         gap: 1em;
     }
     
-    .projects img {
-        height: 30vh;
-    }
     .projects-info {
         gap: 1em;
         bottom: 30%;
@@ -87,7 +84,7 @@
     }
 
     .projects img {
-        height: 30vh;
+        height: 40vh;
         width: 80vw;
         border-radius: 10px;
     }
