@@ -7,7 +7,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: 15%;
+    /* margin-inline: 15%; */
+    padding: 0 10%;
 }
 
 .nav-principal {
@@ -26,4 +27,28 @@ header {
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.search_bar_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+}
+
+.infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infos li {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+.infos li a {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
 }
