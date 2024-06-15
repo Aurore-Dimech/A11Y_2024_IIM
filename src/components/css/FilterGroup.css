@@ -30,7 +30,7 @@
 /* ////////////////////////////////// */
 
 /* Limite entre le FIlterCategory et le Filter */
-fieldset {
+.all_filter fieldset {
     border-style: none;
     display: flex;
     gap: 1em;

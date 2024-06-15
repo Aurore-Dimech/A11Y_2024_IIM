@@ -29,7 +29,6 @@
 
 }
 
-
 .slick-slide {
     display: flex;
     
@@ -42,7 +41,6 @@
 .carousel-slides {
     display: flex !important;
     justify-content: center;
-    align-items: center;
     gap: 1.2rem;
 }
 
@@ -71,6 +69,68 @@
     align-items: center;
 }
 
+.carousel-title-book {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-author {
+    font-size: 1rem;
+}
+
 .title_carousel {
     padding:  0 1rem;
+}
+
+.slick-dots {
+    bottom : -4.5rem;
+}
+
+.slick-dots li {
+    border: none;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #2F2C7E;
+    border-radius: 50%;
+}
+
+.slick-dots li button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    width: 100%;
+    height: 100%;
+    content: none;
+}
+
+.slick-dots .slick-active {
+    background: #2F2C7E;
+}
+
+.slick-prev::before, .slick-next::before {
+    font-size: 2.375rem;
+    display: block;
+    font-family: revicons;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    opacity: 1;
+}
+
+.slick-prev::before {
+    content: '\e824';
+}
+
+.slick-next::before {
+    content: '\e825';
+}
+
+.slick-list {
+    width: 90%;
+    align-self: center;
 }

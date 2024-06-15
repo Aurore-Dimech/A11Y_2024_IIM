@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './css/CarouselLivres.css';
 
-function CarouselLivres({title, books}) {
+function CarouselLivres({title, books, className}) {
     const settings = {
         dots: true,
         infinite: true,
@@ -39,10 +39,10 @@ function CarouselLivres({title, books}) {
     };
 
     return (
-        <div className="container-carousel">
+        <div className={"container-carousel " + className}>
             <div className="book_title_style"> {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
-              <h3 className="title_carousel">{title}</h3>
+              <h2 className="title_carousel">{title}</h2>
               <div className="trait"></div>
             </div>
             <Slider {...settings}>

@@ -21,7 +21,7 @@ const MainPage = () => {
   ];
 
   return (
-    <main role="main">
+    <main role="main" className="main-page">
       <Ariane position={[position]} />
       <FrontPage />
       <Agenda />

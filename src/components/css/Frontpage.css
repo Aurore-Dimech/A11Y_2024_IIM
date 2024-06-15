@@ -17,15 +17,15 @@
     border-radius: 10px;
 }
 
-.react-multi-carousel-track {
+.section-frontpage .react-multi-carousel-track {
     margin-bottom: 2%;
 }
   
-.react-multi-carousel-list {
+.section-frontpage .react-multi-carousel-list {
     padding: 0rem 0 2rem 0;
 }
   
-.custom-dot-list-style button{
+.section-frontpage .custom-dot-list-style button{
     border: none;
     background: white;
     width: 30px;
@@ -33,22 +33,22 @@
     border: 2px solid #2F2C7E;
 }
 
-.react-multi-carousel-dot-list {
+.section-frontpage .react-multi-carousel-dot-list {
     gap: 1%;
 }
 
-.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+.section-frontpage .react-multi-carousel-dot.react-multi-carousel-dot--active button{
     background: #2F2C7E;
 }
 
-.gd-carousel-wrapper {
+.section-frontpage .gd-carousel-wrapper {
     position:relative;
     width: 110%;
     align-self: center;
     display:grid;
 }
 
-.gd-carousel {
+.section-frontpage .gd-carousel {
     position:unset;
     margin-inline: 80px;
     overflow: hidden ;
@@ -56,28 +56,28 @@
     justify-self: center;
 }
 
-.react-multiple-carousel__arrow {
+.section-frontpage .react-multiple-carousel__arrow {
     position:absolute;
     background: none;
     filter: brightness(0);
 }
 
-.react-multiple-carousel__arrow::before {
+.section-frontpage .react-multiple-carousel__arrow::before {
     /* font-size: 38px; */
     font-size: 2.375rem;
 }
 
-.react-multiple-carousel__arrow:hover {
+.section-frontpage .react-multiple-carousel__arrow:hover {
     background: none;
 }
 
-.react-multi-carousel-item {
+.section-frontpage .react-multi-carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.info-slider {
+.section-frontpage .info-slider {
     padding-inline : 3rem;
     position: absolute;
     bottom: 15%;

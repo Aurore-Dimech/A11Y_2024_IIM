@@ -104,10 +104,10 @@ section{
 }
 
 .carousel-image {
-  width: 100%;
+  /* width: 100%; */
   max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
+  object-fit: contain;
+  /* margin-bottom: 10px; */
 }
 
 .carousel-book-title {
