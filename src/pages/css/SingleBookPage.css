@@ -10,7 +10,6 @@
 .singleBookPage-container .return {
     display: flex;
     justify-content: left;
-    margin-bottom: 5%;
     gap: 1vw;
     width: 80%;
     margin-top: 4rem;
@@ -21,7 +20,24 @@
 }
 
 .singleBookPage-container .return a {
-    color: black;
+    color: #292929;
+}
+
+.actions {
+    width: 80%;
+}
+
+.actions ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 5%;
+}
+
+.actions li img {
+    width: 30px;
+    height: 30px;
 }
 
 .SingleBookPage {
@@ -299,15 +315,18 @@ td {
 }
 
 .commentNameDate {
-    color:  grey;
+    color:  #525252;
 }
 
 .comment-button {
     border-style: none;
 }
 
+.containerAllComments .commentMore {
+    color : #4237CB;
+    text-decoration: underline;
+}
 
-/* Carousel container */
 .containerAllComments h3 {
     color: white;
     margin-bottom: 1rem;
@@ -438,4 +457,55 @@ td {
 
 .suggestions {
     margin-top: 4rem;
+}
+
+@media screen and (max-width: 950px) {
+    .Book_img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .book-cover{
+        height: 40vh;
+        width: auto;
+        max-width: 80%;
+        object-fit: contain;
+    }
+
+    .book-details {
+        gap : 1.5rem;
+    }
+
+    .reserve-button {
+        width: 100%;
+    }
+
+    .SingleBookPage, .description-section dl {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SingleBookPage > img {
+        align-self: center;
+    }
+
+    tbody > tr > td:first-child {
+        padding-left: 0;
+        font-weight: bold;
+    }
+
+    .containerComments {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .commentNameDate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .suggestions {
+        margin-bottom: 5rem;
+    }
 }
