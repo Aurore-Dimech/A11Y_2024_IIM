@@ -15,10 +15,6 @@
     margin-top: 4rem;
 }
 
-.singleBookPage-container .return img {
-    height: 1vw;
-}
-
 .singleBookPage-container .return a {
     color: #292929;
 }
@@ -177,10 +173,12 @@ dl {
 
 .disponible {
     color : #16651F;
+    font-weight: 600;
 }
 
 .indisponible {
     color : #A60E0E;
+    font-weight: 600;
 }
 
 .trait{
@@ -306,7 +304,7 @@ td {
 
 .commentPhoto {
     width: 100%;
-    min-width: 20px;
+    min-width: 50px;
 }
 
 .commentName {
@@ -460,6 +458,22 @@ td {
 }
 
 @media screen and (max-width: 950px) {
+    .singleBookPage-container .return, .SingleBookPage, .availability-section, .CommentContainer {
+        width: 90%;
+    }
+
+    .containerAllComments {
+        padding: 1.5rem 2rem;
+    }
+
+    .actions {
+        display: none;
+    }
+
+    .singleBookPage-container .return {
+        margin-block: 1rem 2rem;
+    }
+
     .Book_img {
         display: flex;
         justify-content: center;
@@ -473,6 +487,7 @@ td {
     }
 
     .book-details {
+        margin-top: 1rem;
         gap : 1.5rem;
     }
 
@@ -480,18 +495,25 @@ td {
         width: 100%;
     }
 
+    .description-section {
+        margin-top: 3rem;
+    }
+
     .SingleBookPage, .description-section dl {
         display: flex;
         flex-direction: column;
+        row-gap: 2rem;
     }
 
     .SingleBookPage > img {
         align-self: center;
     }
 
-    tbody > tr > td:first-child {
-        padding-left: 0;
-        font-weight: bold;
+    .availability-section .book-title {
+        background-color: #2F2C7E;
+        color: white;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
     }
 
     .containerComments {
@@ -507,5 +529,82 @@ td {
 
     .suggestions {
         margin-bottom: 5rem;
+    }
+
+    .library {
+        font-weight: bold;
+    }
+
+    .disponibility {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .availability-row {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .availability-row img {
+        width: 1.25rem;
+    }
+
+    .return-date {
+        font-style: italic;
+    }
+
+    .availability-section ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 1rem;
+    }
+
+    .availability-section ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .commentHeader {
+        column-gap: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .singleBookPage-container h3, .availability-section .book-title, .commentName, .container-carousel h2 {
+        font-size: 1rem;
+    }
+
+    .book-author, .commentDate, .description-section dt, .containerAllComments form legend, .comment-description label, .comment-button {
+        font-size: 0.875rem;
+    }
+    
+    .return a, .book-publisher, .availability-text, .reserve-button, .description-section dd, .comment-description textarea{
+        font-size: 0.75rem;
+    }
+
+    .description-section {
+        gap: 1.5rem;
+    }
+
+    .SingleBookPage, .description-section dl {
+        row-gap: 0rem;
+    }
+
+    .SingleBookPage, .description-section dl dd {
+        margin-block: 0.4rem 0.8rem;
+    }
+
+    .commentScoring {
+        height: 1.25rem;
+    }
+
+    .legend-and-ratings {
+        flex-direction: column;
+        align-items: start;
     }
 }

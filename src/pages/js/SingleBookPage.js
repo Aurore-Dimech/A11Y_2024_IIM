@@ -20,6 +20,8 @@ import externalLink from "../../assets/externalLink.svg";
 import download from "../../assets/download.svg";
 import mail from "../../assets/mail.svg";
 
+import { useIsMobile } from "../../hooks/useIsMobile";
+
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
     return {
@@ -181,6 +183,79 @@ function LivreInfos() {
     },
   ];
 
+  const desktopText = (
+    <>
+      <table className="availability-table">
+        <thead className="tableTitles">
+          <tr className="tr">
+            <th>Bibliothèque</th>
+            <th>Section</th>
+            <th>Cote</th>
+            <th>Type</th>
+            <th>Disponibilité</th>
+            <th>Date retour</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr
+              key={index}
+              className={`availability-${item.availability.toLowerCase()}`}
+            >
+              <td>{item.library}</td>
+              <td>{item.section}</td>
+              <td>{item.cote}</td>
+              <td>{item.type}</td>
+              <td
+                className={`availability-status ${item.availability.toLowerCase()}`}
+              >
+                {item.availability}
+              </td>
+              <td>{item.returnDate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  );
+  const mobileText = (
+    <>
+      <ul>
+        {data.map((item, index) => (
+          <li
+            key={index}
+            className={`availability-${item.availability.toLowerCase()}`}
+          >
+            <p className="library">{item.library} : </p>
+            <div className="disponibility">
+              <div className="availability-row">
+                {item.availability === "Disponible" ? (
+                  <img
+                    src={greenTick}
+                    alt=""
+                  />
+                ) : (
+                  <img
+                    src={redTick}
+                    alt=""
+                  />
+                )}
+                <p
+                  className={`availability-status ${item.availability.toLowerCase()}`}
+                >
+                  {item.availability.toUpperCase()}
+                </p>
+              </div>
+              {item.returnDate ? (
+                <p className="return-date">Retour le {item.returnDate}</p>
+              ) : null}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+
   return (
     <>
       <main
@@ -337,37 +412,7 @@ function LivreInfos() {
           </div>{" "}
           {/* /////////////// */}
           <p className="book-title">{selectedBook.title}</p>
-          <table className="availability-table">
-            <thead className="tableTitles">
-              <tr className="tr">
-                <th>Bibliothèque</th>
-                <th>Section</th>
-                <th>Cote</th>
-                <th>Type</th>
-                <th>Disponibilité</th>
-                <th>Date retour</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((item, index) => (
-                <tr
-                  key={index}
-                  className={`availability-${item.availability.toLowerCase()}`}
-                >
-                  <td>{item.library}</td>
-                  <td>{item.section}</td>
-                  <td>{item.cote}</td>
-                  <td>{item.type}</td>
-                  <td
-                    className={`availability-status ${item.availability.toLowerCase()}`}
-                  >
-                    {item.availability}
-                  </td>
-                  <td>{item.returnDate}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          {useIsMobile() ? mobileText : desktopText}
         </section>
         <section
           className="App"
