@@ -9,3 +9,9 @@
     margin-top: 1em;
     padding-inline: 13%;
 }
+
+@media screen and (max-width: 550px) {
+    .ariadnesThread a {
+        font-size: 0.75em;
+    }
+}

@@ -33,7 +33,7 @@ const AriadnesThread = (props) => {
                 </li>
               );
             } else {
-              return <li key={index}>{element.name}</li>;
+              return <li key={index}><p>{element.name}</p></li>;
             }
           })}
         </ul>
