@@ -43,7 +43,7 @@ const SearchBar = () => {
         value="Rechercher"
         className="search search-button"
       >
-        Rechercher
+       <span className="span"> Rechercher </span>
         <img
           src={SearchIcon}
           alt=""

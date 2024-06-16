@@ -16,16 +16,39 @@
     height: 21px;
     border: 3px solid rgba(47, 44, 126, 1);
     border-radius: 0.3em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    position: relative;
    
+}
+
+
+input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease;
+
 }
 
 .individual_filter_label input[type="checkbox"]:checked {
     border-color: rgba(47, 44, 126, 1); /* Couleur de la bordure lorsque cochée */
-    background-color: rgba(251, 225, 26, 1); /* Couleur de fond lorsque cochée */
+    background-color: rgba(47, 44, 126, 1); /* Couleur de fond lorsque cochée */
 }
 
-
-
+input[type="checkbox"]:checked:before {
+    background-color: transparent;
+    color: white;
+    content: "✔";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 
 /* ////////////////////////////////// */
 
@@ -61,5 +84,26 @@ legend {
 .all_filter {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 2.5em;
+}
+
+
+/* Le responsive ///////////////// */
+
+@media screen and (max-width: 1265px) {
+    legend {
+        font-size: 1.1em;
+    }
+    label {
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1131px) {
+    legend {
+        font-size: 1em;
+    }
+    label {
+        font-size: 0.9em;
+    }
+    
 }

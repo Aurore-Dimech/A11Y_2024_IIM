@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
-
+.filterMobile {
+    width: 100%;
+}
 /* Style correspondant à la pagination et aux résultat en haut de la page recherche */
 .container_numberOnTheTop {
     display: flex;
@@ -42,7 +44,7 @@
     background-color: rgba(66, 55, 203, 1);
     color: white;
     transition: background-color 0.3s;
-    /* padding: 1.1rem; */
+    padding: 1rem  1.2rem;
 }
 
 .pagination .page:hover,
@@ -174,4 +176,217 @@
     background-color: rgba(66, 55, 203, 1);
     color: white;
     font-size: 1rem
+}
+
+.DisplaySearchBtn {
+    display: flex;
+    padding: 0.5625rem 1.4375rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    background: #4237CB;
+    border-style: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.container_numberOnTheTop.deux{
+    display: none;
+}
+
+.SecondLineFilter.deux {
+    display: none;
+
+}
+
+/* Le responsive ////////// */
+
+@media screen and (max-width: 1265px) {
+    .container_livres {
+        width: 60%;  
+     }
+}
+
+@media screen and (max-width: 1065px) {
+    .btn_change  {
+        display: none;
+    }
+    .container_livres {
+        width: 100%;  
+        padding:2rem ;
+    }
+    .container_numberOnTheTop.One {
+        display: none;
+    }
+    .container_numberOnTheTop.deux{
+        display: flex;
+        
+     }
+    .container_numberOnTheTop.deux p {
+        font-size: 1.3rem;
+    }
+    .container_searchpage {
+        margin-top: 0.2rem; 
+    }
+    .SecondLineFilter.deux {
+        display: flex;
+        gap: 0.2rem;
+    
+    }
+    .SecondLineFilter.one {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    h1{
+        font-size: 1.8rem;
+    }
+    .ma_recherche{
+        font-size: 1.3rem;
+    
+    }
+}
+@media screen and (max-width: 700px) {
+    h1{
+        font-size: 1.7rem;
+    }
+    .ma_recherche{
+        font-size: 1.2rem;
+    
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 1.6rem;
+    }
+    .ma_recherche{
+        font-size: 1.1rem;
+    
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 1.5rem;
+    }
+    .ma_recherche{
+        font-size: 1rem;
+    
+    }
+}
+
+
+@media screen and (max-width: 590px) {
+    .container_livres {
+        padding:1.5rem ;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .DisplaySearchBtn{
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    .Tri_Affichage {
+        gap: 1rem;
+    }
+    .container_numberOnTheTop.deux p{
+        font-size: 1.2rem;
+    
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .pagination.bottom li {
+        margin: 0px;
+    }
+    .pagination.bottom li a {
+        font-size: 0.85rem;
+        padding: 0.8rem 1rem;
+    }
+    .pagination.bottom {
+        gap: 1rem;
+    }
+    .pagination .arrow.left{
+        margin-right: 0rem;
+    }
+    .pagination .arrow.right{
+        margin-left: 0rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h1{
+        font-size: 1.3rem;
+    }
+    .ma_recherche{
+        font-size: 1rem;
+    
+    }
+}
+
+@media screen and (max-width: 473px) {
+    
+    .Tri_Affichage{
+        gap: 0.5rem;
+    }
+    .tenPerPage p{
+        font-size: 0.95rem;
+    }
+    .tenPerPage {
+        gap: 0.1rem;
+    }
+    .tenPerPage img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .filtreTri p {
+        font-size: 0.9rem;
+    }
+    .filtreTri  {
+        gap: 0.1rem;
+    }
+    .filtreTri img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .container_numberOnTheTop.deux p {
+        font-size: 1rem;
+    }
+    .DisplaySearchBtn{
+        padding: 0.4rem 1rem;
+    }
+    .container_livres {
+        padding:1.1rem ;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .DisplaySearchBtn{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 395px) {
+    .container_numberOnTheTop.deux p {
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .ma_recherche{
+        font-size: 0.8rem;
+    
+    }
+}
+@media screen and (max-width: 390px) {
+    .tenPerPage p {
+        font-size: 0.75rem;
+    }
+    .filtreTri p {
+        font-size: 0.75rem;
+    }
 }

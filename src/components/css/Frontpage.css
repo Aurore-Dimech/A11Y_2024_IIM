@@ -46,6 +46,7 @@
     width: 110%;
     align-self: center;
     display:grid;
+    z-index: 1;
 }
 
 .section-frontpage .gd-carousel {
