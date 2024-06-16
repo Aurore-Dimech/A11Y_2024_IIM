@@ -100,9 +100,9 @@
 }
 
 @media screen and (max-width: 550px) {
-    .info-slider {
-        font-size: 1em;
-        bottom: 1em;
+    .section-frontpage .info-slider {
+        font-size: 1rem;
+        bottom: 2%;
         width: 100%;
     }
 
@@ -132,4 +132,15 @@
         left: calc(4% - 20px);
     }
 
+    .section-frontpage .custom-dot-list-style button{
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .section-frontpage .info-slider {
+        bottom: 20%;
+    }
 }

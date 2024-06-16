@@ -71,6 +71,7 @@
     width: 15vw;
     min-width: 16rem;
     object-fit: contain;
+    border-radius: 0.5rem;
 }
 
 .book-publisher {
@@ -271,10 +272,14 @@ td {
     width: 100%;
 }
 
+.containerAllComments > div:last-of-type {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
 .containerAllComments a {
     color: white;
-    width: 100%;
-    text-align: right;
 }
 
 .containerComments{
@@ -492,7 +497,7 @@ td {
     }
 
     .book-cover{
-        height: 40vh;
+        height: 60vh;
         width: auto;
         max-width: 80%;
         object-fit: contain;
@@ -501,6 +506,10 @@ td {
     .book-details {
         margin-top: 1rem;
         gap : 1.5rem;
+    }
+
+    .book-details h2 {
+        text-align: center;
     }
 
     .reserve-button {
@@ -597,6 +606,10 @@ td {
     
     .return a, .book-publisher, .availability-text, .reserve-button, .description-section dd, .comment-description textarea{
         font-size: 0.75rem;
+    }
+
+    .book-cover{
+        height: 40vh;
     }
 
     .description-section {

@@ -258,31 +258,48 @@ function LivreInfos() {
 
   const [isReserved, setIsReserved] = useState(false);
   const reservation = () => {
+    selectedBook.availableCopiesNumber -= 1;
     setIsReserved(true);
   };
 
-  const notReserved = (
-    <>
-      <div>
-        <button
-          className={"button reserve-button"} 
-          onClick={reservation}
-        >
-          Réserver ce livre
-        </button>
-      </div>
-    </>
-  );
+  const notReserved =
+    selectedBook.availableCopiesNumber === 0 ? (
+      <>
+        <>
+          <div className="reservation-message">
+            <button
+              className={"button reserve-button reserved"}
+              onClick={null}
+            >
+              Indisponible
+            </button>
+          </div>
+        </>
+      </>
+    ) : (
+      <>
+        <div>
+          <button
+            className={"button reserve-button"}
+            onClick={reservation}
+          >
+            Réserver ce livre
+          </button>
+        </div>
+      </>
+    );
   const reserved = (
     <>
       <div className="reservation-message">
         <button
-          className={"button reserve-button reserved"} 
+          className={"button reserve-button reserved"}
           onClick={reservation}
         >
           Réservé
         </button>
-        <p className="reserved-text">Le livre vous est réservé jusqu’au 30 juin 2024 !</p>
+        <p className="reserved-text">
+          Le livre vous est réservé jusqu’au 30 juin 2024 !
+        </p>
       </div>
     </>
   );
@@ -504,9 +521,11 @@ function LivreInfos() {
                   </div>
                 ))}
               </div>
-              <a href={window.location.href + "/allComments"}>
-                VOIR TOUS LES AVIS
-              </a>
+              <div>
+                <a href={window.location.href + "/allComments"}>
+                  VOIR TOUS LES AVIS
+                </a>
+              </div>
             </div>
 
             <div className="containerAllComments">

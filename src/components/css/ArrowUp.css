@@ -1,19 +1,43 @@
+.arrow-up-section {
+    display: flex;
+    justify-content: right;
+}
+
 .arrow-up {
-    position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80px;
+    height: 80px;
     }
+
+.arrow-up button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+}
     
-.arrow-up a img {   
-    border: 5px solid #2F2C7E;
+.arrow-up button img {   
     background-color: #2F2C7E ;
     border-radius: 50%;
+    border: 5px solid #2F2C7E;
+    height: 100%;
+    width: 100%;
 }
 
-.arrow-up a img:hover {
-    cursor: pointer;
-    border: 5px solid #FBE11A;
+@media (hover: hover) {
+    .arrow-up button img:hover, .arrow-up button img:focus {
+        cursor: pointer;
+        border: 5px solid #FBE11A;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .arrow-up {
+        width: 50px;
+        height: 50px;
+    }       
 }
