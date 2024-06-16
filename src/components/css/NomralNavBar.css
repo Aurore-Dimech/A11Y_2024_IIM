@@ -1,0 +1,151 @@
+.nav-principal {
+    background-color: #2F2C7E;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.ListHover {
+    display: flex;
+    padding: 1.5625rem 5.375rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    align-self: stretch;
+}
+.ListItem, .ListItem a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: transparent                                                                              ;        
+    color: white;
+}
+.ListItem {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    width: auto;
+}
+
+.linkForList{
+    position: relative;
+}
+
+
+
+.DetailsList{
+    position: absolute;
+    list-style: none;
+    padding: 1rem; /* Adjust as needed for indentation */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #2F2C7E;
+    width: max-content;
+    z-index: 3;
+}
+
+.li:hover {
+    background-color: #24225a;
+    width: 100%;
+    height: 100%;  
+}
+/*  Ici j'essai le hover mais il ne foncrionne pas */
+ .ListItem:hover .DetailsList {
+    display: flex;
+    } 
+/*  Ici j'essai le hover mais il ne foncrionne pas */
+
+
+
+.ChevronBottom{
+    color: white;
+}
+
+.linkForList {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+
+.CloseIcone{
+   display: none;
+}
+
+.CloseIcone svg:hover{
+    cursor: pointer; 
+}
+
+.li a {
+    font-size: 1rem ;
+    color: white;
+} 
+.arrowToBottom{
+    display: none;
+}
+
+
+@media screen and (max-width: 1144px) {
+    .ListHover {
+        padding: 1.5625rem 0;
+        gap: 1.5rem;
+    }
+} 
+@media screen and (max-width: 960px) {
+    .nav-principal {
+        display: none;
+    }
+} 
+
+@media screen and (max-width: 880px) {
+    .nav-principal {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        padding: 1.2rem;
+       
+    }
+    .DetailsList{
+        position: static;
+        list-style: none;
+        padding: 0;
+        margin-left: 20px; /* Adjust as needed for indentation */
+        display: flex;
+        width: 0;
+        margin: 0.5rem 0 0 1.5rem;
+    }
+    .DetailsList.open   {
+       display: block;
+    }
+    .ListHover {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 3rem;
+        gap: 1.5rem;
+    }
+
+    .List {
+        font-size: 1.5rem; 
+    }
+    .arrowToBottom{
+        display: flex;
+    }
+    .arrowToBottom:hover{
+        cursor: pointer;
+    }
+    .CloseIcone{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+    }
+    
+
+}
+

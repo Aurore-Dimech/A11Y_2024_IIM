@@ -42,6 +42,7 @@
     width: 110%;
     align-self: center;
     display:grid;
+    z-index: 1;
 }
 
 .gd-carousel {

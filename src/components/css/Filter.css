@@ -1,15 +1,62 @@
 .container_filter {
-    width: 30%;
+    width: 25%;
     padding-left: 3em;
     display: flex;
     flex-direction: column;
     justify-items: center;
+    background-color: #fff;
+    /* align-items: center; */
+}
+.container_filteResponsive {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: #fff;
+    /* align-items: center; */
+}
+.container_filteResponsive .all_filter {
+   padding-right: 1em;
     /* align-items: center; */
 }
 
+.ClosingCross{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-style: none;
+    background-color: transparent;
+    
+}
 
 .research_filter {
     /* text-align: center; */
     margin-bottom: 2em;
     font-size: 1.6em;
+}
+
+/* Le responsive  */
+
+@media screen and (max-width: 1286px) {
+    .research_filter{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1265px) {
+    .research_filter{
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .container_filter{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1065px) {
+    .container_filter{
+        display: none;
+    }
 }
