@@ -1,0 +1,19 @@
+.arrow-up {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+.arrow-up a img {   
+    border: 5px solid #2F2C7E;
+    background-color: #2F2C7E ;
+    border-radius: 50%;
+}
+
+.arrow-up a img:hover {
+    cursor: pointer;
+    border: 5px solid #FBE11A;
+}

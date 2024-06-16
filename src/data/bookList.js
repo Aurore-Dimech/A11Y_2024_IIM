@@ -177,7 +177,7 @@ const bookList = {
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2016",
-    description: "Pourquoi Ariol offre-t-il une bouteille de bain moussant parfumé à Vanesse, la petite grenouille un peu timide de sa classe ? <br>Ça n'a l'air de plaire ni à Ramono, ni à Pétula. Et si c'était une idée de BiSBiLLE ? Pour avoir la clef de tous ces mystères, venez faire la fête à la grenouille !",
+    description: "Pourquoi Ariol offre-t-il une bouteille de bain moussant parfumé à Vanesse, la petite grenouille un peu timide de sa classe ? Ça n'a l'air de plaire ni à Ramono, ni à Pétula. Et si c'était une idée de BiSBiLLE ? Pour avoir la clef de tous ces mystères, venez faire la fête à la grenouille !",
     reviewNumber: 0,
     availableCopiesNumber: 3,
     documentType: "Bande Dessinée",
