@@ -596,7 +596,7 @@ td {
 
 @media screen and (max-width: 550px) {
 
-    .singleBookPage-container h3, .availability-section .book-title, .commentName, .container-carousel h2 {
+    .singleBookPage-container h3, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button {
         font-size: 1rem;
     }
 
@@ -604,12 +604,16 @@ td {
         font-size: 0.875rem;
     }
     
-    .return a, .book-publisher, .availability-text, .reserve-button, .description-section dd, .comment-description textarea{
+    .return a, .book-publisher, .availability-text, .description-section dd, .comment-description textarea, .containerAllComments a{
         font-size: 0.75rem;
     }
 
     .book-cover{
         height: 40vh;
+    }
+
+    .reserve-button {
+        padding: 10px 15px;
     }
 
     .description-section {

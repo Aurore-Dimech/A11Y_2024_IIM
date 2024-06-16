@@ -71,7 +71,7 @@ input {
 }
 @media screen and (max-width: 800px) {
     .search {
-       padding : 0.85em 0.5em;
+       padding : 0.7rem;
     }
     .span{
         display: none;
@@ -84,12 +84,13 @@ input {
 @media screen and (max-width: 555px) {
     .search-input {
         width: 7rem;
+        font-size: 0.75rem;
     }
     .search-catalogue select{
         font-size: 0.9rem;
     }
     .search {
-        padding : 0.7em 0.2em;
+        padding : 0.4rem 0.6rem;
     }
 
     .search-button {
@@ -103,18 +104,10 @@ input {
         font-size: 0.8rem;
     }
     .search{
-        padding: 0.6em 0.2em;
+        padding: 0.3rem 0.5rem;
     }
     .search-button {
         padding-inline: 0.6rem;
     } 
-}
-
-=======
-@media screen and (max-width: 700px) {
-    .search-bar {
-        width: 100%;
-        flex-direction: column;
-    }
 }
 

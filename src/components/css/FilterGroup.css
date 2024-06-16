@@ -24,7 +24,7 @@
 }
 
 
-input[type="checkbox"]:before {
+.individual_filter_label input[type="checkbox"]:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -39,7 +39,7 @@ input[type="checkbox"]:before {
     background-color: rgba(47, 44, 126, 1); /* Couleur de fond lorsque cochée */
 }
 
-input[type="checkbox"]:checked:before {
+.individual_filter_label input[type="checkbox"]:checked:before {
     background-color: transparent;
     color: white;
     content: "✔";

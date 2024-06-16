@@ -8,6 +8,8 @@ import icon_aide from "../../images/aide_icone.png";
 import drapeau from "../../images/drapeau.png";
 import flehe_bas from "../../images/flèche_vers_bas.png";
 import NormalNavBar from "./NomralNavBar";
+
+
 function Navbar() {
  const [ScreenSize, setScreenSize] = useState(false);
 

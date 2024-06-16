@@ -45,9 +45,6 @@ header {
     text-decoration: underline;
 }
 
-.logo_flex{
-    
-}
 .NavAndSearchBar{
     display: flex;
     justify-content: space-between;
@@ -68,14 +65,14 @@ header {
 
 /* ajout du menu burger, disposition en column du logo et de la bar de recherche */
 @media screen and (max-width: 1050px) {
-    .logo{
+    header .logo{
         width: 15rem;
         height: auto;
     }
     
 }
 @media screen and (max-width: 1000px) {
-    .logo{
+    header .logo{
         width: 14rem;
         height: auto;
     }
@@ -85,8 +82,7 @@ header {
     .header{
         flex-direction: column;
         gap: 1.6rem;
-        padding: 0 5%;
-        padding: 0 2%;
+        padding: 0 1rem;
     }
     .search_bar_infos{
         padding-bottom: 0rem;
@@ -114,6 +110,7 @@ header {
 
     .infos {
         gap: 01rem;
+        flex-wrap: wrap;
     }
 
 }

@@ -1,6 +1,7 @@
 .arrow-up-section {
     display: flex;
     justify-content: right;
+    margin-block: 0;
 }
 
 .arrow-up {
