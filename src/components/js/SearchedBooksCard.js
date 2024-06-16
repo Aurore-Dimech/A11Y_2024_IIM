@@ -72,7 +72,15 @@ const Book = ({
             {" "}
             {/* premiere partie  */}
             <div>
-              <h2 className="title_book">{title}</h2>
+              <h2 className="title_book">
+                <a
+                  href={"/livre/" + id}
+                  aria-label="Lien vers la page du livre"
+                  className="title_book_link"
+                >
+                  {title}
+                </a>
+              </h2>
               <p className="autor">
                 {author} - {publicationDate}
               </p>
@@ -81,7 +89,7 @@ const Book = ({
             <div className="infoMoreAndEg one">
               <div className="btn">
                 {" "}
-                {/* le lien e savoir plus */}
+                {/* le lien e savoir plus */} 
                 <a
                   href={"/livre/" + id}
                   aria-label="En savoir plus"
