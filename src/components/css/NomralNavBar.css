@@ -139,19 +139,21 @@
         z-index: 4;
         width: 100%;
         padding: 1.2rem;
+        min-height: 100vh;
+        height: auto;
+        position: absolute;
+        top: 0;
        
     }
     .DetailsList{
         position: static;
         list-style: none;
-        padding: 0;
-        margin-left: 20px;
-        display: flex;
-        width: 0;
-        margin: 0.5rem 0 0 1.5rem;
+         /* Adjust as needed for indentation */
+        display: none;
     }
+
     .DetailsList.open   {
-       display: block;
+       display: flex;
     }
     .ListHover {
         flex-direction: column;
