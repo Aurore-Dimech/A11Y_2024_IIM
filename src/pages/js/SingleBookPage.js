@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
 import Carousel from "../../components/CarouselLivres";
@@ -256,6 +256,37 @@ function LivreInfos() {
     </>
   );
 
+  const [isReserved, setIsReserved] = useState(false);
+  const reservation = () => {
+    setIsReserved(true);
+  };
+
+  const notReserved = (
+    <>
+      <div>
+        <button
+          className={"button reserve-button"} 
+          onClick={reservation}
+        >
+          Réserver ce livre
+        </button>
+      </div>
+    </>
+  );
+  const reserved = (
+    <>
+      <div className="reservation-message">
+        <button
+          className={"button reserve-button reserved"} 
+          onClick={reservation}
+        >
+          Réservé
+        </button>
+        <p className="reserved-text">Le livre vous est réservé jusqu’au 30 juin 2024 !</p>
+      </div>
+    </>
+  );
+
   return (
     <>
       <main
@@ -358,11 +389,7 @@ function LivreInfos() {
                 {disponibility(selectedBook.availableCopiesNumber).text}
               </span>
             </div>
-            <div>
-              <button className="reserve-button button">
-                Réserver ce livre
-              </button>
-            </div>
+            {isReserved ? reserved : notReserved}
           </div>
           <div className="description-section">
             {" "}

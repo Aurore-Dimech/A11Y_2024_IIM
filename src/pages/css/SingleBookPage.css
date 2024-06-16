@@ -90,8 +90,24 @@
 
 .reserve-button {
     padding: 1rem 2rem;
-    border-style: none;
     font-size: 1.5rem;
+}
+
+.reserved {
+    text-decoration: none;
+    border: 2px solid #4019FA;
+    background-color: #EEF2FF;
+    color: #4237CB;
+}
+
+.reserved-text {
+    color: #16651F;
+}
+
+.reservation-message {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .Book_informations{
@@ -314,10 +330,6 @@ td {
 
 .commentNameDate {
     color:  #525252;
-}
-
-.comment-button {
-    border-style: none;
 }
 
 .containerAllComments .commentMore {
