@@ -3,15 +3,20 @@ import "../css/ArrowUp.css";
 import arrowUp from "../../assets/arrowUpPage.svg";
 
 const ArrowUp = () => {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <div className="arrow-up">
-      <a href="#top">
-        <img
-          src={arrowUp}
-          alt="Retour en haut de page"
-        />
-      </a>
-    </div>
+    <section className="arrow-up-section">
+      <div className="arrow-up">
+        <button onClick={scrollTop}>
+          <img
+            src={arrowUp}
+            alt="Retour en haut de page"
+          />
+        </button>
+      </div>
+    </section>
   );
 };
 
