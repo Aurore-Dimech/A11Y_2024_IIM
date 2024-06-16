@@ -12,6 +12,7 @@ header {
 }
 
 
+
 .search_bar_infos {
    
     display: flex;
@@ -59,6 +60,7 @@ header {
 }
 
 
+
 /* LE RESPONSIVE DE LA NAVBAR ////////////////////// */
 
 /* taille de la navbar en bleue qui diminue */
@@ -84,15 +86,12 @@ header {
         flex-direction: column;
         gap: 1.6rem;
         padding: 0 5%;
+        padding: 0 2%;
     }
     .search_bar_infos{
         padding-bottom: 0rem;
         width: 100%;
 
-    }
-    .header{
-       
-        padding: 0 2%;
     }
     .infos {
         gap: 0.6em;
@@ -104,6 +103,8 @@ header {
     }
     
 }
+
+
 
 @media screen and (max-width: 616px) {
     
@@ -130,4 +131,5 @@ header {
     }
 
 }
+
 

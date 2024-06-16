@@ -20,13 +20,13 @@ const CollectionAlpes = () => {
         />
         <div>
           <h3>À LA DÉCOUVERTE DE NOTRE PATRIMOINE CULTUREL </h3>
-          <p>A travers le projet PITEM Pace ( Plan Intégré Thématique ) qui concerne les régions Sud Provence-Alpes Côte d'Azur, Auvergne Rhône Alpes, Ligurie, Piémont et Vallée d’Aoste, la bibliothèque de Nice met en avant ses collections numérisées autour de l'arc alpin</p>
+          <p>À travers le projet PITEM PACE couvrant les régions Sud Provence-Alpes Côte d'Azur, Auvergne Rhône-Alpes, Ligurie, Piémont et Vallée d’Aoste, la bibliothèque de Nice met en avant ses collections numérisées autour de l'arc alpin, valorisant ainsi le patrimoine culturel transfrontalier.</p>
           <a
             href="/catalogue"
             className="button"
-            aria-label="Découvrir le catalogue : collections spéciales alpes"
+            aria-label="Consulter le catalogue : collections spéciales alpes"
           >
-            Découvrir le catalogue
+            Consulter le catalogue
           </a>
         </div>
       </div>

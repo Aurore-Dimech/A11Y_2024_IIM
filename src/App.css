@@ -7,18 +7,33 @@
 }
 
 h2 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.5rem;
 }
 
 p {
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 1rem;
 }
 
+a {
+  text-decoration: none;
+}
 
+a:hover {
+  text-decoration: underline;
+}
+
+section{
+  margin-inline: 13%;
+  /* margin-top: 10%; */
+  margin-top: 7%;
+}
 
 .section-title {
   display: flex;
@@ -36,8 +51,17 @@ p {
   text-align: center;
   padding: 10px 15px;
   border-radius: 10px;
-  font-size: 16px;
-  line-height: 24px;
+  /* font-size: 16px; */
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: 2px solid #4237CB;
+}
+
+.button:hover {
+  text-decoration: none;
+  border: 2px solid #4019FA;
+  background-color: #EEF2FF;
+  color: #4237CB;
 }
 
 /* .App {
@@ -73,7 +97,8 @@ p {
 }
 
 .carousel-title {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.5rem;
   margin-bottom: 10px;
   text-align: left;
 }
@@ -83,23 +108,49 @@ p {
 }
 
 .carousel-image {
-  width: 100%;
+  /* width: 100%; */
   max-height: 200px;
-  object-fit: cover;
-  margin-bottom: 10px;
+  object-fit: contain;
+  /* margin-bottom: 10px; */
 }
 
 .carousel-book-title {
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .carousel-book-author {
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 0.875rem;
   color: gray;
 }
 
-a {
-  text-decoration: none;
-  color: black ;
+@media screen and (max-width: 550px) {
+    
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .section-title img {
+    height: 28px;
+  }
+
+  section, .section {
+    margin-top : 3rem;
+    margin-inline: 7%;
+  }
+
+  .button {
+    font-size: 0.75rem;
+  }
+
 }

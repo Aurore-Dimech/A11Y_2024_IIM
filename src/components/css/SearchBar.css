@@ -17,15 +17,18 @@
 .search-catalogue {
     /* flex-grow: 1; */
     border-radius: 25px 0 0 25px;
+
     width: auto;
+=======
+   
 }
 
 .search-button {
     /* flex-grow: 1; */
     border-radius: 0 25px 25px 0;
+
     width: auto;
     gap:0.5rem; 
-
 }
 
 .search-input {
@@ -47,7 +50,6 @@ input {
     border: none;
 }
 
-
 /*  le responsive de la barre de recherche  */
 
 @media screen and (max-width: 1050px) {
@@ -61,18 +63,13 @@ input {
 @media screen and (max-width: 1000px) {
     .search{
         padding: 0.85rem 1.2rem;
-    
     }
-    
-
 }
 @media screen and (max-width: 960px) {
     .search-bar {
         width: 65%;
         justify-content: flex-end;
     }
-    
-
 }
 @media screen and (max-width: 800px) {
     .search {
@@ -83,14 +80,12 @@ input {
     }
     .search-button {
         padding: 0.125rem 1.2rem;
-    }
-    
+    }  
 }
 
 @media screen and (max-width: 555px) {
     .search-input {
         width: 7rem;
-    
     }
     .search-catalogue select{
         font-size: 0.9rem;
@@ -114,8 +109,14 @@ input {
     }
     .search-button {
         padding-inline: 0.6rem;
+    } 
+}
+
+=======
+@media screen and (max-width: 700px) {
+    .search-bar {
+        width: 100%;
+        flex-direction: column;
     }
-   
-    
 }
 

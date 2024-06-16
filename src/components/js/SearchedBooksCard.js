@@ -1,4 +1,6 @@
+
 import React, {useState, useEffect, useRef} from "react";
+
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
 import "../css/SearchedBooksCard.css";

@@ -9,6 +9,8 @@ import SingleBookPage from "./pages/js/SingleBookPage";
 import Search from "./pages/js/SearchPage"
 import Header from "./components/js/Header";
 
+import ArrowUp from "./components/js/ArrowUp";
+
 function App() {
   return (
     <div className="App">
@@ -36,6 +38,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      <ArrowUp />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import pinterest from "../../assets/pinterest.svg";
 import x from "../../assets/x.svg";
 import tumblr from "../../assets/tumblr.svg";
 import facebook from "../../assets/facebook.svg";
-import logo from "../../assets/logo.svg";
+import logoFooter from "../../assets/logoFooter.svg";
 import logoNice from "../../assets/logoNice.svg";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
     <footer role="contentinfo">
       <div className="contacts-links">
         <div className="contacts">
-          <h3>NOUS CONTACTER</h3>
+          <h2>NOUS CONTACTER</h2>
           <div className="address">
             <p>
               BMVR - Direction
@@ -111,7 +111,7 @@ const Footer = () => {
 
       <div className="footer-second-section">
         <form>
-          <h3>NEWSLETTER</h3>
+          <h2>NEWSLETTER</h2>
           <div className="newsletter-container">
             <label htmlFor="newsletter">
               Votre adresse mail
@@ -148,16 +148,23 @@ const Footer = () => {
             </div>
           </div>
         </form>
-        <div className="logo">
+        <div className="logo logos">
           <ol>
             <li>
-              <a href="/">
-                <img
-                  src={logo}
-                  className="logo"
-                  alt="logo de la bibliothèque - Accueil"
-                />
-              </a>
+              <ol className="bibli-logo-prog">
+                <li>
+                  <a href="/">
+                    <img
+                      src={logoFooter}
+                      className="logo logo-img"
+                      alt="logo de la bibliothèque - Accueil"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="/programme">Voir le programme</a>
+                </li>
+              </ol>
             </li>
             <li>
               <a
@@ -167,7 +174,7 @@ const Footer = () => {
               >
                 <img
                   src={logoNice}
-                  className="logo"
+                  className="logo logo-img"
                   alt="logo de la ville de Nice"
                 />
               </a>

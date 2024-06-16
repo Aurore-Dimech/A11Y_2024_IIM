@@ -1,11 +1,16 @@
 .agenda-section-bg {
     background-color: #2F2C7E ;
-    margin-top: 10%;
-    padding: 3% 0;
+    margin-top: 6%;
+    padding: 5em 0;
+    width: 100%;
 }
 
 .agenda-section {
     margin-top: 0;
+}
+
+.agenda-section .section-title {
+    margin-bottom: 4%;
 }
 
 .agenda-section h2, .agenda-section a {
@@ -14,10 +19,12 @@
 
 .events-list {
     display: grid;
-    grid-template-columns: 0.9fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5%;
-    margin-bottom: 5%;
+    grid-template-columns: 0.8fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    /* gap: 5%; */
+    column-gap: 3.5vw;
+    row-gap: 4vh;
+    margin-bottom: 3em;
 }
 
 .events-list li {
@@ -27,54 +34,76 @@
 }
 
 .activity1 {
+    position: relative;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 }
 
-.activity1 img {
+.activity1 > img {
+    height: 61%;
+    object-fit: cover;
     width: 100%;
+    /* height: 40vh; */
     border-radius: 10px 10px 0 0;
 } 
 
-.activity2 img, .activity3 img {
+.activity2, .activity3 {
+    height: 35vh;
+}
+
+.activity2 > img, .activity3 > img {
     border-radius: 10px 0 0 10px;
+    /* height: 30vh;
+    flex-grow: 1; */
+    object-fit: cover;
 }
 
 .activity1 h3 {
     text-align: center;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .activity1 .cards-info {
-    margin-inline: 10%;
-    padding: 5% 5%;
-    position: relative;
-    top: -12%;
-    height: 50%;
+    margin-inline: 8%;
+    position: absolute;
+    bottom : 5%;
+    height: 48%;
 }
 
 .events-list li:not(:first-of-type) {
     display: flex;
+    /* height: 27vh; */
 }
 
-.events-list li:not(:first-of-type) ol {
-    padding-inline: 1.5em;
+.activity2 .cards-info, .activity3 .cards-info {
+    padding: 1.5em;
+}
+
+.cards-info > ol {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.cards-info .cards-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .cards-info {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-radius: 10px;
 }
 
 .cards-info img {
     width: 23px;
     border-radius: 0;
-}
-
-.cards-info h3 {
-    margin-bottom: 10%;
 }
 
 .info-line {
@@ -84,13 +113,137 @@
 }
 
 .cards-info .button {
-    margin-top: 8%;
+    width: 100%;
 }
 
 .all-events {
     display: flex;
     justify-content: end;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.25rem;
     text-decoration: none;
     color: black;
+}
+
+.all-events:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1250px) {
+    .events-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .events-list > li {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards > img {
+        height: 50vh;
+    }
+
+    .cards-info > ol {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-info h3 {
+        padding: 1rem 1.5rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+    }
+
+    .activity1 .cards-info h3 {
+        position: absolute;
+        width: fit-content;
+        max-width: 80%;
+        bottom: 90%;
+        background-color: white;
+    }
+
+    .events-list > li:first-of-type {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .events-list li:not(:first-of-type) {
+        margin-top: 0.4rem;
+    }
+
+    .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
+        margin-inline: 5%;
+        padding-block: 1rem;
+        padding-inline: 0;
+        position: relative;
+    }
+
+    .activity2 .cards-info, .activity3 .cards-info {
+        padding-top: 0.2em;
+    }
+
+    .cards-info > ol > li:first-of-type {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards-info .button {
+        padding-block: 1.5rem;
+    }
+
+    .activity2, .activity3 {
+        position: relative;
+        height: fit-content;
+    }
+
+    .activity2 > img, .activity3 > img {
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .events-list {
+        margin-bottom: 1.5em;
+    }
+
+    .agenda-section-bg {
+        padding: 2em 0;
+        margin-top: 4em;
+    }
+    .cards-info h3 {
+        padding-inline: 1em;
+    }
+
+    .all-events {
+        font-size: 0.75em;
+    }
+
+    .cards > img {
+        height: 30vh;
+    }
+
+    .agenda-section .section-title {
+        margin-bottom: 0;
+    }
+
+    .events-list {
+        row-gap: 1.5em;
+    }
+
+    .cards-info .button {
+        padding: 0.5em 1em;
+        margin-top: 1em;
+    }
+
+    .info-line img {
+        width: 14px;
+    }
 }
