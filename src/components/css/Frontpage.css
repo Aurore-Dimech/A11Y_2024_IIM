@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.section-frontpage .section-title {
+    margin-bottom: 2%;
+}
+
 .slider {
     margin:0 15px;
 }
@@ -13,15 +17,15 @@
     border-radius: 10px;
 }
 
-.react-multi-carousel-track {
-    margin-bottom: 5%;
+.section-frontpage .react-multi-carousel-track {
+    margin-bottom: 2%;
 }
   
-.react-multi-carousel-list {
+.section-frontpage .react-multi-carousel-list {
     padding: 0rem 0 2rem 0;
 }
   
-.custom-dot-list-style button{
+.section-frontpage .custom-dot-list-style button{
     border: none;
     background: white;
     width: 30px;
@@ -29,15 +33,15 @@
     border: 2px solid #2F2C7E;
 }
 
-.react-multi-carousel-dot-list {
+.section-frontpage .react-multi-carousel-dot-list {
     gap: 1%;
 }
 
-.react-multi-carousel-dot.react-multi-carousel-dot--active button{
+.section-frontpage .react-multi-carousel-dot.react-multi-carousel-dot--active button{
     background: #2F2C7E;
 }
 
-.gd-carousel-wrapper {
+.section-frontpage .gd-carousel-wrapper {
     position:relative;
     width: 110%;
     align-self: center;
@@ -45,7 +49,7 @@
     z-index: 1;
 }
 
-.gd-carousel {
+.section-frontpage .gd-carousel {
     position:unset;
     margin-inline: 80px;
     overflow: hidden ;
@@ -53,41 +57,90 @@
     justify-self: center;
 }
 
-.react-multiple-carousel__arrow {
+.section-frontpage .react-multiple-carousel__arrow {
     position:absolute;
     background: none;
     filter: brightness(0);
 }
 
-.react-multiple-carousel__arrow::before {
-    font-size: 38px;
-    top: -30px;
+.section-frontpage .react-multiple-carousel__arrow::before {
+    /* font-size: 38px; */
+    font-size: 2.375rem;
 }
 
-.react-multiple-carousel__arrow:hover {
+.section-frontpage .react-multiple-carousel__arrow:hover {
     background: none;
 }
 
-.react-multi-carousel-item {
+.section-frontpage .react-multi-carousel-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.info-slider {
-    padding-inline : 5%;
+.section-frontpage .info-slider {
+    padding-inline : 3rem;
     position: absolute;
-    bottom: 60px;
+    bottom: 15%;
     color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
 }
 
 .info-slider h3 {
-    font-size: 20px;
-    margin-bottom: 0.2em;
+    text-align: center;
+    height: 12vh;
 }
 
 .section-frontpage .button {
     position: absolute;
-    bottom: -22px;
-    border-radius: 20px;
+    bottom: -15px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .section-frontpage .info-slider {
+        font-size: 1rem;
+        bottom: 2%;
+        width: 100%;
+    }
+
+    .section-frontpage .button {
+        padding: 0.5em 1em;
+        bottom: -10px;
+    }
+
+    .custom-dot-list-style button {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .carousel-container {
+            margin: 0.5em 0;
+    }
+
+    .react-multiple-carousel__arrow::before {
+        font-size: 1.8rem;
+    }
+
+    .react-multiple-carousel__arrow--right {
+        right: calc(4% - 20px);
+    }
+
+    .react-multiple-carousel__arrow--left {
+        left: calc(4% - 20px);
+    }
+
+    .section-frontpage .custom-dot-list-style button{
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .section-frontpage .info-slider {
+        bottom: 20%;
+    }
 }

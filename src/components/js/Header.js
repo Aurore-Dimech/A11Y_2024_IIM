@@ -8,6 +8,8 @@ import icon_aide from "../../images/aide_icone.png";
 import drapeau from "../../images/drapeau.png";
 import flehe_bas from "../../images/flèche_vers_bas.png";
 import NormalNavBar from "./NomralNavBar";
+
+
 function Navbar() {
  const [ScreenSize, setScreenSize] = useState(false);
 
@@ -28,6 +30,7 @@ function Navbar() {
     <>
       <header role="banner">
         <div className="header">
+
           <a  className="logo_flex " href="/">
             <img
               src={Logo}
@@ -42,28 +45,41 @@ function Navbar() {
               </svg>
               <SearchBar />
             </div>
+
             <ul className="infos">
               <li>
                 <a href="/infos">
-                  <img src = {horloge} alt=""/>
+                  <img
+                    src={horloge}
+                    alt=""
+                  />
                   Horaires
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {accessibilite} alt=""/>
+                  <img
+                    src={accessibilite}
+                    alt=""
+                  />
                   Accessibilité
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {icon_aide} alt=""/>
+                  <img
+                    src={icon_aide}
+                    alt=""
+                  />
                   Aides
                 </a>
               </li>
               <li>
                 <a href="/infos">
-                  <img src = {drapeau} alt=""/>
+                  <img
+                    src={drapeau}
+                    alt=""
+                  />
                   Français
                   <img src = {flehe_bas} alt=""/>
                 </a>
@@ -75,6 +91,7 @@ function Navbar() {
               </li> 
             </ul>     
           </div>
+
         </div>
       </header>
       <NormalNavBar />

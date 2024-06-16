@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../css/SearchBar.css";
 import SearchIcon from "../../assets/searchIcon.svg";
 
+import { useIsMobile } from "../../hooks/useIsMobile";
+
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
 
@@ -33,7 +35,7 @@ const SearchBar = () => {
       <input
         type="search"
         title="Recherchez par mots-clés"
-        placeholder="Recherchez votre document..."
+        placeholder={useIsMobile() ? "Rechercher..." : "Recherchez votre document..."}
         className="search-input"
         onChange={handleInputChange}
       />

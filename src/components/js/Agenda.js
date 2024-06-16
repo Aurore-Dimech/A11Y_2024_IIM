@@ -46,50 +46,58 @@ const FrontPage = () => {
     return (
       <li
         key={activity}
-        className={activities[activity].id}
+        className={"cards " + activities[activity].id}
       >
         <img
           src={activities[activity].image}
           alt={activities[activity].alt}
         />
-        <ol className="cards-info">
-          <li>
-            <h3>{activities[activity].title}</h3>
-          </li>
-          <li className="info-line">
-            <img
-              src={calendar}
-              className="icon"
-              alt="Date : "
-            />
-            <p>{activities[activity].dates}</p>
-          </li>
-          <li className="info-line">
-            <img
-              src={marker}
-              className="icon"
-              alt="Lieu : "
-            />
-            <p>{activities[activity].place}</p>
-          </li>
-          <li className="info-line">
-            <img
-              src={tag}
-              className="icon"
-              alt="Catégorie : "
-            />
-            <p>{activities[activity].type}</p>
-          </li>
-          <a
-            href={activities[activity].ref}
-            className="button"
-            aria-label={
-              "Se renseigner sur l'atelier :" + activities[activity].title
-            }
-          >
-            Se renseigner sur l'atelier
-          </a>
-        </ol>
+        <div className="cards-info">
+          <ol>
+            <li>
+              <h3>{activities[activity].title}</h3>
+            </li>
+            <li>
+              <ol className="cards-desc">
+                <li className="info-line">
+                  <img
+                    src={calendar}
+                    className="icon"
+                    alt="Date : "
+                  />
+                  <p>{activities[activity].dates}</p>
+                </li>
+                <li className="info-line">
+                  <img
+                    src={marker}
+                    className="icon"
+                    alt="Lieu : "
+                  />
+                  <p>{activities[activity].place}</p>
+                </li>
+                <li className="info-line">
+                  <img
+                    src={tag}
+                    className="icon"
+                    alt="Catégorie : "
+                  />
+                  <p>{activities[activity].type}</p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a
+                href={activities[activity].ref}
+                className="button"
+                aria-label={
+                  "Consulter l'évènement :" + activities[activity].title
+                }
+              >
+                Consulter l'évènement
+              </a>
+            </li>
+          </ol>
+        </div>
       </li>
     );
   });

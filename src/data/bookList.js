@@ -13,7 +13,7 @@ const bookList = {
   book1: {
     cover: cover1,
     id: 1,
-    title: "ARIOL chante comme un rossignol",
+    title: "Ariol chante comme un rossignol",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2023",
@@ -33,7 +33,7 @@ const bookList = {
   book2: {
     cover: cover2,
     id: 2,
-    title: "ARIOL VIEUX SAC À PUCES !",
+    title: "Ariol vieux sac à puces !",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2022",
@@ -53,7 +53,7 @@ const bookList = {
   book3: {
     cover: cover3,
     id: 3,
-    title: "ARIOL LA CHOUETTE CLASSE VERTE",
+    title: "Ariol la chouette classe verte",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2021",
@@ -73,7 +73,7 @@ const bookList = {
   book4: {
     cover: cover4,
     id: 4,
-    title: "ARIOL NAPHTALINE NOUS DIT TOUTOU",
+    title: "Ariol Naphtaline nous dit toutou",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2020",
@@ -93,7 +93,7 @@ const bookList = {
   book5: {
     cover: cover5,
     id: 5,
-    title: "ARIOL Touche pas à mon veau",
+    title: "Ariol touche pas à mon veau",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2019",
@@ -113,7 +113,7 @@ const bookList = {
   book6: {
     cover: cover6,
     id: 6,
-    title: "ARIOL ce nigaud d'agneau",
+    title: "Ariol ce nigaud d'agneau",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2018",
@@ -133,7 +133,7 @@ const bookList = {
   book7: {
     cover: cover7,
     id: 7,
-    title: "ARIOL le canard calé",
+    title: "Ariol le canard calé",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2017",
@@ -153,7 +153,7 @@ const bookList = {
   book8: {
     cover: cover8,
     id: 8,
-    title: "ARIOL le coq sportif",
+    title: "Ariol le coq sportif",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2017",
@@ -173,11 +173,11 @@ const bookList = {
   book9: {
     cover: cover9,
     id: 9,
-    title: "ARIOL La fête à la grenouille",
+    title: "Ariol la fête à la grenouille",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2016",
-    description: "Pourquoi Ariol offre-t-il une bouteille de bain moussant parfumé à Vanesse, la petite grenouille un peu timide de sa classe ? <br>Ça n'a l'air de plaire ni à Ramono, ni à Pétula. Et si c'était une idée de BiSBiLLE ? Pour avoir la clef de tous ces mystères, venez faire la fête à la grenouille !",
+    description: "Pourquoi Ariol offre-t-il une bouteille de bain moussant parfumé à Vanesse, la petite grenouille un peu timide de sa classe ? Ça n'a l'air de plaire ni à Ramono, ni à Pétula. Et si c'était une idée de BiSBiLLE ? Pour avoir la clef de tous ces mystères, venez faire la fête à la grenouille !",
     reviewNumber: 0,
     availableCopiesNumber: 3,
     documentType: "Bande Dessinée",
@@ -193,7 +193,7 @@ const bookList = {
   book10: {
     cover: cover10,
     id: 10,
-    title: "ARIOL Les petits rats de l'opéra",
+    title: "Ariol les petits rats de l'opéra",
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2015",

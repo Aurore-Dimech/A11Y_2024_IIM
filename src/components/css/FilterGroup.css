@@ -9,7 +9,7 @@
     gap: 0.4em;
 }
 
-input[type="checkbox"] {
+.individual_filter_label input[type="checkbox"] {
     appearance: none;
     /* height: 20px; */
     width: 21px;
@@ -23,7 +23,8 @@ input[type="checkbox"] {
    
 }
 
-input[type="checkbox"]:before {
+
+.individual_filter_label input[type="checkbox"]:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -33,12 +34,12 @@ input[type="checkbox"]:before {
 
 }
 
-input[type="checkbox"]:checked {
+.individual_filter_label input[type="checkbox"]:checked {
     border-color: rgba(47, 44, 126, 1); /* Couleur de la bordure lorsque cochée */
     background-color: rgba(47, 44, 126, 1); /* Couleur de fond lorsque cochée */
 }
 
-input[type="checkbox"]:checked:before {
+.individual_filter_label input[type="checkbox"]:checked:before {
     background-color: transparent;
     color: white;
     content: "✔";
@@ -52,7 +53,7 @@ input[type="checkbox"]:checked:before {
 /* ////////////////////////////////// */
 
 /* Limite entre le FIlterCategory et le Filter */
-fieldset {
+.all_filter fieldset {
     border-style: none;
     display: flex;
     gap: 1em;
