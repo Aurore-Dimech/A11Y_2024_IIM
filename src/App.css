@@ -107,12 +107,6 @@ section{
   text-align: center;
 }
 
-.carousel-image-container {
-  /* width: 100%; */
-  max-height: 200px;
-  /* margin-bottom: 10px; */
-}
-
 .carousel-book-title {
   /* font-size: 16px; */
   font-size: 1rem;

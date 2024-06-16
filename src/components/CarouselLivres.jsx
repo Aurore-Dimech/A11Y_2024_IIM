@@ -22,14 +22,14 @@ function CarouselLivres({title, books, className}) {
                 }
             },
             {
-                breakpoint: 1430,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 960,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1

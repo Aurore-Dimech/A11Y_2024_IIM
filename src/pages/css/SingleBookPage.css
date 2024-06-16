@@ -497,7 +497,7 @@ td {
     }
 
     .book-cover{
-        height: 40vh;
+        height: 60vh;
         width: auto;
         max-width: 80%;
         object-fit: contain;
@@ -606,6 +606,10 @@ td {
     
     .return a, .book-publisher, .availability-text, .reserve-button, .description-section dd, .comment-description textarea{
         font-size: 0.75rem;
+    }
+
+    .book-cover{
+        height: 40vh;
     }
 
     .description-section {
