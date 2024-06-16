@@ -44,7 +44,7 @@
     min-width: max-content;
 }
 
-/* .ListHover {
+ .ListHover {
     display: flex;
     padding: 1.5625rem 5.375rem;
     justify-content: center;
@@ -148,7 +148,6 @@
     .DetailsList{
         position: static;
         list-style: none;
-         /* Adjust as needed for indentation */
         display: none;
     }
 
@@ -179,5 +178,5 @@
         padding: 1rem;
     }
     
-} */
+} 
 

@@ -71,18 +71,29 @@ function Recherche() {
     },
   ];
 
+  const focuSearchBar = () =>{
+    const searchBar = document.querySelector('.search-input');
+    const ChangeReasearch = document.querySelector('.btn_change');
+    
+      ChangeReasearch.scrollTo({ top:0, behavior:"smooth"});
+      searchBar.focus();
+    
+
+
+  }
+
   return (
 
-    <main role="main">
+    <main role="main" className="MainPage">
       {DisplayFilter ? 
         <div className="filterMobile" >
           <FilteResponsive  closeFilterMobile={closeFilterMobile}/>
         </div> : 
       ""}
 
-      <h1>RESULTAT DE LA RECHERCHE :</h1>
+      <h1 className="SearchResult">RESULTAT DE LA RECHERCHE :</h1>
       <p className="ma_recherche"> Ma recherche : "Ariol"</p>
-      <button className="btn_change">Modifier ma recherche</button>
+      <button className="btn_change" onClick={focuSearchBar}>Modifier ma recherche</button>
       <div className="container_searchpage">
 
         <Filter ButtonDisplayClick= {ButtonDisplayClick}  closeFilterMobile={closeFilterMobile}/>
