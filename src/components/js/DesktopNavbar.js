@@ -21,6 +21,7 @@ function DesktopNavbar() {
 
   return (
     <nav
+    id="navbar"
       role="navigation"
       aria-label="Menu principal"
       className="nav-principal"
