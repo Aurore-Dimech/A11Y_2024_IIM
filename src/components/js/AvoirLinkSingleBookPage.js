@@ -29,3 +29,5 @@ function AvoidLinkSingleBookPage () {
         </ul>
     )
 }
+
+export default AvoidLinkSingleBookPage;

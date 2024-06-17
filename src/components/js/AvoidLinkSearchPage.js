@@ -8,7 +8,7 @@ function AvoidLinkSearchPage () {
         <ul className="AvoidLink">
             <AvoidLinkHeader/>
             <li>
-                <a id="CollectionsBook"> Livres de la collection</a>
+                <a href="#CollectionsBook"> Livres de la collection</a>
             </li>
             <li>
                 <a href="#Footer">Footer</a>
@@ -16,3 +16,5 @@ function AvoidLinkSearchPage () {
         </ul>
     )
 }
+
+export default AvoidLinkSearchPage;
