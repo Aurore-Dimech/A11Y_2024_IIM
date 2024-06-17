@@ -1,15 +1,15 @@
 import React from 'react';
-import '../css/AvoidLinkHeader.css';
+import '../css/AvoidLink.css';
 
 const AvoidLinkHeader = () => {
 
 return (
     <>
         <li>
-            <a href="#header">Aller au header</a>
+            <a href="#header">Header</a>
         </li>
         <li>
-            <a href="#navbar">Aller à la barre de navigation</a>
+            <a href="#navbar">Barre de navigation</a>
         </li>
 
     </>

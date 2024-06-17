@@ -1,6 +1,7 @@
 header {
     background-color: #FBE11A;
     padding: 0.5em 0;
+    order: 2;
 }
 
 .header {
