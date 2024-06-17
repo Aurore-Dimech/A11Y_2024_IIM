@@ -74,6 +74,7 @@
 .events-list li:not(:first-of-type) {
     display: flex;
     /* height: 27vh; */
+    max-height: 300px;
 }
 
 .activity2 .cards-info, .activity3 .cards-info {
@@ -84,6 +85,7 @@
 .cards-info > ol {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     justify-content: space-between;
     height: 100%;
     width: 100%;

@@ -15,9 +15,10 @@ function MobileNavbar() {
   const [activeMenu, setActiveMenu] = useState(null);
 
   const expandMenu = (menuName) => {
-    if (activeMenu !== menuName) {
+    // if (activeMenu !== menuName) {
       setActiveMenu(menuName);
-      }
+      // }
+    console.log("menuName", menuName)
     console.log("activeMenu", activeMenu);
   };
 
