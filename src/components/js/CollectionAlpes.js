@@ -5,7 +5,7 @@ import "../css/CollectionAlpes.css";
 
 const CollectionAlpes = () => {
   return (
-    <section>
+    <section id="CollectionsAlpes">
       <div className="section-title">
         <img
           src={blueMoon}

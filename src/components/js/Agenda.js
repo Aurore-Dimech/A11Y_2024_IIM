@@ -103,7 +103,7 @@ const FrontPage = () => {
     );
   });
   return (
-    <div className="agenda-section-bg">
+    <div id="Agenda" className="agenda-section-bg">
       <section className="agenda-section">
         <div className="section-title">
           <img

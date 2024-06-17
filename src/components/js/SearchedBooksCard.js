@@ -53,7 +53,7 @@ const Book = ({
   documentType,
 }) => {
   return (
-      <div className="one_book">
+      <div id="CollectionsBook" className="one_book">
         {" "}
         {/* container avec infos pour un livre */}
         <div className="photo_btn">

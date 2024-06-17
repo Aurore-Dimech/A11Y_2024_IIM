@@ -4,7 +4,7 @@ import "../css/SearchSection.css";
 
 const SearchSection = () => {
   return (
-    <div className="section-search">
+    <div id="Barrederecherche" className="section-search">
       <h2>Un Monde de Savoir à Portée de Recherche !</h2>
       <SearchBar />
       <a

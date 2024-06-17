@@ -14,16 +14,13 @@ import scoring from "../../assets/scoring.svg";
 import threeStars from "../../assets/3stars.svg";
 import fiveStars from "../../assets/5stars.svg";
 import returnArrow from "../../assets/returnArrow.svg";
-
 import externalLink from "../../assets/externalLink.svg";
 import download from "../../assets/download.svg";
 import mail from "../../assets/mail.svg";
-
 import arrowLink from "../../assets/arrowLink.svg";
-
 import { useIsMobile } from "../../hooks/useIsMobile";
-
 import { BurgerContext } from "../../context/BurgerContext";
+import AvoidLinkSingleBookPage from "../../components/js/AvoidLinkSingleBookPage"
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -325,6 +322,7 @@ function LivreInfos() {
           isBurgerOpen ? "bg-burger-hidden" : ""
         }`}
       >
+        <AvoidLinkSingleBookPage/>
         <Ariane position={[position]} />
 
         <div className="return-actions">
@@ -375,7 +373,7 @@ function LivreInfos() {
           </div>
         </div>
 
-        <div className="SingleBookPage">
+        <div id="ContentBook" className="SingleBookPage">
           <div className="Book_img">
             {" "}
             {/* Image du livre */}
@@ -466,7 +464,7 @@ function LivreInfos() {
           </div>
         </div>
         {/* Proposition de livres */}
-        <section className="availability-section">
+        <section id="Availability" className="availability-section">
           <div className="disponible_style">
             {" "}
             {/* container avec le titre "disponibilité et le traits" */}
@@ -484,7 +482,7 @@ function LivreInfos() {
           className="App"
           id="singlePageComments"
         >
-          <div className="CommentContainer">
+          <div id="Comments" className="CommentContainer">
             <div className="disponible_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
@@ -497,7 +495,7 @@ function LivreInfos() {
               </h2>
               <div className="trait"></div>
             </div>
-            <div className="containerAllComments">
+            <div  className="containerAllComments">
               <div className="containerComments">
                 {" "}
                 {/* section sur les avis */}
@@ -554,7 +552,7 @@ function LivreInfos() {
               </div>
             </div>
 
-            <div className="containerAllComments">
+            <div id="LeaveComments" className="containerAllComments">
               <h2>Donnez nous votre avis !</h2>
               <form>
                 <fieldset className="star-rating">
@@ -631,7 +629,7 @@ function LivreInfos() {
               </form>
             </div>
           </div>
-          <div className="container-carousel">
+          <div id="SameAuthorBook" className="container-carousel">
             <div className="book_title_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
@@ -671,7 +669,7 @@ function LivreInfos() {
             </div>
           </div>
 
-          <div className="container-carousel">
+          <div id="Suggestions" className="container-carousel">
             <div className="book_title_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}

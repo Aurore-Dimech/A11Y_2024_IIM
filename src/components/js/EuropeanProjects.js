@@ -48,7 +48,7 @@ const EuropeanProjects = () => {
     );
   });
   return (
-    <section className="european-projects">
+    <section id="ProjetsUE" className="european-projects">
       <div className="section-title">
         <img
           src={blueMoon}

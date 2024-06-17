@@ -14,6 +14,9 @@ return (
             <a href="#Agenda">Aller à l'agenda</a>
         </li>
         <li>
+            <a href="#CollectionsAlpes">Aller à la collections des Alpes</a>
+        </li>
+        <li>
             <a href="#Barrederecherche">Aller à la seconde barre de recherche</a>
         </li>
         <li>
