@@ -17,7 +17,7 @@ const Footer = () => {
   const { isBurgerOpen } = useContext(BurgerContext);
 
   return (
-    <footer role="contentinfo" className={`App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
+    <footer id="Footer" role="contentinfo" className={`App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
       <div className="contacts-links">
         <div className="contacts">
           <h2>NOUS CONTACTER</h2>

@@ -27,7 +27,7 @@ import arrowLink from "../../assets/arrowLink.svg";
 const FrontPage = () => {
   return (
     <section className="section-frontpage">
-      <div className="section-title">
+      <div id="AlaUne" className="section-title">
         <img
           src={blueMoon}
           alt=""
@@ -76,7 +76,7 @@ const FrontPage = () => {
         </Carousel>
       </div> */}
 
-      <div className="slider-container">
+      <div id="" className="slider-container">
         {articles.map((article, index) => {
           return (
             <div
