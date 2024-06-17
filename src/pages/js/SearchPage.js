@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import SearchedBooksCard from "../../components/js/SearchedBooksCard";
 import bookList from "../../data/bookList";
 import "../css/SearchPage.css";
@@ -10,6 +10,8 @@ import returnArrow from "../../assets/returnArrow.svg";
 import share from "../../assets/searchShare.svg";
 import history from "../../assets/searchHistory.svg";
 import download from "../../assets/download.svg";
+
+import { BurgerContext } from "../../context/BurgerContext";
 
 function Recherche() {
   const list = Object.keys(bookList).map((book) => (
@@ -54,8 +56,6 @@ function Recherche() {
   };
 
   useEffect(() => {
-    console.log("DisplayFilter", DisplayFilter);
-    console.log("ButtonDisplayClick", ButtonDisplayClick);
   }, [DisplayFilter, ButtonDisplayClick]);
 
   const position = [
@@ -81,10 +81,12 @@ function Recherche() {
     searchBar.focus();
   };
 
+  const { isBurgerOpen } = useContext(BurgerContext);
+
   return (
     <main
       role="main"
-      className="MainPage"
+      className={`MainPage App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
     >
       <Ariane position={[position]} />
       <div className="return-actions">
@@ -149,7 +151,7 @@ function Recherche() {
           Ma recherche : "<span>{window.location.href.split("/").pop()}"</span>
         </p>
         <button
-          className="button"
+          className="button modif_search"
           onClick={focuSearchBar}
         >
           Modifier ma recherche
@@ -234,7 +236,7 @@ function Recherche() {
               </div>
               <div className="container_numberOnTheTop deux">
                 <button
-                  className="DisplaySearchBtn"
+                  className="button"
                   onClick={toggleFilterMobile}
                 >
                   Affiner votre recherche

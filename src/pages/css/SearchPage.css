@@ -249,11 +249,6 @@
 
 /* Le responsive ////////// */
 
-@media screen and (max-width: 1265px) {
-    .container_livres {
-        width: 60%;  
-     }
-}
 
 @media screen and (max-width: 1065px) {
     .btn_change  {
@@ -261,7 +256,6 @@
     }
     .container_livres {
         width: 100%;  
-        padding:2rem ;
     }
     .container_numberOnTheTop.One {
         display: none;
@@ -270,12 +264,15 @@
         display: flex;
         
      }
-    .container_numberOnTheTop.deux p {
-        font-size: 1.3rem;
-    }
+
     .container_searchpage {
-        margin-top: 0.2rem; 
+        margin-top: 2rem; 
     }
+
+    .all_books {
+        gap: 2rem;
+    }
+
     .SecondLineFilter.deux {
         display: flex;
         gap: 0.2rem;
@@ -316,29 +313,25 @@
 }
 
 @media screen and (max-width: 600px) {
-    h1{
-        font-size: 1.6rem;
-    }
-    .ma_recherche{
-        font-size: 1.1rem;
     
-    }
-}
-
-@media screen and (max-width: 500px) {
     h1{
         font-size: 1.5rem;
     }
-    .ma_recherche{
-        font-size: 1rem;
-    
+    .ma_recherche, .exemplaireDisponible{
+        font-size: 0.75rem;
     }
+
+    .autor {
+        display: none;
+    }
+    
 }
 
 
 @media screen and (max-width: 590px) {
-    .container_livres {
-        padding:1.5rem ;
+
+    .modif_search {
+        display: none;
     }
 }
 
@@ -351,10 +344,6 @@
     }
     .Tri_Affichage {
         gap: 1rem;
-    }
-    .container_numberOnTheTop.deux p{
-        font-size: 1.2rem;
-    
     }
 }
 
@@ -380,10 +369,6 @@
 @media screen and (max-width: 450px) {
     h1{
         font-size: 1.3rem;
-    }
-    .ma_recherche{
-        font-size: 1rem;
-    
     }
 }
 
@@ -418,9 +403,6 @@
     .DisplaySearchBtn{
         padding: 0.4rem 1rem;
     }
-    .container_livres {
-        padding:1.1rem ;
-    }
 }
 
 @media screen and (max-width: 420px) {
@@ -429,15 +411,9 @@
     }
 }
 @media screen and (max-width: 395px) {
-    .container_numberOnTheTop.deux p {
-        font-size: 0.9rem;
-    }
+
     h1{
         font-size: 1rem;
-    }
-    .ma_recherche{
-        font-size: 0.8rem;
-    
     }
 }
 @media screen and (max-width: 390px) {

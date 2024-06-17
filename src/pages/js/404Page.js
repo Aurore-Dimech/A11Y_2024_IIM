@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 
 import "../css/404Page.css";
 import image from "../../assets/404.svg";
 import returnArrow from "../../assets/returnArrow.svg";
 import Ariane from "../../components/js/AriadnesThread";
+
+import { BurgerContext } from "../../context/BurgerContext";
 
 const NotFoundPage = () => {
   useEffect(() => {
@@ -25,8 +27,11 @@ const NotFoundPage = () => {
     },
   ];
 
+  const { isBurgerOpen } = useContext(BurgerContext);
+
+
   return (
-    <main role="main">
+    <main role="main" className= {`App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
       <Ariane position={[position]} />
       <section className="unfound-page">
         <div className="return">

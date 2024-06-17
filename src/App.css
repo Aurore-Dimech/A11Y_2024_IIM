@@ -6,6 +6,10 @@
   font-weight: normal;
 }
 
+.bg-burger-hidden {
+  display: none !important;
+}
+
 h2 {
   /* font-size: 36px; */
   font-size: 2.25rem;

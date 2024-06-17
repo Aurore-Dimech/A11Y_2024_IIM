@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
 import bookList from "../../data/bookList";
@@ -22,6 +22,8 @@ import mail from "../../assets/mail.svg";
 import arrowLink from "../../assets/arrowLink.svg";
 
 import { useIsMobile } from "../../hooks/useIsMobile";
+
+import { BurgerContext } from "../../context/BurgerContext";
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -309,11 +311,13 @@ function LivreInfos() {
     </>
   );
 
+  const { isBurgerOpen } = useContext(BurgerContext);
+
   return (
     <>
       <main
         role="main"
-        className="container singleBookPage-container"
+        className={`container singleBookPage-container App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
       >
         <Ariane position={[position]} />
 

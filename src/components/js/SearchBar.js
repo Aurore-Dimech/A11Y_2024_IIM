@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../css/SearchBar.css";
 import SearchIcon from "../../assets/searchIcon.svg";
 
 import { useIsMobile } from "../../hooks/useIsMobile";
+
+import { BurgerContext } from "../../context/BurgerContext";
 
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
@@ -16,10 +18,12 @@ const SearchBar = () => {
     window.location.href = `/recherche/${inputValue}`;
   };
 
+  const { isBurgerOpen } = useContext(BurgerContext);
+
   return (
     <form
       role="search"
-      className="search-bar"
+      className= {`search-bar ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
       onSubmit={handleSubmit}
     >
       <div className="search search-catalogue">

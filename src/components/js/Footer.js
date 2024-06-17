@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "../css/Footer.css";
 
@@ -11,9 +11,13 @@ import facebook from "../../assets/facebook.svg";
 import logoFooter from "../../assets/logoFooter.svg";
 import logoNice from "../../assets/logoNice.svg";
 
+import { BurgerContext } from "../../context/BurgerContext";
+
 const Footer = () => {
+  const { isBurgerOpen } = useContext(BurgerContext);
+
   return (
-    <footer role="contentinfo">
+    <footer role="contentinfo" className={`App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
       <div className="contacts-links">
         <div className="contacts">
           <h2>NOUS CONTACTER</h2>

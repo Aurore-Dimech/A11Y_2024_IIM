@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -10,35 +11,39 @@ import Header from "./components/js/Header";
 
 import ArrowUp from "./components/js/ArrowUp";
 
+import { BurgerProvider } from './context/BurgerContext';
+
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={<MainPage />}
-          />
-          <Route
-            path="/livre/:id"
-            element={<SingleBookPage />}
-          />
-          {/* changer pour mettre le nom du livre ? */}
-          <Route
-            path="/recherche/:query"
-            element={<Search />}
-          />
-          {/* changer pour mettre la query ? */}
-          <Route
-            path="*"
-            element={<NotFoundPage />}
-          />
-        </Routes>
-        <ArrowUp />
-        <Footer />
-      </Router>
-    </div>
+    <BurgerProvider>
+      <div className="App">
+        <Router>
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={<MainPage />}
+            />
+            <Route
+              path="/livre/:id"
+              element={<SingleBookPage />}
+            />
+            {/* changer pour mettre le nom du livre ? */}
+            <Route
+              path="/recherche/:query"
+              element={<Search />}
+            />
+            {/* changer pour mettre la query ? */}
+            <Route
+              path="*"
+              element={<NotFoundPage />}
+            />
+          </Routes>
+          <ArrowUp />
+          <Footer />
+        </Router>
+      </div>
+    </BurgerProvider>
   );
 }
 
