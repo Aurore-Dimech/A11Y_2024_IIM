@@ -81,6 +81,14 @@
     font-size: 1.25rem;
 }
 
+.go-to-comments {
+    border: none;
+    background-color: transparent;
+    font-size: 1.25rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .rating {
     display: flex;
     align-items: end;
@@ -483,7 +491,7 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .slides-container {
@@ -495,7 +503,8 @@ td {
 }
 
 .carousel-slides {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
     gap: 1rem;
 }
 
@@ -594,8 +603,16 @@ td {
         text-align: center;
     }
 
+    .book-details .book-author {
+        text-align: left;
+    }
+
     .reserve-button {
         width: 100%;
+    }
+
+    .reservation-message {
+        flex-direction: column;
     }
 
     .description-section {
@@ -613,12 +630,12 @@ td {
     }
 
     .carousel-image-container {
-        width: 30vw;
+        width: 100%;
         justify-content: flex-start;
     }
 
     .carousel-image-container img {
-        width: 30vw;
+        width: 100%;
         height: auto;
     }
 
@@ -691,6 +708,11 @@ td {
 }
 
 @media screen and (max-width: 550px) {
+
+    .singleBookPage-container h1 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
 
     .singleBookPage-container h2, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button, .carousel-title-book {
         font-size: 1rem;

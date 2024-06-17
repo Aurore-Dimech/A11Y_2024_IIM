@@ -33,7 +33,8 @@ const NotFoundPage = () => {
   return (
     <main role="main" className= {`App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
       <Ariane position={[position]} />
-      <section className="unfound-page">
+      <div className="unfound-page">
+      <div className="return-actions">
         <div className="return">
           <img
             src={returnArrow}
@@ -41,6 +42,7 @@ const NotFoundPage = () => {
           />
           <a href="/">Retour à la page d'accueil</a>
         </div>
+      </div>
         <div className="main">
           <h2>
             <img
@@ -55,7 +57,7 @@ const NotFoundPage = () => {
         >
           Accueil
         </a>
-      </section>
+      </div>
     </main>
   );
 };

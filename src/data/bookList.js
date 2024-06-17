@@ -17,7 +17,7 @@ const bookList = {
     author: "Guibert Emmanuel",
     editor: "BD kids",
     publicationDate: "2023",
-    description: "Ariol adore les chansons mais il ne s'attendait pas à ce que Bisbille lui en écrive une. Elle s'appelle Hoquet chorale. Il va falloir l'interpréter avec tous les élèves, devant les parents... Ariol doit faire semblant d'avoir le hoquet hic... hoc... hic... hoc... Comme si cetait facile d'avoir le hoquet et de chanter en même temps !",
+    description: "Ariol adore les chansons mais il ne s'attendait pas à ce que Bisbille lui en écrive une. Elle s'appelle Hoquet chorale. Il va falloir l'interpréter avec tous les élèves, devant les parents... Ariol doit faire semblant d'avoir le hoquet hic... hoc... hic... hoc... Comme si c'était facile d'avoir le hoquet et de chanter en même temps !",
     reviewNumber: 0,
     availableCopiesNumber: 1,
     documentType: "Bandes dessinées",

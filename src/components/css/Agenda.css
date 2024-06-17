@@ -30,6 +30,7 @@
 .events-list li {
     background-color: white;
     border-radius: 10px;
+    width: 100%;
     /* overflow: hidden; */
 }
 
@@ -77,6 +78,7 @@
 
 .activity2 .cards-info, .activity3 .cards-info {
     padding: 1.5em;
+    width: 100%;
 }
 
 .cards-info > ol {
@@ -84,12 +86,14 @@
     grid-template-rows: auto 1fr auto;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
 }
 
 .cards-info .cards-desc {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 5%;
+    justify-content: center;
     width: 100%;
 }
 
@@ -108,8 +112,12 @@
 
 .info-line {
     display: flex;
-    gap: 5%;
+    gap: 3%;
     align-items: center;
+}
+
+.info-line > img {
+    height: 1.3rem;
 }
 
 .cards-info .button {
@@ -193,9 +201,9 @@
     }
 
     .activity1 .cards-info, .activity2 .cards-info, .activity3 .cards-info {
-        margin-inline: 5%;
+        padding-inline: 5%;
         padding-block: 1rem;
-        padding-inline: 0;
+        /* padding-inline: 0; */
         position: relative;
     }
 

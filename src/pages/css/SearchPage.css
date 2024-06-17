@@ -104,9 +104,13 @@
     border-radius: 50%;
     width: 2px;
     height: 32px;
-    font-size: 1.5em;
-    
+    font-size: 1.5em;  
 }
+
+.pagination .arrow:hover, .pagination .arrow:focus {
+    text-decoration: underline;
+}
+
 .pagination .arrow.left{
     margin-right: 2rem;
 }
@@ -324,6 +328,22 @@
     .autor {
         display: none;
     }
+
+    .return-actions {
+        margin-top: 5%;
+    }
+
+    .actions{
+        display: none;
+    }
+
+    .MainPage .return {
+        margin: 0;
+    }
+
+    .MainPage button {
+        line-height: unset;
+    }
     
 }
 
@@ -397,9 +417,7 @@
         width: 1.2rem;
         height: 1.2rem;
     }
-    .container_numberOnTheTop.deux p {
-        font-size: 1rem;
-    }
+    
     .DisplaySearchBtn{
         padding: 0.4rem 1rem;
     }

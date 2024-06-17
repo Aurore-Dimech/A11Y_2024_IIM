@@ -145,7 +145,7 @@ function Recherche() {
       )}
 
       <div className="result-search-title">
-        <h1 className="SearchResult">RESULTAT DE LA RECHERCHE</h1>
+        <h1 className="SearchResult">RÉSULTAT DE LA RECHERCHE</h1>
         <p className="ma_recherche">
           {" "}
           Ma recherche : "<span>{window.location.href.split("/").pop()}"</span>

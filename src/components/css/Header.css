@@ -14,10 +14,10 @@ header {
 
 
 .search_bar_infos {
-   
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    width: 50vw;
 }
 
 .infos {
@@ -67,12 +67,9 @@ header {
         width: 15rem;
         height: auto;
     }
-    
-}
-@media screen and (max-width: 1000px) {
-    header .logo{
-        width: 14rem;
-        height: auto;
+
+    .NavAndSearchBar {
+        justify-content: flex-end;
     }
     
 }
@@ -82,11 +79,21 @@ header {
         gap: 1.6rem;
         padding: 0 1rem;
     }
+
+    .NavAndSearchBar {
+        justify-content: space-between;
+    }
+    
     .search_bar_infos{
         padding-bottom: 0rem;
         width: 100%;
-
     }
+
+    header .logo{
+        width: 14rem;
+        height: auto;
+    }
+
     .infos {
         gap: 0.6em;
     }

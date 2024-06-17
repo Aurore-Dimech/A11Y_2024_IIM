@@ -28,6 +28,10 @@
         text-align: justify;
     }
 
+    .main-collection > div h3, .main-collection > div p {
+        padding-inline: 2%;
+    }
+
     .main-collection > div :last-child {
         align-self: center;
         width: 100%;
@@ -37,5 +41,9 @@
 @media screen and (max-width: 550px) {
     .main-collection img {
         height: 30vh;
+    }
+
+    .main-collection .button {
+        padding: 0.5em 1em;
     }
 }

@@ -78,7 +78,7 @@ const Book = ({
                   aria-label="Lien vers la page du livre"
                   className="title_book_link"
                 >
-                  {title}
+                  {title.toUpperCase()}
                 </a>
               </h2>
               <p className="autor">

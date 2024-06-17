@@ -7,7 +7,7 @@ import { useIsMobile } from "../../hooks/useIsMobile";
 import { BurgerContext } from "../../context/BurgerContext";
 
 const SearchBar = () => {
-  const [inputValue, setInputValue] = useState("");
+  let [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -15,6 +15,9 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (inputValue === "" || inputValue === " " || inputValue === null || inputValue === undefined) {
+      inputValue = "...";
+    };
     window.location.href = `/recherche/${inputValue}`;
   };
 
@@ -48,6 +51,8 @@ const SearchBar = () => {
         href={`/recherche/${inputValue}`}
         value="Rechercher"
         className="search search-button"
+        onKeyDown={handleSubmit}
+        onClick={handleSubmit}
       >
        <span className="span"> Rechercher </span>
         <img

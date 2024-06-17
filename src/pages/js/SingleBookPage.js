@@ -72,7 +72,7 @@ function LivreInfos() {
       section: "Jeunesse",
       cote: "BD ARI 19",
       type: "Bande Dessinées",
-      availability: "Disponible",
+      availability: "Indisponible",
       returnDate: "",
     },
     {
@@ -313,11 +313,17 @@ function LivreInfos() {
 
   const { isBurgerOpen } = useContext(BurgerContext);
 
+  const goToComments = () => {
+    document.querySelector("#Comments").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <main
         role="main"
-        className={`container singleBookPage-container App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
+        className={`container singleBookPage-container App ${
+          isBurgerOpen ? "bg-burger-hidden" : ""
+        }`}
       >
         <Ariane position={[position]} />
 
@@ -381,7 +387,9 @@ function LivreInfos() {
           </div>{" "}
           {/* Tous les informations textuelles du livres jusqu'à la description */}
           <div className="book-details">
-            <h1 className="book-title single-book-title-section">{selectedBook.title.toUpperCase()}</h1>
+            <h1 className="book-title single-book-title-section">
+              {selectedBook.title.toUpperCase()}
+            </h1>
             <div>
               <h2 className="book-author">{selectedBook.author}</h2>
               <p className="book-publisher">
@@ -403,7 +411,7 @@ function LivreInfos() {
                   alt="Moyenne des avis : 4 étoiles sur 5"
                 />
               </span>
-              <a href="#Comments">3 avis</a>
+              <button className="go-to-comments" onClick={goToComments}>3 avis</button>
             </div>
             <div className="availability">
               <img
@@ -463,7 +471,9 @@ function LivreInfos() {
             {" "}
             {/* container avec le titre "disponibilité et le traits" */}
             <div className="trait"></div>
-            <h2 className="availability-title single-book-title-section">DISPONIBILITÉS</h2>
+            <h2 className="availability-title single-book-title-section">
+              DISPONIBILITÉS
+            </h2>
             <div className="trait"></div>
           </div>{" "}
           {/* /////////////// */}
@@ -626,7 +636,9 @@ function LivreInfos() {
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
-              <h2 className="title_carousel single-book-title-section">DU MÊME AUTEUR</h2>
+              <h2 className="title_carousel single-book-title-section">
+                DU MÊME AUTEUR
+              </h2>
               <div className="trait"></div>
             </div>
             <div className="slides-container">
@@ -664,7 +676,9 @@ function LivreInfos() {
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
-              <h2 className="title_carousel single-book-title-section">SUGGESTIONS</h2>
+              <h2 className="title_carousel single-book-title-section">
+                SUGGESTIONS
+              </h2>
               <div className="trait"></div>
             </div>
             <div className="slides-container">

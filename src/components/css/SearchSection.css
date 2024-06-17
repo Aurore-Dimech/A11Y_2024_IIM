@@ -43,6 +43,7 @@
   }
   
   .section-search .advanced-search {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
+    padding-right: 0.5rem;
   }
 }

@@ -17,15 +17,13 @@ function MobileNavbar() {
   const expandMenu = (menuName) => {
     if (activeMenu !== menuName) {
       setActiveMenu(menuName);
-    }
+      }
+    console.log("activeMenu", activeMenu);
   };
 
   const shrinkMenu = () => {
     setActiveMenu(null);
   };
-
-  const [isOpen, setIsOpen] = useState(false);
-    const toggleOpen = () => setIsOpen(!isOpen)
 
   return (
     <ul className={`burger-main ${isBurgerOpen ? "" : "bg-burger-hidden"}`}>
@@ -45,7 +43,6 @@ function MobileNavbar() {
           aria-expanded={activeMenu === "PRATIQUE"}
           className="button-nav-mobile"
           onClick={() => {
-            toggleOpen();
             if (activeMenu === "PRATIQUE") {
               shrinkMenu("PRATIQUE");
               if (pratiqueRef.current) {
@@ -66,7 +63,12 @@ function MobileNavbar() {
           }}
         >
           PRATIQUE
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className={`${activeMenu === "PRATIQUE" ? "nav-mobile-open" : "nav-mobile-closed"
+            }`}
+            src={chevronRight}
+            alt=""
+          />
         </button>
 
         {activeMenu === "PRATIQUE" && (
@@ -119,7 +121,13 @@ function MobileNavbar() {
           }}
         >
           BIBLIOTHEQUES
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className={`${
+              activeMenu === "BIBLIOTHEQUE" ? "nav-mobile-open" : "nav-mobile-closed"
+            }`}
+            src={chevronRight}
+            alt=""
+          />
         </button>
         {activeMenu === "BIBLIOTHEQUE" && (
           <ul className="second-chain-mobile">
@@ -150,7 +158,11 @@ function MobileNavbar() {
           className="button-nav-mobile"
         >
           AGENDA
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className="nav-mobile-closed"
+            src={chevronRight}
+            alt=""
+          />
         </a>
       </li>
       <li>
@@ -159,7 +171,11 @@ function MobileNavbar() {
           className="button-nav-mobile"
         >
           NOUVEAUTÉS
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className="nav-mobile-closed"
+            src={chevronRight}
+            alt=""
+          />
         </a>
       </li>
       <li>
@@ -168,7 +184,11 @@ function MobileNavbar() {
           className="button-nav-mobile"
         >
           EN LIGNE
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className="nav-mobile-closed"
+            src={chevronRight}
+            alt=""
+          />
         </a>
       </li>
       <li
@@ -207,7 +227,13 @@ function MobileNavbar() {
           }}
         >
           DÉCOUVRIR
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className={`${
+              activeMenu === "DECOUVRIR" ? "nav-mobile-open" : "nav-mobile-closed"
+            }`}
+            src={chevronRight}
+            alt=""
+          />
         </button>
         {activeMenu === "DECOUVRIR" && (
           <ul className="second-chain-mobile">
@@ -265,7 +291,13 @@ function MobileNavbar() {
           }}
         >
           PATRIMOINE
-          <img className={`${isOpen ? "" : 'nav-mobile-closed'}`} src={chevronRight} alt="" />
+          <img
+            className={`${
+              activeMenu === "PATRIMOINE" ? "nav-mobile-open" : "nav-mobile-closed"
+            }`}
+            src={chevronRight}
+            alt=""
+          />
         </button>
         {activeMenu === "PATRIMOINE" && (
           <ul className="second-chain-mobile">

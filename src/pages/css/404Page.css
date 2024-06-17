@@ -1,11 +1,11 @@
 .unfound-page {
     display: grid;
+    margin-inline: 13%;
 }
 
 .unfound-page .return {
     display: flex;
     justify-content: left;
-    margin-bottom: 5%;
     gap: 1vw;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .unfound-page .main img {
-    height: 55vw;
+    height: 45vw;
 }
 
 .unfound-page .button {
@@ -48,6 +48,7 @@
     }
 
     .unfound-page .button {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
+        padding: 6px 12px;
     }
 }
