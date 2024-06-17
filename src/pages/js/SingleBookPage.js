@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
-import Carousel from "../../components/CarouselLivres";
 import bookList from "../../data/bookList";
 import "../css/SingleBookPage.css";
 import sugCover1 from "../../assets/sugCover1.svg";
@@ -19,6 +18,8 @@ import returnArrow from "../../assets/returnArrow.svg";
 import externalLink from "../../assets/externalLink.svg";
 import download from "../../assets/download.svg";
 import mail from "../../assets/mail.svg";
+
+import arrowLink from "../../assets/arrowLink.svg";
 
 import { useIsMobile } from "../../hooks/useIsMobile";
 
@@ -101,6 +102,10 @@ function LivreInfos() {
   const sameAuthorBooks = bookListArray.filter(
     (book) => book.author === selectedBook.author && book.id !== selectedBook.id
   );
+
+  while (sameAuthorBooks.length > 3) {
+    sameAuthorBooks.pop();
+  }
 
   const suggestions = [
     {
@@ -311,50 +316,53 @@ function LivreInfos() {
         className="container singleBookPage-container"
       >
         <Ariane position={[position]} />
-        <div className="return">
-          <img
-            src={returnArrow}
-            alt=""
-          />
-          <a href="/recherche/ariol">Retour à la page précédente</a>
-        </div>
 
-        <div className="actions">
-          <ul>
-            <li>
-              <a
-                href={window.location.href}
-                className="action"
-              >
-                <img
-                  src={externalLink}
-                  alt="Ouvrir dans un autre onglet"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href={window.location.href + "/export"}
-                className="action"
-              >
-                <img
-                  src={download}
-                  alt="exporter le document"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href={window.location.href + "/send"}
-                className="action"
-              >
-                <img
-                  src={mail}
-                  alt="Envoyer par mail"
-                />
-              </a>
-            </li>
-          </ul>
+        <div className="return-actions">
+          <div className="return">
+            <img
+              src={returnArrow}
+              alt=""
+            />
+            <a href="/recherche/ariol">Retour à la page précédente</a>
+          </div>
+
+          <div className="actions">
+            <ul>
+              <li>
+                <a
+                  href={window.location.href}
+                  className="action"
+                >
+                  <img
+                    src={externalLink}
+                    alt="Ouvrir dans un autre onglet"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={window.location.href + "/export"}
+                  className="action"
+                >
+                  <img
+                    src={download}
+                    alt="exporter le document"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={window.location.href + "/send"}
+                  className="action"
+                >
+                  <img
+                    src={mail}
+                    alt="Envoyer par mail"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="SingleBookPage">
@@ -369,9 +377,9 @@ function LivreInfos() {
           </div>{" "}
           {/* Tous les informations textuelles du livres jusqu'à la description */}
           <div className="book-details">
-            <h2 className="book-title">{selectedBook.title.toUpperCase()}</h2>
+            <h1 className="book-title single-book-title-section">{selectedBook.title.toUpperCase()}</h1>
             <div>
-              <h3 className="book-author">{selectedBook.author}</h3>
+              <h2 className="book-author">{selectedBook.author}</h2>
               <p className="book-publisher">
                 Édité par{" "}
                 <a href={"/recherche/editors/" + selectedBook.editor}>
@@ -411,7 +419,7 @@ function LivreInfos() {
           <div className="description-section">
             {" "}
             {/* Section de description du livre */}
-            <h3 className="description-title">DESCRIPTION</h3>
+            <h2 className="description-title">DESCRIPTION</h2>
             <dl>
               <dt className="label">Type de document:</dt>
               <dd className="value">{selectedBook.documentType}</dd>
@@ -451,7 +459,7 @@ function LivreInfos() {
             {" "}
             {/* container avec le titre "disponibilité et le traits" */}
             <div className="trait"></div>
-            <h3 className="availability-title">DISPONIBILITÉS</h3>
+            <h2 className="availability-title single-book-title-section">DISPONIBILITÉS</h2>
             <div className="trait"></div>
           </div>{" "}
           {/* /////////////// */}
@@ -467,12 +475,12 @@ function LivreInfos() {
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
-              <h3
-                className="availability-title"
+              <h2
+                className="availability-title single-book-title-section"
                 id="Comments"
               >
                 AVIS DES LECTEURS
-              </h3>
+              </h2>
               <div className="trait"></div>
             </div>
             <div className="containerAllComments">
@@ -523,13 +531,17 @@ function LivreInfos() {
               </div>
               <div>
                 <a href={window.location.href + "/allComments"}>
-                  VOIR TOUS LES AVIS
+                  <p>VOIR TOUS LES AVIS</p>
+                  <img
+                    src={arrowLink}
+                    alt=""
+                  />
                 </a>
               </div>
             </div>
 
             <div className="containerAllComments">
-              <h3>Donnez nous votre avis !</h3>
+              <h2>Donnez nous votre avis !</h2>
               <form>
                 <fieldset className="star-rating">
                   <div className="legend-and-ratings">
@@ -605,16 +617,81 @@ function LivreInfos() {
               </form>
             </div>
           </div>
-          <Carousel
-            title="DU MÊME AUTEUR"
-            books={sameAuthorBooks}
-            className="same-author isolated-carousel"
-          />
-          <Carousel
-            title="SUGGESTIONS"
-            books={suggestions}
-            className="suggestions"
-          />
+          <div className="container-carousel">
+            <div className="book_title_style">
+              {" "}
+              {/* container avec le titre "disponibilité et le traits" */}
+              <div className="trait"></div>
+              <h2 className="title_carousel single-book-title-section">DU MÊME AUTEUR</h2>
+              <div className="trait"></div>
+            </div>
+            <div className="slides-container">
+              {sameAuthorBooks.map((book, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="carousel-slides"
+                  >
+                    <div className="carousel-image-container">
+                      <img
+                        src={book.cover}
+                        alt={book.title.toUpperCase()}
+                        className="carousel-image"
+                      />
+                    </div>
+                    <div className="carouselBookInformation">
+                      <a
+                        href={"/livre/" + book.id}
+                        className="carousel-title-book"
+                      >
+                        {book.title.toUpperCase()}
+                      </a>
+                      <p className="carousel-author">{book.author}</p>
+                      <p className="carousel-author">{book.publicationDate}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="container-carousel">
+            <div className="book_title_style">
+              {" "}
+              {/* container avec le titre "disponibilité et le traits" */}
+              <div className="trait"></div>
+              <h2 className="title_carousel single-book-title-section">SUGGESTIONS</h2>
+              <div className="trait"></div>
+            </div>
+            <div className="slides-container">
+              {suggestions.map((book, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="carousel-slides"
+                  >
+                    <div className="carousel-image-container">
+                      <img
+                        src={book.cover}
+                        alt={book.title.toUpperCase()}
+                        className="carousel-image"
+                      />
+                    </div>
+                    <div className="carouselBookInformation">
+                      <a
+                        href={"/livre/" + book.id}
+                        className="carousel-title-book"
+                      >
+                        {book.title.toUpperCase()}
+                      </a>
+                      <p className="carousel-author">{book.author}</p>
+                      <p className="carousel-author">{book.publicationDate}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </section>
       </main>
     </>

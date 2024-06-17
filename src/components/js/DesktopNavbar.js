@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import "../css/NomralNavBar.css";
+import "../css/DesktopNavbar.css";
 
-function NomralNavBar() {
+function DesktopNavbar() {
   const pratiqueRef = useRef();
   const bibliothequeRef = useRef();
   const decouvrirRef = useRef();
@@ -281,4 +281,4 @@ function NomralNavBar() {
   );
 }
 
-export default NomralNavBar;
+export default DesktopNavbar;

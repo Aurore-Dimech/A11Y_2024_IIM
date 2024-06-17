@@ -1,10 +1,5 @@
-.section-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-page-title {
+    position: absolute;
+    left: -99999999rem;
 }
 
-.section-search input {
-    border-top: 1px solid #2F2C7E;
-    border-bottom: 1px solid #2F2C7E;
-}

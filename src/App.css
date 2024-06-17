@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
 }
 
@@ -57,7 +57,7 @@ section{
   border: 2px solid #4237CB;
 }
 
-.button:hover {
+.button:hover, .button:focus {
   text-decoration: none;
   border: 2px solid #4019FA;
   background-color: #EEF2FF;

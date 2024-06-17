@@ -5,8 +5,9 @@
 
 .nav-principal > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-principal > ul > li {
@@ -39,12 +40,17 @@
     color: #292929;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     width: calc(100% + 2rem);
     min-width: max-content;
+    z-index: 1;
 }
 
- .ListHover {
+.second-chain a {
+    color: #292929;
+}
+
+ /* .ListHover {
     display: flex;
     padding: 1.5625rem 5.375rem;
     justify-content: center;
@@ -179,4 +185,4 @@
     }
     
 } 
-
+ */

@@ -87,12 +87,13 @@ const Book = ({
               <p className="description">{description}</p>
             </div>
             <div className="infoMoreAndEg one">
-              <div className="btn">
+              <div>
                 {" "}
                 {/* le lien e savoir plus */} 
                 <a
                   href={"/livre/" + id}
                   aria-label="En savoir plus"
+                  className="button"
                 >
                   {" "}
                   En savoir plus

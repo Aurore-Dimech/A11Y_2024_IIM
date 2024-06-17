@@ -7,15 +7,14 @@
     flex-direction: column
 }
 
-.singleBookPage-container .return {
+.singleBookPage-container .return-actions .return {
     display: flex;
     justify-content: left;
     gap: 1vw;
     width: 80%;
-    margin-top: 4rem;
 }
 
-.singleBookPage-container .return a {
+.singleBookPage-container .return-actions .return a {
     color: #292929;
 }
 
@@ -28,12 +27,11 @@
     align-items: center;
     justify-content: end;
     gap: 1rem;
-    margin-bottom: 5%;
 }
 
 .actions li img {
-    width: 30px;
-    height: 30px;
+    width: 1.563rem;
+    height: 1.563rem;
 }
 
 .SingleBookPage {
@@ -58,6 +56,10 @@
 .book-details a {
     color: black;
     text-decoration: underline;
+}
+
+.book-author {
+    font-size: 1.5rem;
 }
 
 .availability-section .book-title {
@@ -91,7 +93,7 @@
 
 .reserve-button {
     padding: 1rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .reserved {
@@ -279,7 +281,15 @@ td {
 }
 
 .containerAllComments a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: white;
+}
+
+.containerAllComments a img {
+    filter: invert(1);
+    width: 1.25rem;
 }
 
 .containerComments{
@@ -342,9 +352,10 @@ td {
     text-decoration: underline;
 }
 
-.containerAllComments h3 {
+.containerAllComments h2 {
     color: white;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .containerAllComments form {
@@ -420,8 +431,8 @@ td {
 }
 
 .star-rating input:checked + label,
-.star-rating input:focus + label, .star-rating input:checked + label:hover,
-.star-rating label:hover{
+.star-rating input:focus + label, .star-rating input:checked + label:hover, .star-rating input:checked + label:focus
+.star-rating label:hover, .star-rating label:focus {
     background-image: url('data:image/svg+xml,<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.0703 9.8441L15.6452 2.07539C15.2945 1.27995 14.1658 1.27995 13.8151 2.07539L10.39 9.8441C10.2301 10.2067 9.87126 10.4407 9.47499 10.4407H2.46657C1.56839 10.4407 1.12559 11.5329 1.7702 12.1584L7.42046 17.641C7.67179 17.8849 7.77724 18.2424 7.69843 18.5837L6.0094 25.8974C5.81776 26.7272 6.68493 27.4015 7.44194 27.0112L14.272 23.4904C14.5595 23.3422 14.9009 23.3422 15.1884 23.4904L22.0184 27.0112C22.7754 27.4015 23.6426 26.7272 23.4509 25.8974L21.7574 18.5644C21.681 18.2336 21.7776 17.8867 22.014 17.6431L27.3547 12.1369C27.9699 11.5027 27.5205 10.4407 26.6369 10.4407H19.9853C19.5891 10.4407 19.2302 10.2067 19.0703 9.8441Z" fill="%232906D1" stroke="%232906D1" stroke-width="2"/></svg>');
 }
             
@@ -466,7 +477,74 @@ td {
     right: 0.5rem;
 }
 
-.same-author h2, .suggestions h2 {
+.container-carousel {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.slides-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.carousel-slides {
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel-image-container  {
+    width: 10vw;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-image-container img {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    max-height: 100%;
+}
+
+.carouselBookInformation{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.carousel-title-book {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: black ;
+}
+
+.title_carousel {
+    padding:  0 1rem;
+}
+
+.book_title_style {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-author {
+    font-size: 1rem;
+}
+
+.container-carousel h2 {
     font-size: 2rem;
 }
 
@@ -474,8 +552,12 @@ td {
     margin-top: 4rem;
 }
 
-@media screen and (max-width: 950px) {
-    .singleBookPage-container .return, .SingleBookPage, .availability-section, .CommentContainer {
+.single-book-title-section {
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width: 1160px) {
+    .singleBookPage-container .return, .SingleBookPage, .availability-section, .CommentContainer, .container-carousel {
         width: 90%;
     }
 
@@ -520,10 +602,24 @@ td {
         margin-top: 3rem;
     }
 
-    .SingleBookPage, .description-section dl {
+    .SingleBookPage, .description-section dl, .slides-container {
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+    }
+
+    .carousel-slides {
+        align-items: center;
+    }
+
+    .carousel-image-container {
+        width: 30vw;
+        justify-content: flex-start;
+    }
+
+    .carousel-image-container img {
+        width: 30vw;
+        height: auto;
     }
 
     .SingleBookPage > img {
@@ -596,7 +692,7 @@ td {
 
 @media screen and (max-width: 550px) {
 
-    .singleBookPage-container h3, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button {
+    .singleBookPage-container h2, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button, .carousel-title-book {
         font-size: 1rem;
     }
 
@@ -604,7 +700,7 @@ td {
         font-size: 0.875rem;
     }
     
-    .return a, .book-publisher, .availability-text, .description-section dd, .comment-description textarea, .containerAllComments a{
+    .return a, .book-publisher, .availability-text, .description-section dd, .comment-description textarea, .containerAllComments a, .carousel-author{
         font-size: 0.75rem;
     }
 
@@ -628,6 +724,10 @@ td {
         margin-block: 0.4rem 0.8rem;
     }
 
+    .containerAllComments a img {
+        width: 0.75rem;
+    }
+
     .commentScoring {
         height: 1.25rem;
     }
@@ -636,4 +736,5 @@ td {
         flex-direction: column;
         align-items: start;
     }
+
 }

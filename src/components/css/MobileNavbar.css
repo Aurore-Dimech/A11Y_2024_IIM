@@ -1,0 +1,9 @@
+.burger-main {
+    background-color: #2F2C7E;
+    color: white;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}

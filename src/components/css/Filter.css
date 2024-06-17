@@ -1,6 +1,5 @@
 .container_filter {
     width: 25%;
-    padding-left: 3em;
     display: flex;
     flex-direction: column;
     justify-items: center;

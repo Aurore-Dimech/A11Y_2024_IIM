@@ -52,7 +52,7 @@
     border-radius: 0.4rem;
     
 }
-.btn:hover {
+.btn:hover, .btn:focus {
     text-decoration: none;
     border: 2px solid #4019FA;
     background-color: #EEF2FF;
@@ -68,7 +68,7 @@
     font-size: 1rem;
     
 }
-.btn a:hover {
+.btn a:hover, .btn a:focus{
     color: #4237CB;;
     
 }

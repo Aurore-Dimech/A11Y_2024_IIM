@@ -18,8 +18,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    
-
 }
 
 .infos {
@@ -52,7 +50,7 @@ header {
     width: 100%; 
 }
 
-.svgMenuBurger {
+.NavAndSearchBar > nav {
     display: none;
 }
 
@@ -78,7 +76,7 @@ header {
     }
     
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 950px) {
     .header{
         flex-direction: column;
         gap: 1.6rem;
@@ -92,12 +90,34 @@ header {
     .infos {
         gap: 0.6em;
     }
-    .svgMenuBurger {
-        display: block;
-        width: 10%;
-        height: auto;
+
+    .NavAndSearchBar nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .burger-button {
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: transparent;
     }
     
+    .svgMenuBurger {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .burger-button > img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 

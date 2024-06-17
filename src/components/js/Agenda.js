@@ -7,6 +7,7 @@ import "../css/Agenda.css";
 import calendar from "../../assets/calendar.svg";
 import marker from "../../assets/marker.svg";
 import tag from "../../assets/tag.svg";
+import arrowLink from "../../assets/arrowLink.svg";
 
 const activities = {
   activity1: {
@@ -112,12 +113,14 @@ const FrontPage = () => {
           <h2>AGENDA</h2>
         </div>
         <ol className="events-list">{list}</ol>
-        <a
-          href="/events"
-          className="all-events"
-        >
-          VOIR TOUS LES EVENEMENTS
-        </a>
+        <div>
+          <a
+            href="/events"
+            className="all-events"
+          ><p>VOIR TOUS LES EVENEMENTS </p>
+          <img src={arrowLink} alt="" />
+          </a>
+        </div>
       </section>
     </div>
   );

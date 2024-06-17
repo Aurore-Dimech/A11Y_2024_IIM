@@ -50,6 +50,12 @@
     font-size: 1.25rem;
 }
 
+@media screen and (min-width: 1200px) {
+    .european-projects {
+        margin-bottom : 4rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .projects {
         flex-direction: column;

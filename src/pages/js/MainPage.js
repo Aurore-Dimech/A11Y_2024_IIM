@@ -23,9 +23,10 @@ const MainPage = () => {
   return (
     <main role="main" className="main-page">
       <Ariane position={[position]} />
+      <h1 className="main-page-title">Page d'accueil</h1>
       <FrontPage />
       <Agenda />
-      {/* <SearchSection /> */}
+      <SearchSection />
       <CollectionAlpes />
       <EuropeanProjects />
     </main>

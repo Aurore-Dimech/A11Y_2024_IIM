@@ -2,9 +2,6 @@
 import React from "react";
 import "../../App.css";
 import "../css/Filter.css";
-import SearchedBooksCard from "../../components/js/SearchedBooksCard";
-import bookList from "../../data/bookList";
-import chevronRight from "../../images/Chevron-right.png";
 
 
 import {FilterGroup} from "../js/FilterGroup";
@@ -18,7 +15,8 @@ const filter = ()=>  {
                 {id: 'Documents numériques',name: 'Documents numériques',label: 'Documents numériques',count : 241} ,
                 {id: 'Disponibles',name: 'Disponibles',label: 'Disponibles',count : 117},
                 {id: 'Nouveautés',name: 'Nouveautés',label: 'Nouveautés',count : 7},
-            ]
+            ],
+            input: false
         }, 
         {
             title: 'LOCALISATION',
@@ -27,7 +25,9 @@ const filter = ()=>  {
               { id: 'Conservatoire de Nice', name: 'Conservatoire-de-Nice', label: 'Conservatoire de Nice', count: 117 },
               { id: 'Bibliothèque-de-Saint-Roch', name: 'Bibliothèque-de-Saint-Roch', label: 'Bibliothèque de Saint-Roch', count: 36 },
               { id: 'Bib’Mobile', name: 'Bib’Mobile', label: 'Bib’Mobile', count: 36 }
-            ]
+            ],
+            input: false,
+            seeMore: 10
         },
         {
           title: 'SUPPORT',
@@ -36,7 +36,9 @@ const filter = ()=>  {
             { id: 'Disque-33t', name: 'Disque-33t', label: 'Disque 33t', count: 117 },
             { id: 'Bande-Dessinées', name: 'Bande-Dessinées', label: 'Bande Dessinées', count: 36 },
             { id: 'Disque-45t', name: 'Disque-45t', label: 'Disque 45t', count: 36 }
-          ]
+          ],
+          input: false,
+          seeMore: 5
         },
         {
           title: 'TYPE DE DOCUMENT',
@@ -45,7 +47,9 @@ const filter = ()=>  {
             { id: 'Livre', name: 'Livre', label: 'Livre', count: 117 },
             { id: 'Livre-numérique', name: 'Livre-numérique', label: 'Livre Numérique', count: 36 },
             { id: 'Video', name: 'Video', label: 'Vidéo', count: 36 }
-          ]
+          ],
+          input: false,
+          seeMore: 3
         },
         {
           title: 'SECTION',
@@ -54,7 +58,9 @@ const filter = ()=>  {
             { id: 'Multimédia', name: 'Multimédia', label: 'Multimédia', count: 117 },
             { id: 'Jeunesse', name: 'Jeunesse', label: 'Jeunesse', count: 36 },
             { id: 'Adulte', name: 'Adulte', label: 'Adulte', count: 36 }
-          ]
+          ],
+          input: false,
+          seeMore: 2
         }, 
         {
           title: 'AUTEUR/ARTISTE...',
@@ -63,7 +69,9 @@ const filter = ()=>  {
             { id: 'Boutavant-Marc', name: 'Boutavant-Marc', label: 'Boutavant Marc', count: 117 },
             { id: 'Indochine', name: 'Indochine', label: 'Indochine', count: 36 },
             { id: 'Beethoven-Ludwig-Van', name: 'Beethoven-Ludwig-Van', label: 'Beethoven Ludwig Van', count: 36 }
-          ]
+          ],
+          input: true,
+          seeMore: 46
         }, 
         {
             title: "LANGUE", 
@@ -72,7 +80,9 @@ const filter = ()=>  {
                 {id: 'Anglais',name: 'Anglais',label: 'Anglais',count : 117},
                 {id: 'Allemand',name: 'Allemand',label: 'Allemand',count : 36},
                 {id: 'Italien',name: 'Italien',label: 'Italien',count : 36},
-            ]
+            ],
+            input: false,
+            seeMore: 15
         },
         {
             title: "SUJET", 
@@ -81,20 +91,22 @@ const filter = ()=>  {
                 {id: 'Musique-Populaire',name: 'Musique-Populaire',label: 'Musique Populaire',count : 117},
                 {id: '20e-siècle',name: '20e-siècle',label: '20e siècle',count : 36},
                 {id: '18e-siècle',name: '18e-siècle',label: '18e siècle',count : 36},
-            ]
+            ],
+            input: true,
+            seeMore: 46
         },
         {
             title: "ACCESSIBILITE", 
             items: [
                 {id: 'Sous-titrage Sourds-et-malentendants',name: 'Sous-titrage Sourds-et-malentendants',label: 'Sous-titrage Sourds et malentendants',} ,
-                
-            ]
+            ],
+            input: false,
         }
     ];
 
     return (
         <div className="container_filter">
-          <h3 className="research_filter">Affiner votre recherche :</h3>
+          <h2 className="research_filter">Affiner votre recherche :</h2>
           <FilterGroup categories={categories} />
         </div>
       );
