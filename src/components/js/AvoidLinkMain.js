@@ -1,12 +1,12 @@
 import React from "react";
-import "../css/AvoidLinkMain.css"; 
-// import AvoidLinkHeader from "../../components/js/AvoidLinkMain"
+import "../css/AvoidLink.css"; 
+import AvoidLinkHeader from "../../components/js/AvoidLinkHeader"
 
 const AvoidLinkMain = () => {
 
 return (
-    <ul className="">
-        {/* <AvoidLinkHeader/>   */}
+    <ul className="AvoidLink">
+        <AvoidLinkHeader/>  
         <li>
             <a href="#AlaUne">Aller au contenu</a>
         </li>

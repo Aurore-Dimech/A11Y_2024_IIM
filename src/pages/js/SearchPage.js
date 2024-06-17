@@ -10,7 +10,7 @@ import returnArrow from "../../assets/returnArrow.svg";
 import share from "../../assets/searchShare.svg";
 import history from "../../assets/searchHistory.svg";
 import download from "../../assets/download.svg";
-
+import AvoidLinkSearchPage from "../../components/js/AvoidLinkSearchPage";
 import { BurgerContext } from "../../context/BurgerContext";
 
 function Recherche() {
@@ -88,6 +88,7 @@ function Recherche() {
       role="main"
       className={`MainPage App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
     >
+      <AvoidLinkSearchPage/>
       <Ariane position={[position]} />
       <div className="return-actions">
         <div className="return">

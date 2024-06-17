@@ -7,7 +7,7 @@ import SearchSection from "../../components/js/SearchSection";
 import "../css/MainPage.css";
 import Ariane from "../../components/js/AriadnesThread";
 import { BurgerContext } from "../../context/BurgerContext";
-// import AvoidLinkMain from "../../components/js/AvoidLinkMain";
+import AvoidLinkMain from "../../components/js/AvoidLinkMain";
 
 const MainPage = () => {
   useEffect(() => {
@@ -26,7 +26,7 @@ const MainPage = () => {
 
   return (
     <main role="main" className={`main-page App ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
-      {/* <AvoidLinkMain/> */}
+      <AvoidLinkMain/>
       <Ariane position={[position]} />
       <h1 className="main-page-title">Page d'accueil</h1>
       <FrontPage />
