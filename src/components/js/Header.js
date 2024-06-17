@@ -26,7 +26,7 @@ function Navbar() {
   };
   return (
     <>
-      <header role="banner">
+      <header id="header" role="banner">
         <div className="header">
           <a
             className={`logo_flex ${
