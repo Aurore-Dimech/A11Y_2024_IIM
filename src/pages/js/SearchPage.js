@@ -29,9 +29,20 @@ function Recherche() {
   ));
   const [DisplayFilter, setDisplayFilter] = useState(false);
   const [ButtonDisplayClick, setButtonDisplayClick] = useState(false);
+
   const toggleFilterMobile = () => {
     setDisplayFilter((prevDisplayFilter) => !prevDisplayFilter);
     setButtonDisplayClick((prevButtonDisplayClick) => !prevButtonDisplayClick);
+
+    const title_search = document.querySelector(".result-search-title");
+    const result_search = document.querySelector(".container_searchpage");
+    if (
+      title_search.style.display !== "none" &&
+      result_search.style.display !== "none"
+    ) {
+      title_search.style.display = "none";
+      result_search.style.display = "none";
+    }
 
     const filterMobile = document.querySelector(".container_filteResponsive");
     if (filterMobile) {
@@ -49,14 +60,19 @@ function Recherche() {
     setButtonDisplayClick(false);
     setDisplayFilter(false);
 
+    const title_search = document.querySelector(".result-search-title");
+    const result_search = document.querySelector(".container_searchpage");
+
+    title_search.style.display = "flex";
+    result_search.style.display = "flex";
+
     const filterMobile = document.querySelector(".container_filteResponsive");
     if (filterMobile) {
       filterMobile.style.display = "none";
     }
   };
 
-  useEffect(() => {
-  }, [DisplayFilter, ButtonDisplayClick]);
+  useEffect(() => {}, [DisplayFilter, ButtonDisplayClick]);
 
   const position = [
     {

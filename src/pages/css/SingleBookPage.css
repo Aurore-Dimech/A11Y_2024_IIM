@@ -72,13 +72,18 @@
 .book-cover {
     width: 15vw;
     min-width: 16rem;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 0.5rem;
+    height: 100%;
 }
 
 .book-publisher {
     padding-top: 0.3rem;
     font-size: 1.25rem;
+}
+
+.book-publisher a:hover, .book-publisher a:focus, .go-to-comments:hover, .go-to-comments:focus {
+    font-weight: bold;
 }
 
 .go-to-comments {
@@ -360,6 +365,10 @@ td {
     text-decoration: underline;
 }
 
+.containerAllComments .commentMore:hover, .containerAllComments .commentMore:focus {
+    font-weight: bold;
+}
+
 .containerAllComments h2 {
     color: white;
     margin-bottom: 1rem;
@@ -625,8 +634,8 @@ td {
         row-gap: 2rem;
     }
 
-    .carousel-slides {
-        align-items: center;
+    .carouselBookInformation {
+        margin-top: 10px;
     }
 
     .carousel-image-container {
@@ -714,16 +723,22 @@ td {
         text-align: center;
     }
 
-    .singleBookPage-container h2, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button, .carousel-title-book {
+    .singleBookPage-container h2, .availability-section .book-title, .commentName, .container-carousel h2, .reserve-button, .carousel-title-book, .go-to-comments, .reserved-text {
         font-size: 1rem;
     }
 
-    .book-author, .commentDate, .description-section dt, .containerAllComments form legend, .comment-description label, .comment-button {
+    .book-author, .commentDate, .description-section dt, .containerAllComments form legend, .comment-description label, .comment-button, .library {
         font-size: 0.875rem;
     }
     
     .return a, .book-publisher, .availability-text, .description-section dd, .comment-description textarea, .containerAllComments a, .carousel-author{
         font-size: 0.75rem;
+    }
+
+    .singleBookPage-container .return-actions {
+        width: 100%;
+        padding-inline: 7%;
+        margin: 0;
     }
 
     .book-cover{
