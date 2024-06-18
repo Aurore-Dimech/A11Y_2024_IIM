@@ -7,13 +7,23 @@ Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Trucho
 
 ## [Veuillez cliquer ici pour accéder au site](https://a11y-nice-iim.vercel.app/)
 
-### Parcours utilisateur.ice
+### Scénario utilisateur: Réserver un Livre sur le Site de la Bibliothèque Municipale de Nice
 
-* Vous arrivez sur la page d'accueil. Vous regardez les différentes sections, puis décidez de remonter à la barre de recherche.
-* Vous tapez dans cette-dite barre de recherche "Ariol".
-* Vous choisissez le tome qui vous convient parmi les résultats affichés, et cliquez sur "En savoir plus".
-* Vous lisez les différentes informations, puis cliquez sur "Réserver".
-* Félicitation, vous avez maintenant réservé votre tome d'Ariol ! N'oubliez pas de le rendre avant la date limite.
+##### Étape 1 : Accéder au Site 
+* Ouvrir le navigateur Chrome et copier-coller le lien vers le site de la Bibliothèque Municipale de Nice (https://a11y-nice-iim.vercel.app/)
+
+##### Étape 2 : Rechercher un livre
+* La page d’accueil est affichée.
+* Cliquer sur l’espace dédié de la barre de recherche en haut de la page pour rechercher un livre.
+* Taper “Ariol” puis cliquer sur le bouton “Rechercher” ou taper sur “Entrée”.
+
+##### Étape 3: Résultats de la Recherche:
+* La page des résultats de recherche est affichée et propose différents livres de la série Ariol.
+* Choisir un des livres proposés et disponible
+* Cliquer sur le bouton “En savoir plus” pour accéder à la page du livre.
+
+##### Étape 4: Réservation du Livre
+* Sur la page du livre, cliquez sur le bouton "Réserver ce livre".
 
 ### English version
 
