@@ -732,7 +732,7 @@ function LivreInfos() {
                       <div className="carousel-image-container">
                         <img
                           src={book.cover}
-                          alt={book.title.toUpperCase()}
+                          alt=""
                           className="carousel-image"
                         />
                       </div>

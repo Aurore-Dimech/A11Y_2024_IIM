@@ -9,6 +9,8 @@ import { BurgerContext } from "../../context/BurgerContext";
 import inputRecommandations from "../../data/inputRecommandations";
 
 const SearchBar = () => {
+  const selectRef = useRef(null);
+
   const inputArray = Object.values(inputRecommandations);
 
   let [inputValue, setInputValue] = useState("");
@@ -79,6 +81,18 @@ const SearchBar = () => {
     if (event.key === "ArrowDown") {
       event.preventDefault();
       refs.current[activeIndex].focus();
+    }
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchInputButton.current.focus();
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      searchInputButton.current.focus();
+    }
+    if (event.key === "Tab" && event.shiftKey) {
+      event.preventDefault();
+      selectRef.current.focus();
     }
   };
 
@@ -152,7 +166,7 @@ useEffect(() => {
         onSubmit={handleSubmit}
       >
         <div className="search search-catalogue">
-          <select title="Listes des fonctionnailités et disponibilités du site internet">
+          <select title="Listes des fonctionnailités et disponibilités du site internet" ref={selectRef}>
             <option value="">Catalogue</option>
             <option value="">Livres numériques</option>
             <option value="">Pitem</option>

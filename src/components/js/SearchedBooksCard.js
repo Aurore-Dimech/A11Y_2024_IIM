@@ -66,7 +66,7 @@ const Book = ({
         <img
           className="couverture"
           src={cover}
-          alt="couverture du livre"
+          alt=""
         />
       </div>
       <div className="info">
@@ -108,7 +108,7 @@ const Book = ({
               {/* le lien e savoir plus */}
               <a
                 href={"/livre/" + id}
-                aria-label="En savoir plus"
+                aria-label={`En savoir plus sur ${title}`}
                 className="button"
               >
                 {" "}
@@ -145,7 +145,7 @@ const Book = ({
               {/* le lien e savoir plus */}
               <a
                 href={"/livre/" + id}
-                aria-label="En savoir plus"
+                aria-label={`En savoir plus sur ${title}`}
               >
                 {" "}
                 En savoir plus
