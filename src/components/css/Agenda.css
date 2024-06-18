@@ -226,15 +226,19 @@
     .activity1 .cards-info h3 {
         position: absolute;
         width: fit-content;
-        max-width: 80%;
+        /* max-width: 80%; */
+        width: 85%;
         bottom: 90%;
         background-color: white;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .events-list > li:first-of-type {
         margin-top: 2rem;
         display: flex;
         justify-content: center;
+        max-width: unset;
     }
     
     .events-list li:not(:first-of-type) {
@@ -246,6 +250,7 @@
         padding-block: 1rem;
         /* padding-inline: 0; */
         position: relative;
+        margin-inline: 0;
     }
 
     .activity2 .cards-info, .activity3 .cards-info {
@@ -255,6 +260,7 @@
     .cards-info > ol > li:first-of-type {
         display: flex;
         justify-content: center;
+        align-self: center;
     }
 
     .cards-info .button {

@@ -65,17 +65,37 @@ input {
     z-index: 20;
 }
 
+header .recommandations {
+    /* margin-inline: 0 155px; */
+    left: 0;
+}
+
+/* .recommandations ul {
+    border-right: 3px solid #2F2C7E;
+    border-left: 3px solid #2F2C7E;
+    border-bottom: 3px solid #2F2C7E;
+} */
+
 .recommandations li button{
     background-color: white;
     width: 100%;
     text-align: left;
     padding: 0.5rem;
-    border: 1px solid #525252;
     font-size: 1rem;
+    border: 0;
+}
+
+.recommandations li {
+    border: 2px solid #2F2C7E;
+    border-bottom: 0;
+}
+
+.recommandations li:last-child {
+    border-bottom: 2px solid #2F2C7E;
 }
 
 .recommandations li button:hover, .recommandations li button:focus {
-    background-color: #525252;
+    background-color: #2F2C7E;
     color: white;
 }
 
@@ -84,8 +104,11 @@ input {
 @media screen and (max-width: 1050px) {
     .search{
         padding: 0.85rem 1.3rem;
-    
     }
+
+    /* header .recommandations{
+        margin-right: 151px;
+    } */
     
 
 }
@@ -93,6 +116,10 @@ input {
     .search{
         padding: 0.85rem 1.2rem;
     }
+
+    /* header .recommandations {
+        margin-right: 148px;
+    } */
 }
 
 @media screen and (max-width: 950px){
@@ -103,6 +130,10 @@ input {
     .recommandations{
         margin-left: 191px;
     }
+
+    /* header .recommandations {
+        margin-inline: 0;
+    } */
 }
 
 
@@ -111,6 +142,7 @@ input {
         top: 2.5rem;
         margin-left: 175px;
     }
+
     .search {
        padding : 0.7rem;
     }
@@ -122,10 +154,23 @@ input {
     }  
 }
 
+@media screen and (max-width: 750px) {
+    header .recommandations {
+        /* margin-right: 57px; */
+        left: unset;
+        right: 56px;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 655px) {
     .recommandations{
         top: 2.05rem;
         margin-right: 38px;
+    }
+
+    header .recommandations {
+        right: 38px;
     }
 
     .recommandations li button{

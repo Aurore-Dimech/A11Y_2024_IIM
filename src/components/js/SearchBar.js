@@ -26,12 +26,7 @@ const SearchBar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (
-      inputValue === "" ||
-      inputValue === " " ||
-      inputValue === null ||
-      inputValue === undefined
-    ) {
+    if (!inputValue.trim()) {
       inputValue = "...";
     }
     window.location.href = `/recherche/${inputValue}`;
@@ -58,20 +53,28 @@ const SearchBar = () => {
       );
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
-      setActiveIndex((prevActiveIndex) => Math.max(prevActiveIndex - 1, 0));
+      if (activeIndex === 0) {
+        searchInput.current.focus();
+      } else {
+        setActiveIndex((prevActiveIndex) => Math.max(prevActiveIndex - 1, 0));
+      }
     } else if (event.key === "Enter") {
       event.preventDefault();
       setInputValue(selectedRecommandation[activeIndex].title);
       setSelectedRecommandation([]);
       event.stopPropagation();
-      searchInputButton.current.focus(); 
+      searchInputButton.current.focus();
+    } else if (event.key === "Escape" || event.key === "Tab") {
+      event.preventDefault();
+      setSelectedRecommandation([]);
+      searchInputButton.current.focus();
     }
   };
 
   const handleKeysInput = (event) => {
     if (event.key === "Tab") {
       event.preventDefault();
-      searchInputButton.current.focus(); 
+      searchInputButton.current.focus();
     }
     if (event.key === "ArrowDown") {
       event.preventDefault();
@@ -79,8 +82,70 @@ const SearchBar = () => {
     }
   };
 
+  const [isSearchInputFocused, setIsSearchInputFocused] = useState(false);
+  useEffect(() => {
+    setIsSearchInputFocused(document.activeElement === searchInput.current);
+  }, [inputValue, selectedRecommandation]);
+
+useEffect(() => {
+  const handleFocus = () => setIsSearchInputFocused(true);
+  const handleBlur = () => {
+      setTimeout(() => {
+          if (document.activeElement !== searchInput.current && !refs.current.includes(document.activeElement)) {
+              setIsSearchInputFocused(false);
+          }
+      }, 0);
+  };
+
+  searchInput.current.addEventListener('focus', handleFocus);
+  searchInput.current.addEventListener('blur', handleBlur);
+
+  return () => {
+      searchInput.current.removeEventListener('focus', handleFocus);
+      searchInput.current.removeEventListener('blur', handleBlur);
+  };
+}, []);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      searchInput.current &&
+      !searchInput.current.contains(event.target) &&
+      !refs.current.some((ref) => ref && ref.contains(event.target))
+    ) {
+      setIsSearchInputFocused(false);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Tab') {
+      setTimeout(() => {
+        if (
+          searchInput.current &&
+          !searchInput.current.contains(document.activeElement) &&
+          !refs.current.some((ref) => ref && ref.contains(document.activeElement))
+        ) {
+          setIsSearchInputFocused(false);
+        }
+      }, 0);
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
+  document.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    document.removeEventListener("click", handleClickOutside);
+    document.removeEventListener("keydown", handleKeyDown);
+  };
+}, []);
+
   return (
-    <div className={`search-and-recommandations ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
+    <div
+      className={`search-and-recommandations ${
+        isBurgerOpen ? "bg-burger-hidden" : ""
+      }`}
+    >
       <form
         role="search"
         className={`search-bar`}
@@ -108,23 +173,28 @@ const SearchBar = () => {
           value={inputValue}
           onKeyDown={handleKeysInput}
         />
-        {inputValue !== "" && (
-          <div className="recommandations" onKeyDown={handleKeyDown}>
-            <ul>
-              {selectedRecommandation.map((recommandation, index) => (
-                <li key={index}>
-                  <button
-                    type="button"
-                    ref={(el) => refs.current[index] = el}
-                    onClick={() => setInputValue(recommandation.title)}
-                  >
-                    {recommandation.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {inputValue !== "" &&
+          selectedRecommandation.length > 0 &&
+          isSearchInputFocused && (
+            <div
+              className="recommandations"
+              onKeyDown={handleKeyDown}
+            >
+              <ul>
+                {selectedRecommandation.map((recommandation, index) => (
+                  <li key={index}>
+                    <button
+                      type="button"
+                      ref={(el) => (refs.current[index] = el)}
+                      onClick={() => setInputValue(recommandation.title)}
+                    >
+                      {recommandation.title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         <button
           type="submit"
           ref={searchInputButton}
@@ -134,7 +204,7 @@ const SearchBar = () => {
           // onKeyDown={handleSubmit}
           onClick={handleSubmit}
           onKeyDown={(event) => {
-            if (event.shiftKey && event.key === 'Tab') {
+            if (event.shiftKey && event.key === "Tab") {
               event.preventDefault();
               searchInput.current.focus();
             }
