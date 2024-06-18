@@ -6,7 +6,7 @@
   font-weight: normal;
 }
 
-
+html { scroll-behavior: smooth; }
 
 .bg-burger-hidden {
   display: none !important;

@@ -1,5 +1,6 @@
+import React, { useState, useEffect, useRef } from "react";
 
-import React, {useState, useEffect, useRef} from "react";
+import { Link } from "react-router-dom";
 
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
@@ -30,22 +31,22 @@ const disponibility = (availableCopiesNumber) => {
   }
 };
 
-const TruncatedText = ({text}) => {
+const TruncatedText = ({ text }) => {
   const [isTruncated, setIsTruncated] = useState(true);
   const textRef = useRef(null);
 
   useEffect(() => {
     if (textRef.current) {
-      const {offsetHeight, scrollHeight } = textRef.current;
+      const { offsetHeight, scrollHeight } = textRef.current;
       setIsTruncated(scrollHeight > offsetHeight);
     }
-  })
-}
+  });
+};
 
 const Book = ({
   cover,
   id,
-  title, 
+  title,
   author,
   publicationDate,
   description,
@@ -53,96 +54,116 @@ const Book = ({
   documentType,
 }) => {
   return (
-      <div id="CollectionsBook" className="one_book">
+    <div
+      id="CollectionsBook"
+      className="one_book"
+    >
+      {" "}
+      {/* container avec infos pour un livre */}
+      <div className="photo_btn">
         {" "}
-        {/* container avec infos pour un livre */}
-        <div className="photo_btn">
+        {/* container avec la photo de couverture */}
+        <img
+          className="couverture"
+          src={cover}
+          alt="couverture du livre"
+        />
+      </div>
+      <div className="info">
+        {" "}
+        {/* informations sur le livre */}
+        <div className="text_informations">
           {" "}
-          {/* container avec la photo de couverture */}
-          <img
-            className="couverture"
-            src={cover}
-            alt="couverture du livre"
-          />
-        </div>
-        <div className="info">
-          {" "}
-          {/* informations sur le livre */}
-          <div className="text_informations">
-            {" "}
-            {/* premiere partie  */}
-            <div>
-              <h2 className="title_book">
-                <a
+          {/* premiere partie  */}
+          <div>
+            <h2 className="title_book">
+              {/* <a
                   href={"/livre/" + id}
                   aria-label="Lien vers la page du livre"
                   className="title_book_link"
                 >
                   {title.toUpperCase()}
-                </a>
-              </h2>
-              <p className="autor">
-                {author} - {publicationDate}
-              </p>
-              <p className="description">{description}</p>
-            </div>
-            <div className="infoMoreAndEg one">
-              <div>
+                </a> */}
+              <Link
+                to={{
+                  pathname: "/livre/" + id,
+                  state: {
+                    id: id,                    
+                  },
+                }}
+                aria-label="Lien vers la page du livre"
+                className="title_book_link"
+              >
+                {title.toUpperCase()}
+              </Link>
+            </h2>
+            <p className="autor">
+              {author} - {publicationDate}
+            </p>
+            <p className="description">{description}</p>
+          </div>
+          <div className="infoMoreAndEg one">
+            <div>
+              {" "}
+              {/* le lien e savoir plus */}
+              <a
+                href={"/livre/" + id}
+                aria-label="En savoir plus"
+                className="button"
+              >
                 {" "}
-                {/* le lien e savoir plus */} 
-                <a
-                  href={"/livre/" + id}
-                  aria-label="En savoir plus"
-                  className="button"
-                >
-                  {" "}
-                  En savoir plus
-                </a>
-              </div>
-              <div className="availability">
-                <img
-                  src={disponibility(availableCopiesNumber).img}
-                  alt={disponibility(availableCopiesNumber).alt}
-                  className="checkmark-icon"
-                />
-                <span style={disponibility(availableCopiesNumber).style}>{disponibility(availableCopiesNumber).text}</span>
-              </div>
+                En savoir plus
+              </a>
             </div>
-            <div className="infoMoreAndEg deux">
-              <div className="availability">
-                <img
-                  src={disponibility(availableCopiesNumber).img}
-                  alt={disponibility(availableCopiesNumber).alt}
-                  className="checkmark-icon"
-                />
-                <span className="exemplaireDisponible" style={disponibility(availableCopiesNumber).style}>{disponibility(availableCopiesNumber).text}</span>
-              </div>
-              <div className="btn">
-                {" "}
-                {/* le lien e savoir plus */}
-                <a
-                  href={"/livre/" + id}
-                  aria-label="En savoir plus"
-                >
-                  {" "}
-                  En savoir plus
-                </a>
-              </div>
-              
+            <div className="availability">
+              <img
+                src={disponibility(availableCopiesNumber).img}
+                alt={disponibility(availableCopiesNumber).alt}
+                className="checkmark-icon"
+              />
+              <span style={disponibility(availableCopiesNumber).style}>
+                {disponibility(availableCopiesNumber).text}
+              </span>
             </div>
           </div>
-          <div>
-            {/* <div
+          <div className="infoMoreAndEg deux">
+            <div className="availability">
+              <img
+                src={disponibility(availableCopiesNumber).img}
+                alt={disponibility(availableCopiesNumber).alt}
+                className="checkmark-icon"
+              />
+              <span
+                className="exemplaireDisponible"
+                style={disponibility(availableCopiesNumber).style}
+              >
+                {disponibility(availableCopiesNumber).text}
+              </span>
+            </div>
+            <div className="btn">
+              {" "}
+              {/* le lien e savoir plus */}
+              <a
+                href={"/livre/" + id}
+                aria-label="En savoir plus"
+              >
+                {" "}
+                En savoir plus
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          {/* <div
               role="button"
               tabIndex="0"
               className="accessible-button"
             >
               {documentType}
             </div> */}
-            
-          </div>
         </div>
       </div>
+    </div>
   );
 };
 

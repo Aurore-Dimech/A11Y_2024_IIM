@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { useParams } from "react-router-dom";
 import greenTick from "../../assets/greenTick.svg";
 import redTick from "../../assets/redTick.svg";
 import bookList from "../../data/bookList";
@@ -20,7 +21,6 @@ import mail from "../../assets/mail.svg";
 import arrowLink from "../../assets/arrowLink.svg";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { BurgerContext } from "../../context/BurgerContext";
-import AvoidLinkSingleBookPage from "../../components/js/AvoidLinkSingleBookPage"
 
 const disponibility = (availableCopiesNumber) => {
   if (availableCopiesNumber === 0) {
@@ -48,12 +48,17 @@ const disponibility = (availableCopiesNumber) => {
 };
 
 function LivreInfos() {
+  let { id } = useParams();
+
   const [count, setCount] = React.useState(0);
 
   const bookListArray = Object.values(bookList);
-  const selectedBook = bookListArray.find(
-    (book) => book.id === Number(window.location.href.split("/").pop())
-  );
+  // const selectedBook = bookListArray.find(
+  //   (book) => book.id === Number(window.location.href.split("/").pop())
+  // );
+
+  const selectedBook = bookListArray.find((book) => book.id === Number(id));
+
   if (!selectedBook) {
     window.location.href = "/404";
   }
@@ -313,9 +318,9 @@ function LivreInfos() {
 
   const { isBurgerOpen } = useContext(BurgerContext);
 
-  const goToComments = () => {
-    document.querySelector("#Comments").scrollIntoView({ behavior: "smooth" });
-  };
+  // const goToComments = () => {
+  //   document.querySelector("#Comments").scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
     <>
@@ -325,7 +330,6 @@ function LivreInfos() {
           isBurgerOpen ? "bg-burger-hidden" : ""
         }`}
       >
-        <AvoidLinkSingleBookPage/>
         <Ariane position={[position]} />
 
         <div className="return-actions">
@@ -376,7 +380,10 @@ function LivreInfos() {
           </div>
         </div>
 
-        <div id="ContentBook" className="SingleBookPage">
+        <div
+          id="main"
+          className="SingleBookPage"
+        >
           <div className="Book_img">
             {" "}
             {/* Image du livre */}
@@ -412,7 +419,13 @@ function LivreInfos() {
                   alt="Moyenne des avis : 4 étoiles sur 5"
                 />
               </span>
-              <button className="go-to-comments" onClick={goToComments}>3 avis</button>
+              {/* <button
+                className="go-to-comments"
+                onClick={goToComments}
+              >
+                3 avis
+              </button> */}
+              <a href="#Comments" className="go-to-comments">3 avis</a>
             </div>
             <div className="availability">
               <img
@@ -467,7 +480,10 @@ function LivreInfos() {
           </div>
         </div>
         {/* Proposition de livres */}
-        <section id="Availability" className="availability-section">
+        <section
+          id="Availability"
+          className="availability-section"
+        >
           <div className="disponible_style">
             {" "}
             {/* container avec le titre "disponibilité et le traits" */}
@@ -485,7 +501,10 @@ function LivreInfos() {
           className="App"
           id="singlePageComments"
         >
-          <div id="Comments" className="CommentContainer">
+          <div
+            id="Comments"
+            className="CommentContainer"
+          >
             <div className="disponible_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
@@ -498,7 +517,7 @@ function LivreInfos() {
               </h2>
               <div className="trait"></div>
             </div>
-            <div  className="containerAllComments">
+            <div className="containerAllComments">
               <div className="containerComments">
                 {" "}
                 {/* section sur les avis */}
@@ -555,7 +574,10 @@ function LivreInfos() {
               </div>
             </div>
 
-            <div id="LeaveComments" className="containerAllComments">
+            <div
+              id="LeaveComments"
+              className="containerAllComments"
+            >
               <h2>Donnez nous votre avis !</h2>
               <form>
                 <fieldset className="star-rating">
@@ -632,7 +654,10 @@ function LivreInfos() {
               </form>
             </div>
           </div>
-          <div id="SameAuthorBook" className="container-carousel">
+          <div
+            id="SameAuthorBook"
+            className="container-carousel"
+          >
             <div className="book_title_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
@@ -672,7 +697,10 @@ function LivreInfos() {
             </div>
           </div>
 
-          <div id="Suggestions" className="container-carousel">
+          <div
+            id="Suggestions"
+            className="container-carousel"
+          >
             <div className="book_title_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}

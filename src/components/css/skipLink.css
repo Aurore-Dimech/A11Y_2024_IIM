@@ -1,0 +1,32 @@
+#evitement{
+    position: absolute;
+    left: -99999rem;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-block: 1rem;
+    padding-inline: 13%;
+    row-gap: 0.5rem;
+}
+
+#evitement:hover, #evitement:focus-within{
+    position: relative;
+    left: 0;
+}
+
+#evitement a{
+    color: #292929;
+}
+
+@media screen and (max-width: 550px){
+    #evitement{
+        padding-inline: 7%;
+        margin-block: 0.5rem;
+    }
+
+    #evitement a{
+        font-size: 0.75rem;
+    }
+}

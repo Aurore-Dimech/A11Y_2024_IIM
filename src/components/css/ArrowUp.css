@@ -12,7 +12,7 @@
     height: 80px;
     }
 
-.arrow-up button {
+.arrow-up a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     border: none;
 }
     
-.arrow-up button img {   
+.arrow-up a img {   
     background-color: #2F2C7E ;
     border-radius: 50%;
     border: 5px solid #2F2C7E;
@@ -29,7 +29,7 @@
 }
 
 @media (hover: hover) {
-    .arrow-up button img:hover, .arrow-up button img:focus {
+    .arrow-up a img:hover, .arrow-up a img:focus {
         cursor: pointer;
         border: 5px solid #FBE11A;
     }

@@ -8,6 +8,7 @@ import NotFoundPage from "./pages/js/404Page";
 import SingleBookPage from "./pages/js/SingleBookPage";
 import Search from "./pages/js/SearchPage";
 import Header from "./components/js/Header";
+import SkipLink from "./components/js/skipLink";
 
 import ArrowUp from "./components/js/ArrowUp";
 
@@ -16,6 +17,7 @@ import { BurgerProvider } from './context/BurgerContext';
 function App() {
   return (
     <BurgerProvider>
+      <SkipLink />
       <div className="App">
         <Router>
           <Header />

@@ -21,7 +21,6 @@ function DesktopNavbar() {
 
   return (
     <nav
-    id="navbar"
       role="navigation"
       aria-label="Menu principal"
       className="nav-principal"
@@ -52,7 +51,7 @@ function DesktopNavbar() {
             onMouseEnter={() => {
               document.querySelectorAll(".button-nav").forEach((element) => {
                 element.classList.remove("open");
-                });
+              });
               expandMenu("PRATIQUE");
               if (pratiqueRef.current) {
                 pratiqueRef.current.classList.add("open");
@@ -62,7 +61,7 @@ function DesktopNavbar() {
               if (event.key === "Enter" || event.key === " ") {
                 document.querySelectorAll(".button-nav").forEach((element) => {
                   element.classList.remove("open");
-                  });
+                });
                 // event.preventDefault();
                 expandMenu("PRATIQUE");
                 if (pratiqueRef.current) {
@@ -112,7 +111,7 @@ function DesktopNavbar() {
             onMouseEnter={() => {
               document.querySelectorAll(".button-nav").forEach((element) => {
                 element.classList.remove("open");
-                });
+              });
               expandMenu("BIBLIOTHEQUE");
               if (bibliothequeRef.current) {
                 bibliothequeRef.current.classList.add("open");
@@ -122,7 +121,7 @@ function DesktopNavbar() {
               if (event.key === "Enter" || event.key === " ") {
                 document.querySelectorAll(".button-nav").forEach((element) => {
                   element.classList.remove("open");
-                  });
+                });
                 expandMenu("BIBLIOTHEQUE");
                 if (bibliothequeRef.current) {
                   bibliothequeRef.current.classList.add("open");
@@ -206,7 +205,7 @@ function DesktopNavbar() {
             onMouseEnter={() => {
               document.querySelectorAll(".button-nav").forEach((element) => {
                 element.classList.remove("open");
-                });
+              });
               expandMenu("DECOUVRIR");
               if (decouvrirRef.current) {
                 decouvrirRef.current.classList.add("open");
@@ -216,7 +215,7 @@ function DesktopNavbar() {
               if (event.key === "Enter" || event.key === " ") {
                 document.querySelectorAll(".button-nav").forEach((element) => {
                   element.classList.remove("open");
-                  });
+                });
                 expandMenu("DECOUVRIR");
                 if (decouvrirRef.current) {
                   decouvrirRef.current.classList.add("open");
@@ -273,7 +272,7 @@ function DesktopNavbar() {
             onMouseEnter={() => {
               document.querySelectorAll(".button-nav").forEach((element) => {
                 element.classList.remove("open");
-                });
+              });
               expandMenu("PATRIMOINE");
               if (patrimoineRef.current) {
                 patrimoineRef.current.classList.add("open");
@@ -283,7 +282,7 @@ function DesktopNavbar() {
               if (event.key === "Enter" || event.key === " ") {
                 document.querySelectorAll(".button-nav").forEach((element) => {
                   element.classList.remove("open");
-                  });
+                });
                 patrimoineRef.current.classList.add("open");
                 expandMenu("PATRIMOINE");
                 if (patrimoineRef.current) {

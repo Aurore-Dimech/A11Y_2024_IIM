@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Logo from "../../assets/logo.svg";
 import "../css/Header.css";
 import SearchBar from "./SearchBar";
@@ -17,6 +17,30 @@ import MobileNavbar from "./MobileNavbar";
 
 function Navbar() {
   const useMobile = useIsMobile();
+  console.log(useMobile);
+
+  useEffect(() => {
+    const header = document.querySelector(".header");
+    if (header) {
+      const searchBar = header.querySelector(".search-bar");
+      if (searchBar) {
+        searchBar.setAttribute("id", "main-search-bar");
+      }
+    }
+
+    const burgerButton = document.querySelector(".burger-button");
+    const navDesktop = document.querySelector(".nav-principal");
+
+    if (burgerButton || navDesktop) {
+      if (useMobile) {
+        if (navDesktop) navDesktop.removeAttribute("id");
+        if (burgerButton) burgerButton.setAttribute("id", "navbar");
+      } else {
+        if (burgerButton) burgerButton.removeAttribute("id");
+        if (navDesktop) navDesktop.setAttribute("id", "navbar");
+      }
+    }
+  }, [useMobile]);
 
   const { toggleBurger, isBurgerOpen } = useContext(BurgerContext);
 
@@ -26,12 +50,13 @@ function Navbar() {
   };
   return (
     <>
-      <header id="header" role="banner">
+      <header
+        id="header"
+        role="banner"
+      >
         <div className="header">
           <a
-            className={`logo_flex ${
-              isBurgerOpen ? "bg-burger-hidden" : ""
-            }`}
+            className={`logo_flex ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
             href="/"
           >
             <img
@@ -41,9 +66,11 @@ function Navbar() {
             />
           </a>
           <div className="search_bar_infos">
-            <div className={`NavAndSearchBar ${
-              isBurgerOpen ? "open-burger-menu-main" : ""
-            }`}>
+            <div
+              className={`NavAndSearchBar ${
+                isBurgerOpen ? "open-burger-menu-main" : ""
+              }`}
+            >
               <nav
                 role="navigation"
                 aria-label="Menu principal"
@@ -65,9 +92,7 @@ function Navbar() {
               <SearchBar />
             </div>
 
-            <ul className={`infos ${
-              isBurgerOpen ? "bg-burger-hidden" : ""
-            }`}>
+            <ul className={`infos ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
               <li>
                 <a href="/infos">
                   <img
@@ -120,9 +145,7 @@ function Navbar() {
           </div>
         </div>
       </header>
-      {
-        useMobile ? null : <DesktopNavbar />
-      }
+      {useMobile ? null : <DesktopNavbar />}
     </>
   );
 }
