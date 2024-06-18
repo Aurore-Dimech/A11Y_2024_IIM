@@ -19,10 +19,12 @@ const ArrowUp = () => {
             alt="Retour en haut de page"
           />
         </button> */}
-        <a href="#top">
+        <a href="#top" aria-label="Retour en haut de la page">
           <img
             src={arrowUp}
-            alt="Retour en haut de page"
+            alt="flèche vers le haut"
+            aria-hidden="true"
+            focusable="false"
           />
         </a>
       </div>
