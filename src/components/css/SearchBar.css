@@ -48,6 +48,37 @@ input {
     border: none;
 }
 
+.search-and-recommandations {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.recommandations {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 196px;
+    top: 3rem;
+    width: 60%;
+    z-index: 20;
+}
+
+.recommandations li button{
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    border: 1px solid #525252;
+    font-size: 1rem;
+}
+
+.recommandations li button:hover, .recommandations li button:focus {
+    background-color: #525252;
+    color: white;
+}
+
 /*  le responsive de la barre de recherche  */
 
 @media screen and (max-width: 1050px) {
@@ -63,13 +94,23 @@ input {
         padding: 0.85rem 1.2rem;
     }
 }
-@media screen and (max-width: 960px) {
-    .search-bar {
-        width: 65%;
+
+@media screen and (max-width: 950px){
+    .search-and-recommandations {
+        width: 80%;
         justify-content: flex-end;
     }
+    .recommandations{
+        margin-left: 191px;
+    }
 }
+
+
 @media screen and (max-width: 800px) {
+    .recommandations{
+        top: 2.5rem;
+        margin-left: 175px;
+    }
     .search {
        padding : 0.7rem;
     }
@@ -81,7 +122,20 @@ input {
     }  
 }
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 655px) {
+    .recommandations{
+        top: 2.05rem;
+        margin-right: 38px;
+    }
+
+    .recommandations li button{
+        font-size: 0.75rem;
+    }
+
+    .search-bar {
+        justify-content: flex-end;
+    }
+
     .search-input {
         width: 7rem;
         font-size: 0.75rem;
@@ -99,6 +153,10 @@ input {
     
 }
 @media screen and (max-width: 480px) {
+    .recommandations{
+        top: 1.8rem;
+        margin-right: 38px;
+    }
     
     .search-catalogue select{
         font-size: 0.8rem;

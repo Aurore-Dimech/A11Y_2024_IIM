@@ -17,7 +17,6 @@ import MobileNavbar from "./MobileNavbar";
 
 function Navbar() {
   const useMobile = useIsMobile();
-  console.log(useMobile);
 
   useEffect(() => {
     const header = document.querySelector(".header");

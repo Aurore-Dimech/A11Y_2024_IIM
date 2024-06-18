@@ -23,6 +23,10 @@
 .section-search .search-bar, .section-search .advanced-search {
   width: 750px;
 }
+
+.section-search .search-and-recommandations {
+  align-items: center;
+}
   
   .section-search .advanced-search {
     text-align: right;
@@ -43,7 +47,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .section-search .search-bar, .section-search .advanced-search {
+  .section-search .search-bar, .section-search .advanced-search, .section-search .search-and-recommandations {
     width: 100%;
   }
 }

@@ -144,6 +144,7 @@ const Footer = () => {
                 type="checkbox"
                 id="abonnement_newsletter"
                 name="abonnement_newsletter"
+                required
               />
               <label htmlFor="abonnement_newsletter">
                 J’accepte de recevoir cette newsletter et je comprends que je
