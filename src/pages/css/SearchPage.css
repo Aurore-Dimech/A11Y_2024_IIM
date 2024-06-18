@@ -30,6 +30,27 @@
     justify-content: flex-end;
 }
 
+.actions ul li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.actions ul li:hover, .actions ul li:focus {
+    outline: -webkit-focus-ring-color auto 1px
+}
+
+.actions ul li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .result-search-title {
     display: flex;
     flex-direction: column;
