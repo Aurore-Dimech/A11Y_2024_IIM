@@ -381,365 +381,380 @@ function LivreInfos() {
         </div>
 
         <div
+          className="mainContent"
           id="main"
-          className="SingleBookPage"
         >
-          <div className="Book_img">
-            {" "}
-            {/* Image du livre */}
-            <img
-              src={selectedBook.cover}
-              alt={`Couverture du livre ${selectedBook.title}`}
-              className="book-cover"
-            />
-          </div>{" "}
-          {/* Tous les informations textuelles du livres jusqu'à la description */}
-          <div className="book-details">
-            <h1 className="book-title single-book-title-section">
-              {selectedBook.title.toUpperCase()}
-            </h1>
-            <div>
-              <h2 className="book-author">{selectedBook.author}</h2>
-              <p className="book-publisher">
-                Édité par{" "}
-                <a href={"/recherche/editors/" + selectedBook.editor}>
-                  {selectedBook.editor}
-                </a>{" "}
-                - {selectedBook.publicationDate}
-              </p>
-            </div>
-            <p className="book-description">{selectedBook.description}</p>
-            <div className="rating">
-              <span
-                aria-label="5 étoiles"
-                className="rating-stars"
-              >
-                <img
-                  src={scoring}
-                  alt="Moyenne des avis : 4 étoiles sur 5"
-                />
-              </span>
-              {/* <button
+          <div className="SingleBookPage">
+            <div className="Book_img">
+              {" "}
+              {/* Image du livre */}
+              <img
+                src={selectedBook.cover}
+                alt={`Couverture du livre ${selectedBook.title}`}
+                className="book-cover"
+              />
+            </div>{" "}
+            {/* Tous les informations textuelles du livres jusqu'à la description */}
+            <div className="book-details">
+              <h1 className="book-title single-book-title-section">
+                {selectedBook.title.toUpperCase()}
+              </h1>
+              <div>
+                <h2 className="book-author">{selectedBook.author}</h2>
+                <p className="book-publisher">
+                  Édité par{" "}
+                  <a href={"/recherche/editors/" + selectedBook.editor}>
+                    {selectedBook.editor}
+                  </a>{" "}
+                  - {selectedBook.publicationDate}
+                </p>
+              </div>
+              <p className="book-description">{selectedBook.description}</p>
+              <div className="rating">
+                <span
+                  aria-label="5 étoiles"
+                  className="rating-stars"
+                >
+                  <img
+                    src={scoring}
+                    alt="Moyenne des avis : 4 étoiles sur 5"
+                  />
+                </span>
+                {/* <button
                 className="go-to-comments"
                 onClick={goToComments}
               >
                 3 avis
               </button> */}
-              <a href="#Comments" className="go-to-comments">3 avis</a>
+                <a
+                  href="#Comments"
+                  className="go-to-comments"
+                >
+                  3 avis
+                </a>
+              </div>
+              <div className="availability">
+                <img
+                  src={disponibility(selectedBook.availableCopiesNumber).img}
+                  alt={disponibility(selectedBook.availableCopiesNumber).alt}
+                  className="checkmark-icon"
+                />
+                <span
+                  className="availability-text"
+                  style={
+                    disponibility(selectedBook.availableCopiesNumber).style
+                  }
+                >
+                  {disponibility(selectedBook.availableCopiesNumber).text}
+                </span>
+              </div>
+              {isReserved ? reserved : notReserved}
             </div>
-            <div className="availability">
-              <img
-                src={disponibility(selectedBook.availableCopiesNumber).img}
-                alt={disponibility(selectedBook.availableCopiesNumber).alt}
-                className="checkmark-icon"
-              />
-              <span
-                className="availability-text"
-                style={disponibility(selectedBook.availableCopiesNumber).style}
-              >
-                {disponibility(selectedBook.availableCopiesNumber).text}
-              </span>
+            <div className="description-section">
+              {" "}
+              {/* Section de description du livre */}
+              <h2 className="description-title">DESCRIPTION</h2>
+              <dl>
+                <dt className="label">Type de document:</dt>
+                <dd className="value">{selectedBook.documentType}</dd>
+
+                <dt className="label">Langue:</dt>
+                <dd className="value">{selectedBook.language}</dd>
+
+                <dt className="label">Date de publication:</dt>
+                <dd className="value">{selectedBook.publicationDate}</dd>
+
+                <dt className="label">Série:</dt>
+                <dd className="value">{selectedBook.serie}</dd>
+
+                <dt className="label">Sections:</dt>
+                <dd className="value">{selectedBook.section}</dd>
+
+                <dt className="label">Description physique:</dt>
+                <dd className="value">{selectedBook.physicalAspect}</dd>
+
+                <dt className="label">Contributeurs:</dt>
+                <dd className="value">{selectedBook.contributors}</dd>
+
+                <dt className="label">ISBN:</dt>
+                <dd className="value">{selectedBook.isbn}</dd>
+
+                <dt className="label">EAN:</dt>
+                <dd className="value">{selectedBook.ean}</dd>
+
+                <dt className="label">Popularité:</dt>
+                <dd className="value">{selectedBook.popularity}</dd>
+              </dl>
             </div>
-            {isReserved ? reserved : notReserved}
           </div>
-          <div className="description-section">
-            {" "}
-            {/* Section de description du livre */}
-            <h2 className="description-title">DESCRIPTION</h2>
-            <dl>
-              <dt className="label">Type de document:</dt>
-              <dd className="value">{selectedBook.documentType}</dd>
-
-              <dt className="label">Langue:</dt>
-              <dd className="value">{selectedBook.language}</dd>
-
-              <dt className="label">Date de publication:</dt>
-              <dd className="value">{selectedBook.publicationDate}</dd>
-
-              <dt className="label">Série:</dt>
-              <dd className="value">{selectedBook.serie}</dd>
-
-              <dt className="label">Sections:</dt>
-              <dd className="value">{selectedBook.section}</dd>
-
-              <dt className="label">Description physique:</dt>
-              <dd className="value">{selectedBook.physicalAspect}</dd>
-
-              <dt className="label">Contributeurs:</dt>
-              <dd className="value">{selectedBook.contributors}</dd>
-
-              <dt className="label">ISBN:</dt>
-              <dd className="value">{selectedBook.isbn}</dd>
-
-              <dt className="label">EAN:</dt>
-              <dd className="value">{selectedBook.ean}</dd>
-
-              <dt className="label">Popularité:</dt>
-              <dd className="value">{selectedBook.popularity}</dd>
-            </dl>
-          </div>
-        </div>
-        {/* Proposition de livres */}
-        <section
-          id="Availability"
-          className="availability-section"
-        >
-          <div className="disponible_style">
-            {" "}
-            {/* container avec le titre "disponibilité et le traits" */}
-            <div className="trait"></div>
-            <h2 className="availability-title single-book-title-section">
-              DISPONIBILITÉS
-            </h2>
-            <div className="trait"></div>
-          </div>{" "}
-          {/* /////////////// */}
-          <p className="book-title">{selectedBook.title}</p>
-          {useIsMobile() ? mobileText : desktopText}
-        </section>
-        <section
-          className="App"
-          id="singlePageComments"
-        >
-          <div
-            id="Comments"
-            className="CommentContainer"
+          {/* Proposition de livres */}
+          <section
+            id="Availability"
+            className="availability-section"
           >
             <div className="disponible_style">
               {" "}
               {/* container avec le titre "disponibilité et le traits" */}
               <div className="trait"></div>
-              <h2
-                className="availability-title single-book-title-section"
-                id="Comments"
-              >
-                AVIS DES LECTEURS
+              <h2 className="availability-title single-book-title-section">
+                DISPONIBILITÉS
               </h2>
               <div className="trait"></div>
-            </div>
-            <div className="containerAllComments">
-              <div className="containerComments">
+            </div>{" "}
+            {/* /////////////// */}
+            <p className="book-title">{selectedBook.title}</p>
+            {useIsMobile() ? mobileText : desktopText}
+          </section>
+          <section
+            className="App"
+            id="singlePageComments"
+          >
+            <div
+              id="Comments"
+              className="CommentContainer"
+            >
+              <div className="disponible_style">
                 {" "}
-                {/* section sur les avis */}
-                {comments.map((comment, index) => (
-                  <div
-                    className="CommentCard"
-                    key={comment.name}
-                  >
-                    {" "}
-                    {/* chaque card avis */}
-                    <div className="commentHeader">
-                      <img
-                        src={comment.photo}
-                        alt={comment.alt}
-                        className="commentPhoto"
-                      />
-                      <div className="commentNameDate">
-                        <p className="commentName">{comment.name}</p>
-                        <p className="commentDate">{comment.publicationDate}</p>
-                      </div>
-                      <img
-                        src={comment.scoring}
-                        alt={comment.altScoring}
-                        className="commentScoring"
-                      />
-                    </div>
-                    {comment.more ? (
-                      <p className="commentContent">
-                        {comment.content}{" "}
-                        <span>
-                          {" "}
-                          <a
-                            href={window.location.href + "/comments"}
-                            className="commentMore"
-                          >
-                            Lire la suite{" "}
-                          </a>
-                        </span>{" "}
-                      </p>
-                    ) : (
-                      <p className="commentContent">{comment.content}</p>
-                    )}
-                  </div>
-                ))}
+                {/* container avec le titre "disponibilité et le traits" */}
+                <div className="trait"></div>
+                <h2
+                  className="availability-title single-book-title-section"
+                  id="Comments"
+                >
+                  AVIS DES LECTEURS
+                </h2>
+                <div className="trait"></div>
               </div>
-              <div>
-                <a href={window.location.href + "/allComments"}>
-                  <p>VOIR TOUS LES AVIS</p>
-                  <img
-                    src={arrowLink}
-                    alt=""
-                  />
-                </a>
+              <div className="containerAllComments">
+                <div className="containerComments">
+                  {" "}
+                  {/* section sur les avis */}
+                  {comments.map((comment, index) => (
+                    <div
+                      className="CommentCard"
+                      key={comment.name}
+                    >
+                      {" "}
+                      {/* chaque card avis */}
+                      <div className="commentHeader">
+                        <img
+                          src={comment.photo}
+                          alt={comment.alt}
+                          className="commentPhoto"
+                        />
+                        <div className="commentNameDate">
+                          <p className="commentName">{comment.name}</p>
+                          <p className="commentDate">
+                            {comment.publicationDate}
+                          </p>
+                        </div>
+                        <img
+                          src={comment.scoring}
+                          alt={comment.altScoring}
+                          className="commentScoring"
+                        />
+                      </div>
+                      {comment.more ? (
+                        <p className="commentContent">
+                          {comment.content}{" "}
+                          <span>
+                            {" "}
+                            <a
+                              href={window.location.href + "/comments"}
+                              className="commentMore"
+                            >
+                              Lire la suite{" "}
+                            </a>
+                          </span>{" "}
+                        </p>
+                      ) : (
+                        <p className="commentContent">{comment.content}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <a href={window.location.href + "/allComments"}>
+                    <p>VOIR TOUS LES AVIS</p>
+                    <img
+                      src={arrowLink}
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div
+                id="LeaveComments"
+                className="containerAllComments"
+              >
+                <h2>Donnez nous votre avis !</h2>
+                <form>
+                  <fieldset className="star-rating">
+                    <div className="legend-and-ratings">
+                      <legend>Évaluation globale :</legend>
+                      <div>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="1"
+                          id="rating1"
+                        />
+                        <label htmlFor="rating1">
+                          <span>1</span>
+                        </label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="2"
+                          id="rating2"
+                        />
+                        <label htmlFor="rating2">
+                          <span>2</span>
+                        </label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="3"
+                          id="rating3"
+                        />
+                        <label htmlFor="rating3">
+                          <span>3</span>
+                        </label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="4"
+                          id="rating4"
+                        />
+                        <label htmlFor="rating4">
+                          <span>4</span>
+                        </label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="5"
+                          id="rating5"
+                        />
+                        <label htmlFor="rating5">
+                          <span>5</span>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div className="comment-description">
+                    <label htmlFor="comment">
+                      Écrivez votre commentaire ci-dessous :{" "}
+                    </label>
+                    <textarea
+                      type="text"
+                      id="comment"
+                      name="comment"
+                      placeholder="Écrivez ce que vous avez pensé du livre..."
+                      onChange={(e) => setCount(e.target.value.length)}
+                    />
+                    <p>{count}/500</p>
+                  </div>
+                  <button
+                    type="submit"
+                    className="button comment-button"
+                  >
+                    Envoyer
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div
+              id="SameAuthorBook"
+              className="container-carousel"
+            >
+              <div className="book_title_style">
+                {" "}
+                {/* container avec le titre "disponibilité et le traits" */}
+                <div className="trait"></div>
+                <h2 className="title_carousel single-book-title-section">
+                  DU MÊME AUTEUR
+                </h2>
+                <div className="trait"></div>
+              </div>
+              <div className="slides-container">
+                {sameAuthorBooks.map((book, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="carousel-slides"
+                    >
+                      <div className="carousel-image-container">
+                        <img
+                          src={book.cover}
+                          alt={book.title.toUpperCase()}
+                          className="carousel-image"
+                        />
+                      </div>
+                      <div className="carouselBookInformation">
+                        <a
+                          href={"/livre/" + book.id}
+                          className="carousel-title-book"
+                        >
+                          {book.title.toUpperCase()}
+                        </a>
+                        <p className="carousel-author">{book.author}</p>
+                        <p className="carousel-author">
+                          {book.publicationDate}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
             <div
-              id="LeaveComments"
-              className="containerAllComments"
+              id="Suggestions"
+              className="container-carousel"
             >
-              <h2>Donnez nous votre avis !</h2>
-              <form>
-                <fieldset className="star-rating">
-                  <div className="legend-and-ratings">
-                    <legend>Évaluation globale :</legend>
-                    <div>
-                      <input
-                        type="radio"
-                        name="rating"
-                        value="1"
-                        id="rating1"
-                      />
-                      <label htmlFor="rating1">
-                        <span>1</span>
-                      </label>
-                      <input
-                        type="radio"
-                        name="rating"
-                        value="2"
-                        id="rating2"
-                      />
-                      <label htmlFor="rating2">
-                        <span>2</span>
-                      </label>
-                      <input
-                        type="radio"
-                        name="rating"
-                        value="3"
-                        id="rating3"
-                      />
-                      <label htmlFor="rating3">
-                        <span>3</span>
-                      </label>
-                      <input
-                        type="radio"
-                        name="rating"
-                        value="4"
-                        id="rating4"
-                      />
-                      <label htmlFor="rating4">
-                        <span>4</span>
-                      </label>
-                      <input
-                        type="radio"
-                        name="rating"
-                        value="5"
-                        id="rating5"
-                      />
-                      <label htmlFor="rating5">
-                        <span>5</span>
-                      </label>
+              <div className="book_title_style">
+                {" "}
+                {/* container avec le titre "disponibilité et le traits" */}
+                <div className="trait"></div>
+                <h2 className="title_carousel single-book-title-section">
+                  SUGGESTIONS
+                </h2>
+                <div className="trait"></div>
+              </div>
+              <div className="slides-container">
+                {suggestions.map((book, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="carousel-slides"
+                    >
+                      <div className="carousel-image-container">
+                        <img
+                          src={book.cover}
+                          alt={book.title.toUpperCase()}
+                          className="carousel-image"
+                        />
+                      </div>
+                      <div className="carouselBookInformation">
+                        <a
+                          href={"/livre/" + book.id}
+                          className="carousel-title-book"
+                        >
+                          {book.title.toUpperCase()}
+                        </a>
+                        <p className="carousel-author">{book.author}</p>
+                        <p className="carousel-author">
+                          {book.publicationDate}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </fieldset>
-                <div className="comment-description">
-                  <label htmlFor="comment">
-                    Écrivez votre commentaire ci-dessous :{" "}
-                  </label>
-                  <textarea
-                    type="text"
-                    id="comment"
-                    name="comment"
-                    placeholder="Écrivez ce que vous avez pensé du livre..."
-                    onChange={(e) => setCount(e.target.value.length)}
-                  />
-                  <p>{count}/500</p>
-                </div>
-                <button
-                  type="submit"
-                  className="button comment-button"
-                >
-                  Envoyer
-                </button>
-              </form>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-          <div
-            id="SameAuthorBook"
-            className="container-carousel"
-          >
-            <div className="book_title_style">
-              {" "}
-              {/* container avec le titre "disponibilité et le traits" */}
-              <div className="trait"></div>
-              <h2 className="title_carousel single-book-title-section">
-                DU MÊME AUTEUR
-              </h2>
-              <div className="trait"></div>
-            </div>
-            <div className="slides-container">
-              {sameAuthorBooks.map((book, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="carousel-slides"
-                  >
-                    <div className="carousel-image-container">
-                      <img
-                        src={book.cover}
-                        alt={book.title.toUpperCase()}
-                        className="carousel-image"
-                      />
-                    </div>
-                    <div className="carouselBookInformation">
-                      <a
-                        href={"/livre/" + book.id}
-                        className="carousel-title-book"
-                      >
-                        {book.title.toUpperCase()}
-                      </a>
-                      <p className="carousel-author">{book.author}</p>
-                      <p className="carousel-author">{book.publicationDate}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div
-            id="Suggestions"
-            className="container-carousel"
-          >
-            <div className="book_title_style">
-              {" "}
-              {/* container avec le titre "disponibilité et le traits" */}
-              <div className="trait"></div>
-              <h2 className="title_carousel single-book-title-section">
-                SUGGESTIONS
-              </h2>
-              <div className="trait"></div>
-            </div>
-            <div className="slides-container">
-              {suggestions.map((book, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="carousel-slides"
-                  >
-                    <div className="carousel-image-container">
-                      <img
-                        src={book.cover}
-                        alt={book.title.toUpperCase()}
-                        className="carousel-image"
-                      />
-                    </div>
-                    <div className="carouselBookInformation">
-                      <a
-                        href={"/livre/" + book.id}
-                        className="carousel-title-book"
-                      >
-                        {book.title.toUpperCase()}
-                      </a>
-                      <p className="carousel-author">{book.author}</p>
-                      <p className="carousel-author">{book.publicationDate}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
     </>
   );
