@@ -50,6 +50,10 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.numberOnTheTop p, .container_numberOnTheTop.One p {
+    font-size: 1.25rem;
+}
 /* Code pour la pagination de la liste des livres allant de 1 à 100 */
 .pagination {
     display: flex;
@@ -288,7 +292,7 @@
 }
 
 @media screen and (max-width: 1065px) {
-    .container_numberOnTheTop{
+    .container_numberOnTheTop.deux.bottom{
         justify-content: space-around;
     }
 }
@@ -358,6 +362,16 @@
 
     .modif_search {
         display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .numberOnTheTop p, .container_numberOnTheTop.One p {
+        font-size: 0.75rem;
+    }
+
+    .container_searchpage {
+        width: 90%;
     }
 }
 

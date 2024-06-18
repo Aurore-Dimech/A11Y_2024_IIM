@@ -27,7 +27,7 @@ footer a:hover, footer a:focus{
 
 .contacts-links {
     display: grid;
-    grid-template-columns: 2fr 1px 1fr;
+    grid-template-columns: 1.7fr 1px 1fr;
     gap: 5%;
 }
 

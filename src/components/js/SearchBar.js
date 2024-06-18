@@ -80,10 +80,10 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="search-and-recommandations">
+    <div className={`search-and-recommandations ${isBurgerOpen ? "bg-burger-hidden" : ""}`}>
       <form
         role="search"
-        className={`search-bar ${isBurgerOpen ? "bg-burger-hidden" : ""}`}
+        className={`search-bar`}
         onSubmit={handleSubmit}
       >
         <div className="search search-catalogue">

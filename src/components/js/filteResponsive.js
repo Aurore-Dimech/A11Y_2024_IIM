@@ -207,7 +207,7 @@ const filteResponsive = ({ closeFilterMobile }) => {
         >
           <path
             d="M27.75 9.25L9.25 27.75M9.25 9.25L27.75 27.75"
-            stroke="#FBE11A"
+            stroke="#2F2C7E"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

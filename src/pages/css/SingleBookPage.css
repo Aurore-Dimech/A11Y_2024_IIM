@@ -153,6 +153,7 @@
     grid-auto-columns: max-content;
     column-gap: 1rem;
     row-gap: 0.5rem;
+    font-size: 1.25rem;
 }
 .description-section dt {
     grid-column: 1 / 2;
@@ -513,7 +514,7 @@ td {
 
 .carousel-slides {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: auto 1fr;
     gap: 1rem;
 }
 

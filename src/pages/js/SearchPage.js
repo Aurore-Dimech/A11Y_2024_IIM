@@ -35,12 +35,15 @@ function Recherche() {
 
     const title_search = document.querySelector(".result-search-title");
     const result_search = document.querySelector(".container_searchpage");
+    const previousPage = document.querySelector(".return-actions");
+
     if (
       title_search.style.display !== "none" &&
-      result_search.style.display !== "none"
+      result_search.style.display !== "none" && previousPage.style.display !== "none"
     ) {
       title_search.style.display = "none";
       result_search.style.display = "none";
+      previousPage.style.display = "none";
     }
 
     const filterMobile = document.querySelector(".container_filteResponsive");
@@ -61,9 +64,11 @@ function Recherche() {
 
     const title_search = document.querySelector(".result-search-title");
     const result_search = document.querySelector(".container_searchpage");
+    const previousPage = document.querySelector(".return-actions");
 
     title_search.style.display = "flex";
     result_search.style.display = "flex";
+    previousPage.style.display = "flex";
 
     const filterMobile = document.querySelector(".container_filteResponsive");
     if (filterMobile) {

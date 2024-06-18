@@ -12,13 +12,17 @@ header {
     padding: 0 13%;
 }
 
-
+header .search-bar {
+    justify-content: end;
+}
 
 .search_bar_infos {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    width: 50vw;
+    width: 40vw;
+    min-width: 625px;
+    align-items: end
 }
 
 .infos {
@@ -26,6 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 1em;
+    width: 100%;
 }
 
 .infos li {
@@ -67,15 +72,41 @@ header {
 
 
 /* ajout du menu burger, disposition en column du logo et de la bar de recherche */
-@media screen and (max-width: 1050px) {
+
+@media screen and (max-width: 1260px){
     header .logo{
         width: 15rem;
+        height: auto;
+    }
+
+    .search_bar_infos {
+        width: 30vw;
+        /* min-width: unset; */
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .header {
+        flex-direction: column;
+    }
+    .search_bar_infos {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    
+
+    header .logo{
+        width: 12rem;
         height: auto;
     }
 
     .NavAndSearchBar {
         justify-content: flex-end;
     }
+
+    
     
 }
 @media screen and (max-width: 950px) {
@@ -92,6 +123,7 @@ header {
     .search_bar_infos{
         padding-bottom: 0rem;
         width: 100%;
+        min-width: unset;
     }
 
     header .logo{
