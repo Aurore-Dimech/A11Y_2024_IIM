@@ -196,6 +196,7 @@ useEffect(() => {
             </div>
           )}
         <button
+        aria-label="Rechercher"
           type="submit"
           ref={searchInputButton}
           // href={`/recherche/${inputValue}`}
@@ -214,7 +215,9 @@ useEffect(() => {
           <span className="span">Rechercher</span>
           <img
             src={SearchIcon}
-            alt="Rechercher"
+            alt=""
+            aria-hidden="true"
+            focusable="false"
           />
         </button>
       </form>

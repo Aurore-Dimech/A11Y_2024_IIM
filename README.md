@@ -2,7 +2,7 @@
 ### French version
 English below
 
-Ce projet a été réalisé par [ redacted ]. Il a été fait dans le cadre du concours d'accessibilité organisé par A11Y.
+Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Truchon-Bartes (UX/UI Designer), Brunic Feyou (Développeuse Frontend) & Aurore Dimech (Développeuse Frontend). Il a été fait dans le cadre du concours d'accessibilité organisé par A11Y.
 
 
 ## [Veuillez cliquer ici pour accéder au site](https://a11y-nice-iim.vercel.app/)
@@ -17,7 +17,7 @@ Ce projet a été réalisé par [ redacted ]. Il a été fait dans le cadre du c
 
 ### English version
 
-This project has been realised by [ redacted ]. It was produced as part of the accessibility competition organized by A11Y.
+This project has been realised by Wing-Yee Kam (Project Leader), Capucine Truchon-Bartes (UX/UI Designer), Brunic Feyou (Frontend Developer) & Aurore Dimech (Frontend Developer). It was produced as part of the accessibility competition organized by A11Y.
 
 ## [Click here to see the website](https://a11y-nice-iim.vercel.app/)
 

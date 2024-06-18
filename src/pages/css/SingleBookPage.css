@@ -653,9 +653,11 @@ td {
         justify-content: flex-start;
     }
 
+
     .carousel-image-container img {
         width: 100%;
         height: auto;
+        min-width: 200px;
     }
 
     .SingleBookPage > img {
@@ -727,6 +729,14 @@ td {
 }
 
 @media screen and (max-width: 550px) {
+
+    .carousel-image-container img {
+        min-width: unset;
+    }
+
+    .carousel-slides {
+        grid-template-columns: 1.3fr 1fr;
+    }
 
     .singleBookPage-container h1 {
         font-size: 1.25rem;
