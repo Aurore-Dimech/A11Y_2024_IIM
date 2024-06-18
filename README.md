@@ -7,7 +7,7 @@ Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Trucho
 
 ## [Veuillez cliquer ici pour accéder au site](https://a11y-nice-iim.vercel.app/)
 
-### Scénario utilisateur: Réserver un Livre sur le Site de la Bibliothèque Municipale de Nice
+### Scénario de test : Réserver un Livre sur le Site de la Bibliothèque Municipale de Nice
 
 ##### Étape 1 : Accéder au Site 
 * Ouvrir le navigateur Chrome et copier-coller le lien vers le site de la Bibliothèque Municipale de Nice (https://a11y-nice-iim.vercel.app/).
@@ -34,7 +34,7 @@ This project has been realised by Wing-Yee Kam (Project Leader), Capucine Trucho
 
 ## [Click here to see the website](https://a11y-nice-iim.vercel.app/)
 
-### User Journey: Reserve a Book on the Nice Municipal Library Website
+### Test scenario: Reserve a Book on the Nice Municipal Library Website
 
 #### Step 1: Access the Site 
 * Open the Chrome browser and copy and paste the link to the Nice Municipal Library website (https://a11y-nice-iim.vercel.app/).
