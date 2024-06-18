@@ -10,7 +10,7 @@ Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Trucho
 ### Scénario utilisateur: Réserver un Livre sur le Site de la Bibliothèque Municipale de Nice
 
 ##### Étape 1 : Accéder au Site 
-* Ouvrir le navigateur Chrome et copier-coller le lien vers le site de la Bibliothèque Municipale de Nice (https://a11y-nice-iim.vercel.app/)
+* Ouvrir le navigateur Chrome et copier-coller le lien vers le site de la Bibliothèque Municipale de Nice (https://a11y-nice-iim.vercel.app/).
 
 ##### Étape 2 : Rechercher un livre
 * La page d’accueil est affichée.
@@ -19,7 +19,7 @@ Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Trucho
 
 ##### Étape 3: Résultats de la Recherche:
 * La page des résultats de recherche est affichée et propose différents livres de la série Ariol.
-* Choisir un des livres proposés et disponible
+* Choisir un des livres proposés et indiqué comme disponible.
 * Cliquer sur le bouton “En savoir plus” pour accéder à la page du livre.
 
 ##### Étape 4: Réservation du Livre
@@ -37,7 +37,7 @@ This project has been realised by Wing-Yee Kam (Project Leader), Capucine Trucho
 ### User Journey: Reserve a Book on the Nice Municipal Library Website
 
 #### Step 1: Access the Site 
-* Open the Chrome browser and copy and paste the link to the Nice Municipal Library website (https://a11y-nice-iim.vercel.app/)
+* Open the Chrome browser and copy and paste the link to the Nice Municipal Library website (https://a11y-nice-iim.vercel.app/).
 
 #### Step 2: Search for a book
 * The home page is displayed.
@@ -46,7 +46,7 @@ This project has been realised by Wing-Yee Kam (Project Leader), Capucine Trucho
 
 #### Step 3: Search Results:
 * The search results page is displayed and offers different books from the Ariol serie.
-* Choose one that is available
+* Choose one that is available.
 * Click on the “Learn more” button to access the book page.
 
 #### Step 4: Book Reservation
