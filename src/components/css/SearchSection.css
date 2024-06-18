@@ -62,3 +62,21 @@
     padding-right: 0.5rem;
   }
 }
+
+@media screen and (min-width: 1450px) {
+  .section-search .recommandations {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1850px) {
+  .section-search .recommandations {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 2450px) {
+  .section-search .recommandations {
+    width: 20%;
+  }
+}
