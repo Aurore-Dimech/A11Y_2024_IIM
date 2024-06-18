@@ -10,8 +10,7 @@
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin-top: 4rem;
-    margin-bottom: 5%;
+    margin-block: 4rem;
 }
 
 .MainPage .return-actions .return {
@@ -254,7 +253,7 @@
 /* Le responsive ////////// */
 
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1160px) {
     .btn_change  {
         display: none;
     }
@@ -280,10 +279,17 @@
     .SecondLineFilter.deux {
         display: flex;
         gap: 0.2rem;
+        flex-wrap: wrap;
     
     }
     .SecondLineFilter.one {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1065px) {
+    .container_numberOnTheTop{
+        justify-content: space-around;
     }
 }
 
@@ -371,6 +377,11 @@
     .pagination.bottom li {
         margin: 0px;
     }
+
+    .pagination.bottom li:nth-last-child(4) {
+        display: none;
+    }
+
     .pagination.bottom li a {
         font-size: 0.85rem;
         padding: 0.8rem 1rem;
@@ -441,4 +452,11 @@
     .filtreTri p {
         font-size: 0.75rem;
     }
+}
+
+@media screen and (max-width: 350px) {
+    .pagination.bottom li:nth-last-child(5) {
+        display: none;
+    }
+    
 }

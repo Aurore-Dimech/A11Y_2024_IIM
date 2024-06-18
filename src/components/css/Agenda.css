@@ -71,8 +71,15 @@
     height: 48%;
 }
 
+.events-list li:first-of-type {
+    max-width: 490px;
+
+}
+
 .events-list li:not(:first-of-type) {
     display: flex;
+    max-width: 650px;
+    max-height: 350px;
     /* height: 27vh; */
     max-height: 300px;
 }
@@ -152,10 +159,42 @@
     text-decoration: underline;
 }
 
+@media screen and (min-width: 1630px){
+    .events-list {
+        grid-template-columns: max-content max-content;
+    }
+
+    .agenda-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agenda-section .section-title {
+        width: 100%;
+    }
+
+    .agenda-section > div:last-of-type {
+        width: auto;
+        display: block;
+    }
+
+    .all-events {
+        margin-left: 950px;
+    }
+    
+}
+
+
 @media screen and (max-width: 1250px) {
     .events-list {
         display: flex;
         flex-direction: column;
+    }
+
+    .events-list li:not(:first-of-type) {
+        max-width: none;
+        max-height: none;
     }
     
     .events-list > li {

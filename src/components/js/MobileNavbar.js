@@ -15,11 +15,9 @@ function MobileNavbar() {
   const [activeMenu, setActiveMenu] = useState(null);
 
   const expandMenu = (menuName) => {
-    // if (activeMenu !== menuName) {
+    if (activeMenu !== menuName) {
       setActiveMenu(menuName);
-      // }
-    console.log("menuName", menuName)
-    console.log("activeMenu", activeMenu);
+      }
   };
 
   const shrinkMenu = () => {
@@ -55,7 +53,8 @@ function MobileNavbar() {
             }
           }}
           onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === "Space") {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               expandMenu("PRATIQUE");
               if (pratiqueRef.current) {
                 pratiqueRef.current.classList.add("open");
@@ -89,10 +88,10 @@ function MobileNavbar() {
       <li
         onKeyDown={(event) => {
           if (event.key === "Escape") {
-            shrinkMenu("DECOUVRIR");
-            if (decouvrirRef.current) {
-              decouvrirRef.current.classList.remove("open");
-              decouvrirRef.current.focus();
+            shrinkMenu("BIBLIOTHEQUE");
+            if (bibliothequeRef.current) {
+              bibliothequeRef.current.classList.remove("open");
+              bibliothequeRef.current.focus();
             }
           }
         }}
@@ -104,16 +103,17 @@ function MobileNavbar() {
           onClick={() => {
             if (activeMenu === "BIBLIOTHEQUE") {
               shrinkMenu("BIBLIOTHEQUE");
-              if (pratiqueRef.current) {
-                pratiqueRef.current.classList.remove("open");
-                pratiqueRef.current.focus();
+              if (bibliothequeRef.current) {
+                bibliothequeRef.current.classList.remove("open");
+                bibliothequeRef.current.focus();
               }
             } else {
               expandMenu("BIBLIOTHEQUE");
             }
           }}
           onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === "Space") {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               expandMenu("BIBLIOTHEQUE");
               if (bibliothequeRef.current) {
                 bibliothequeRef.current.classList.add("open");
@@ -210,16 +210,17 @@ function MobileNavbar() {
           onClick={() => {
             if (activeMenu === "DECOUVRIR") {
               shrinkMenu("DECOUVRIR");
-              if (pratiqueRef.current) {
-                pratiqueRef.current.classList.remove("open");
-                pratiqueRef.current.focus();
+              if (decouvrirRef.current) {
+                decouvrirRef.current.classList.remove("open");
+                decouvrirRef.current.focus();
               }
             } else {
               expandMenu("DECOUVRIR");
             }
           }}
           onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === "Space") {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               expandMenu("DECOUVRIR");
               if (decouvrirRef.current) {
                 decouvrirRef.current.classList.add("open");
@@ -274,16 +275,17 @@ function MobileNavbar() {
           onClick={() => {
             if (activeMenu === "PATRIMOINE") {
               shrinkMenu("PATRIMOINE");
-              if (pratiqueRef.current) {
-                pratiqueRef.current.classList.remove("open");
-                pratiqueRef.current.focus();
+              if (patrimoineRef.current) {
+                patrimoineRef.current.classList.remove("open");
+                patrimoineRef.current.focus();
               }
             } else {
               expandMenu("PATRIMOINE");
             }
           }}
           onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === "Space") {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               expandMenu("PATRIMOINE");
               if (patrimoineRef.current) {
                 patrimoineRef.current.classList.add("open");

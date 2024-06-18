@@ -54,6 +54,9 @@ function LivreInfos() {
   const selectedBook = bookListArray.find(
     (book) => book.id === Number(window.location.href.split("/").pop())
   );
+  if (!selectedBook) {
+    window.location.href = "/404";
+  }
 
   const data = [
     {

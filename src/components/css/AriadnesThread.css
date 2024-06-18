@@ -12,6 +12,9 @@
 }
 
 @media screen and (max-width: 550px) {
+    .ariadnesThread {
+        padding-inline: 7%;
+    }
     .ariadnesThread a {
         font-size: 0.75em;
     }

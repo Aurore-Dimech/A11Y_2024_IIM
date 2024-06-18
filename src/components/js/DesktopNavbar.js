@@ -50,13 +50,20 @@ function DesktopNavbar() {
             className="button-nav"
             onClick={() => expandMenu("PRATIQUE")}
             onMouseEnter={() => {
+              document.querySelectorAll(".button-nav").forEach((element) => {
+                element.classList.remove("open");
+                });
               expandMenu("PRATIQUE");
               if (pratiqueRef.current) {
                 pratiqueRef.current.classList.add("open");
               }
             }}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === "Space") {
+              if (event.key === "Enter" || event.key === " ") {
+                document.querySelectorAll(".button-nav").forEach((element) => {
+                  element.classList.remove("open");
+                  });
+                // event.preventDefault();
                 expandMenu("PRATIQUE");
                 if (pratiqueRef.current) {
                   pratiqueRef.current.classList.add("open");
@@ -103,13 +110,19 @@ function DesktopNavbar() {
             className="button-nav"
             onClick={() => expandMenu("BIBLIOTHEQUE")}
             onMouseEnter={() => {
+              document.querySelectorAll(".button-nav").forEach((element) => {
+                element.classList.remove("open");
+                });
               expandMenu("BIBLIOTHEQUE");
               if (bibliothequeRef.current) {
                 bibliothequeRef.current.classList.add("open");
               }
             }}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === "Space") {
+              if (event.key === "Enter" || event.key === " ") {
+                document.querySelectorAll(".button-nav").forEach((element) => {
+                  element.classList.remove("open");
+                  });
                 expandMenu("BIBLIOTHEQUE");
                 if (bibliothequeRef.current) {
                   bibliothequeRef.current.classList.add("open");
@@ -134,7 +147,9 @@ function DesktopNavbar() {
                 <a href="/bibliotheque/raoul-mille">Raoul Mille</a>
               </li>
               <li>
-                <a href="/bibliotheque/a-proximite">Bibliothèques de proximité</a>
+                <a href="/bibliotheque/a-proximite">
+                  Bibliothèques de proximité
+                </a>
               </li>
               <li>
                 <a href="/bibliotheques/associees">Bibliothèque associées</a>
@@ -189,13 +204,19 @@ function DesktopNavbar() {
             className="button-nav"
             onClick={() => expandMenu("DECOUVRIR")}
             onMouseEnter={() => {
+              document.querySelectorAll(".button-nav").forEach((element) => {
+                element.classList.remove("open");
+                });
               expandMenu("DECOUVRIR");
               if (decouvrirRef.current) {
                 decouvrirRef.current.classList.add("open");
               }
             }}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === "Space") {
+              if (event.key === "Enter" || event.key === " ") {
+                document.querySelectorAll(".button-nav").forEach((element) => {
+                  element.classList.remove("open");
+                  });
                 expandMenu("DECOUVRIR");
                 if (decouvrirRef.current) {
                   decouvrirRef.current.classList.add("open");
@@ -250,13 +271,20 @@ function DesktopNavbar() {
               expandMenu("PATRIMOINE");
             }}
             onMouseEnter={() => {
+              document.querySelectorAll(".button-nav").forEach((element) => {
+                element.classList.remove("open");
+                });
               expandMenu("PATRIMOINE");
               if (patrimoineRef.current) {
                 patrimoineRef.current.classList.add("open");
               }
             }}
             onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === "Space") {
+              if (event.key === "Enter" || event.key === " ") {
+                document.querySelectorAll(".button-nav").forEach((element) => {
+                  element.classList.remove("open");
+                  });
+                patrimoineRef.current.classList.add("open");
                 expandMenu("PATRIMOINE");
                 if (patrimoineRef.current) {
                   patrimoineRef.current.classList.add("open");

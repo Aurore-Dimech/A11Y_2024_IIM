@@ -101,13 +101,18 @@ legend {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
+    }
+    
 .filter-see-more button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 1em;
+    color: #525252;
+}
+
+.filter-see-more button:hover, .filter-see-more button:focus{
+    text-decoration: underline;
 }
 
 .filter-closed {
