@@ -78,6 +78,7 @@ function Navbar() {
                   aria-expanded={isBurgerOpen}
                   className="burger-button"
                   onClick={handleBurgerClick}
+                  aria-label="Ouvrir le menu principal"
                 >
                   <img
                     src={isBurgerOpen ? close : burgerMenu}
