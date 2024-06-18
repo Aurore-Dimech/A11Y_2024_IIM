@@ -25,6 +25,9 @@ Ce projet a été réalisé par Wing-Yee Kam (Cheffe de projet), Capucine Trucho
 ##### Étape 4: Réservation du Livre
 * Sur la page du livre, cliquez sur le bouton "Réserver ce livre".
 
+<br>
+<br>
+
 ### English version
 
 This project has been realised by Wing-Yee Kam (Project Leader), Capucine Truchon-Bartes (UX/UI Designer), Brunic Feyou (Frontend Developer) & Aurore Dimech (Frontend Developer). It was produced as part of the accessibility competition organized by A11Y.
