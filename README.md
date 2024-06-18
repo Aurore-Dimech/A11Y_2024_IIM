@@ -31,10 +31,20 @@ This project has been realised by Wing-Yee Kam (Project Leader), Capucine Trucho
 
 ## [Click here to see the website](https://a11y-nice-iim.vercel.app/)
 
-### User Journey
+### User Journey: Reserve a Book on the Nice Municipal Library Website
 
-* You're on the main page. You look at the various sections, and then decide to go back up to the search bar.
-* You type in the search bar "Ariol".
-* You choose the volume you want, and click on the "En savoir plus" button.
-* You read the information and then click on "Réserver".
-* Congratulations, you have now reserved your volume of Ariol! Don't forget to return it before the deadline.
+#### Step 1: Access the Site 
+* Open the Chrome browser and copy and paste the link to the Nice Municipal Library website (https://a11y-nice-iim.vercel.app/)
+
+#### Step 2: Search for a book
+* The home page is displayed.
+* Click on the dedicated space in the search bar at the top of the page to search for a book.
+* Type “Ariol” then click on the “Search” button or press “Enter”.
+
+#### Step 3: Search Results:
+* The search results page is displayed and offers different books from the Ariol serie.
+* Choose one that is available
+* Click on the “Learn more” button to access the book page.
+
+#### Step 4: Book Reservation
+* On the book page, click the "Réserver ce livre" button.
