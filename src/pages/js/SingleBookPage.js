@@ -403,7 +403,7 @@ function LivreInfos() {
                 <h2 className="book-author">{selectedBook.author}</h2>
                 <p className="book-publisher">
                   Édité par{" "}
-                  <a href={"/recherche/editors/" + selectedBook.editor}>
+                  <a href={"/recherche/editors/" + selectedBook.editor} aria-label={`Rechercher ${selectedBook.editor}`}>
                     {selectedBook.editor}
                   </a>{" "}
                   - {selectedBook.publicationDate}
@@ -429,6 +429,7 @@ function LivreInfos() {
                 <a
                   href="#Comments"
                   className="go-to-comments"
+                  aria-label="Voir les avis"
                 >
                   3 avis
                 </a>
