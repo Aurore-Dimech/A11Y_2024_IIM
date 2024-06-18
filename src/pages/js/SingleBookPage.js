@@ -338,7 +338,7 @@ function LivreInfos() {
               src={returnArrow}
               alt=""
             />
-            <a href="/recherche/ariol">Retour à la page précédente</a>
+            <a href="/recherche/Ariol">Retour à la page précédente</a>
           </div>
 
           <div className="actions">
